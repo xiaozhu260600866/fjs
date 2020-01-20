@@ -1,14 +1,14 @@
 @font-face {
-  font-family: 'iconfont';  /* project id 1179141 */
-  src: url('//at.alicdn.com/t/font_1179141_sdsw7nmibb.eot');
-  src: url('//at.alicdn.com/t/font_1179141_sdsw7nmibb.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1179141_sdsw7nmibb.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1179141_sdsw7nmibb.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1179141_sdsw7nmibb.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1179141_sdsw7nmibb.svg#iconfont') format('svg');
+  font-family: 'iconfont';  /* project id 594334 */
+  src: url('//at.alicdn.com/t/font_594334_beqr5825b8g.eot');
+  src: url('//at.alicdn.com/t/font_594334_beqr5825b8g.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_594334_beqr5825b8g.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_594334_beqr5825b8g.woff') format('woff'),
+  url('//at.alicdn.com/t/font_594334_beqr5825b8g.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_594334_beqr5825b8g.svg#iconfont') format('svg');
 }
 
-/* 3314024140@qq.com  dx3229010  1名片*/
+/* 3314024140@qq.com  dx3229010  融E修 */
 
 .iconfont {
 	font-family: "iconfont" !important;
@@ -17,14 +17,41 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-right:before{content: "\e600";}/* 右 */
-.icon-location-o:before{content: "\e628";}/* 定位 */
-.icon-service-o:before{content: "\e646";}/* 客服 */
-.icon-cart-del:before{content: "\e63f";}/* 删除 */
+.icon-top:before{content: "\e913";}/* 上 */
+.icon-bottom:before{content: "\e912";}/* 下 */
+.icon-left:before{content: "\e910";}/* 右 */
+.icon-right:before{content: "\e911";}/* 右 */
+.icon-plus:before{content: "\e987";}/* 加 */
+.icon-minus:before{content: "\e986";}/* 减 */
+.icon-count-plus:before{content: "\e987";}/* 加 */
+.icon-count-minus:before{content: "\e986";}/* 减 */
+.icon-del:before{content: "\e984";}/* 删除-垃圾桶 */
+.icon-location:before{content: "\e982";}/* 定位 */
+.icon-location-co:before{content: "\e985";}/* 定位-空心带圈 */
+.icon-location-o:before{content: "\e603";}/* 定位-空心 */
+.icon-off:before{content: "\e6e0";}/* 关闭 */
+.icon-off-co:before{content: "\ec33";}/* 圆圈-关闭 */
+.icon-off-co-o:before{content: "\e979";}/* 圆圈-关闭-空 */
+.icon-tel:before{content: "\e983";}/* 电话 */
+.icon-phone:before{content: "\e63c";}/* 手机 */
+.icon-coupon:before{content: "\e6b4";}/* 优惠券 */
+.icon-pic:before{content: "\e674";}/* 图片 */
+.icon-people:before{content: "\e675";}/* 人员 */
+.icon-user:before{content: "\e616";}/* 用户 */
+.icon-myAcclunt:before{content: "\e640";}/* 余额 */
+.icon-share:before{content: "\e654";}/* 分享达人 */
 
 
-.icon-pay-success:before{content: "\e676";color: #09BB07;}/* 支付成功 */
-.icon-pay-fail:before{content: "\e988";color: #E84335;}/* 支付失败 */
+.icon-intergral-record:before{content: "\e69a";}/* 兑换记录 */
+
+
+.icon-pay-no:before{content: "\e988";color: #E84335;}/* 支付失败 */
+.icon-pay-yes:before{content: "\e989";color: #09BB07;}/* 支付成功 */
+
+
+.icon-user-coupon-e:before{content: "\e976";color: #00beaf;}/* 优惠券 */
+.icon-user-about:before{content: "\e74f";color: #4A81C3;}/* 优惠券 */
+.icon-user-tel:before{content: "\e608";color: #2AC17E;}/* 优惠券 */
 
 
 

@@ -1,21 +1,22 @@
 <template>
-	<view>
+	<view class="pb50">
 		<page :parentData="data" :formAction="formAction"></page>
 		<view v-if='data.show'>
-		
+			<div class="show-img">
+				<image class="img w-b100 flex" mode="widthFix":src="getSiteName+ '/upload/images/coupon/'+data.detail.logo" />
+			</div>
 			<div class="shop-info bg-f mb10 p15">
 				<div class="top-item flex-between">
 					<div class="rinfo flex1">
-						<p class="ctitle fs-20">{{data.user.userInfo.company_name}}</p>
+						<p class="ctitle fs-20">{{data.detail.name}}</p>
 						<p class="lh-20 star"><tui-rate :current="index" @change="change" :disabled="true"></tui-rate></p>
 						<p class="industry fs-12 fc-9 lh-22"></p>
 					</div>
 					<div class="ricon flex pl10">
 						<button class="iitem plr8 text-center bg-f" hover-class="none" open-type="share">
-							<p class="iconfont icon-show-share fc-6 fs-18 lh-20 mb5"></p>
+							<p class="iconfont icon-share fc-6 fs-18 lh-20 mb5"></p>
 							<p class="name fs-12 fc-6 lh-18">分享</p>
 						</button>
-						
 					</div>
 				</div>
 				<div class="bottom-item" >
@@ -24,26 +25,24 @@
 						<p class="fs-13 fc-9 flex1" >{{data.detail.phone}}</p>
 					</div>
 					<div class="flex lh-20 pt15" @click="location(data.detail.location_x,data.detail.location_y,data.detail.address)">
-						<p class="iconfont icon-info-address fs-16 fc-9 mr5"></p>
+						<p class="iconfont icon-location fs-16 fc-9 mr5"></p>
 						<p class="fs-13 fc-9 flex1">{{data.detail.address}}</p>
 					</div>
 				</div>
 			</div>
-		
-			
-			
-			<div class="bus-detail">
+			<div class="bus-detail mb12">
 				<div class="box-title mer-title p15 bg-f">
-					<p class="name fs-16 cur">商家介绍</p>
+					<p class="name fs-16 cur">个人介绍</p>
 				</div>
 				<div class="content bg-f fs-13 plr15 pb15">
 					<u-parse :content="data.detail.content" />
 				</div>
 			</div>
 			
-			
+			<view class="b_fixed Footer flex">
+				<view class="nav dx-btn-blue">一键拨号</view>
+			</view>
 		</view>
-		<!-- <Footer :url="formAction" :userId="data.user.id"></Footer> -->
 	</view>
 </template>
 

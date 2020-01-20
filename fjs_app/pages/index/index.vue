@@ -1,82 +1,59 @@
 <template>
 	<view>
 		<page :parentData="data" :formAction="formAction" ref="page"></page>
-		<view>
+		<view v-if="data.show">
 			<view class="banner">
 				<myswiper :lists="data.silders.data"></myswiper>
 			</view>
-			<div class="box-title mer-title p15 pb10 bg-f mt10">
-				<p class="name fs-18 fw-bold">医生推荐</p>
-			</div>
-			<div class="couponList bg-f">
+			
+			<view v-if="data.index_link.data.length">
+				<view class="fun_button mb12">
+					<view class="fun_button_con">
+						<view class="a ptb8" v-for="(v,index) in data.index_link.data" :key="index">
+							<myform :ruleform="{}" :append="true" :vaildate="{}" :data="v" @callBack="goto(v.url,v.redirect_type)">
+								<view slot="content">
+									<view :class="['button-img']">
+										<image :src=" v.cover " :class="['img']" />
+									</view>
+									<view :class="['button-txt','pt5', 'fs-13','fc-3','text-center','lh-20']"><span>{{v.name}}</span></view>
+								</view>
+							</myform>
+						</view>
+					</view>
+				</view>
+			</view>
+			
+			<view class="hospital bg-f mb12">
+				<view class="ass-title p15 pr0 bg-f" @click="goto('/pages/hospital/lists/index',2)">
+					<view class="name fs-16">医院推荐</view>
+					<view class="icon iconfont icon-right fc-9 fs-13 pr15"></view>
+				</view>
 				<!-- 循环开始 -->
-				<div class="coupon-box" v-for="v in data.doctor_lists.data">
-					<myform :ruleform="{}" :append="true" :vaildate="{}" :data="item" @callBack="goto('/pages/doctor/show/index?id='+v.id,1)">
-						<div slot="content">
-							<div class="list_item plr15">
-								<div class="item_box ptb10 bd-be">
-									<div class="limg pr10">
-										<image class="img" :src="v.logo ? getSiteName+ '/upload/images/coupon/300_'+v.logo : 'https://boss.doxinsoft.com/images/wap/nocoupon.png'" />
-									</div>
-									<div class="rinfo flex1">
-										<div class="tcon flex-between">
-											<div class="info flex1 pr10">
-												<p class="ctitle fs-15 lh-22">{{v.name}}</p>
-												<p class="lh-20 star">
-													<!-- <tui-rate :current="index" @change="change" :disabled="true"></tui-rate> -->
-												</p>
-												<p class="ctitle fs-12 fc-6 lh-20">{{v.phone}}</p>
-											</div>
+				<hospitalLists :data="data"></hospitalLists>
+			</view>
 			
-										</div>
-			
-									</div>
-								</div>
-							</div>
-						</div>
-					</myform>
-				</div>
-			</div>
-			
-			<div class="box-title mer-title p15 pb10 bg-f mt10">
-				<p class="name fs-18 fw-bold">医院推荐</p>
-			</div>
-			<div class="couponList bg-f">
+			<view class="doctor bg-f mb12">
+				<view class="ass-title p15 pr0 bg-f" @click="goto('/pages/doctor/lists/index',2)">
+					<view class="name fs-16">医生推荐</view>
+					<view class="icon iconfont icon-right fc-9 fs-13 pr15"></view>
+				</view>
 				<!-- 循环开始 -->
-				<div class="coupon-box" v-for="v in data.lists.data">
-					<myform :ruleform="{}" :append="true" :vaildate="{}" :data="item" @callBack="goto('/pages/hospital/show/index?id='+v.id,1)">
-						<div slot="content">
-							<div class="list_item plr15">
-								<div class="item_box ptb10 bd-be">
-									<div class="limg pr10">
-										<image class="img" :src="v.logo ? getSiteName+ '/upload/images/coupon/300_'+v.logo : 'https://boss.doxinsoft.com/images/wap/nocoupon.png'" />
-									</div>
-									<div class="rinfo flex1">
-										<div class="tcon flex-between">
-											<div class="info flex1 pr10">
-												<p class="ctitle fs-15 lh-22">{{v.userInfo.company_name}}</p>
-												<p class="lh-20 star">
-													<!-- <tui-rate :current="index" @change="change" :disabled="true"></tui-rate> -->
-												</p>
-												<p class="ctitle fs-12 fc-6 lh-20">{{v.getUser.userInfo.company_name}}</p>
-											</div>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</div>
-					</myform>
-				</div>
-			</div>
+				<doctorLists :data="data"></doctorLists>
+			</view>
+			
 		</view>
 	</view>
 </template>
 
 <script>
 	import "./index.css";
+	import hospitalLists from '@/components/hospitalLists';
+	import doctorLists from '@/components/doctorLists';
 	export default {
+		components:{
+			hospitalLists,
+			doctorLists
+		},
 		data() {
 			return {
 				formAction: '/wapindex',

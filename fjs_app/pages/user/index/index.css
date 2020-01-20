@@ -1,3 +1,5 @@
+page{background: #fff;}
+
 /* 头部背景 */
 .Uhead-info{position: relative;}
 .Uhead-bg .img,.Uhead-bg img{width: 100%;display: flex;}
@@ -18,4 +20,4 @@
 .f-unav .item .unav-tab{height: 30px;width: 30px;margin: 0 auto 10px;line-height: 30px;}
 .f-unav .item .unav-tab .iconfont{font-size: 30px;color: #415161;}
 .f-unav .item .nav-txt{font-size: 15px;line-height: 20px;}
-.f-unav .item .mark{position: absolute;bottom: -12px;left: 0;width: 100%;}
+.f-unav .item .mark{position: absolute;bottom: -12px;left: 0;width: 100%}

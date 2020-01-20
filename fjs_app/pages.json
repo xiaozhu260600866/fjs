@@ -3,7 +3,15 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "福加斯大健康信息平台",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		{
+			"path": "pages/doctor/lists/index",
+			"style": {
+				"navigationBarTitleText": "医生",
 				"enablePullDownRefresh": true
 				
 			}
@@ -53,6 +61,14 @@
 			"path": "pages/hospital/info/index",
 			"style": {
 				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		{
+			"path": "pages/hospital/lists/index",
+			"style": {
+				"navigationBarTitleText": "医院",
 				"enablePullDownRefresh": true
 				
 			}
@@ -164,19 +180,37 @@
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {
-			"selectedColor": "#FE6A00",
-			"list": [{
-				"pagePath": "pages/index/index",
-				"text": "首页",
-				"iconPath": "static/A01.png",
-				"selectedIconPath": "static/A02.png"
-			},
-			{
-				"pagePath": "pages/user/index/index",
-				"text": "我的",
-				"iconPath": "static/C01.png",
-				"selectedIconPath": "static/C02.png"
-			}]
-		}
+		"selectedColor": "#0F8CFF",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"text": "首页",
+			"iconPath": "static/A01.png",
+			"selectedIconPath": "static/A02.png"
+		},
+		{
+			"pagePath": "pages/hospital/lists/index",
+			"text": "医院",
+			"iconPath": "static/B01.png",
+			"selectedIconPath": "static/B02.png"
+		},
+		{
+			"pagePath": "pages/doctor/lists/index",
+			"text": "医生",
+			"iconPath": "static/C01.png",
+			"selectedIconPath": "static/C02.png"
+		},
+		{
+			"pagePath": "pages/user/index/index",
+			"text": "我的",
+			"iconPath": "static/D01.png",
+			"selectedIconPath": "static/D02.png"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#0F8CFF",
+		"backgroundColor": "#0F8CFF"
+	}
 	
 }

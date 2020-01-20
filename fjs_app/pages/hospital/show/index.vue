@@ -1,7 +1,7 @@
 <template>
-	<view>
+	<view class="pb50">
 		<page :parentData="data" :formAction="formAction"></page>
-		<view v-if='data.show'>
+		<view class="pb10" v-if='data.show'>
 			<myswiper :lists="data.cover" purl="user"></myswiper>
 			<div class="shop-info bg-f mb10 p15">
 				<div class="top-item flex-between">
@@ -12,7 +12,7 @@
 					</div>
 					<div class="ricon flex pl10">
 						<button class="iitem plr8 text-center bg-f" hover-class="none" open-type="share">
-							<p class="iconfont icon-show-share fc-6 fs-18 lh-20 mb5"></p>
+							<p class="iconfont icon-share fc-6 fs-18 lh-20 mb5"></p>
 							<p class="name fs-12 fc-6 lh-18">分享</p>
 						</button>
 						
@@ -24,33 +24,32 @@
 						<p class="fs-13 fc-9 flex1" >{{data.user.userInfo.phone}}</p>
 					</div>
 					<div class="flex lh-20 pt15" @click="location(data.user.userInfo.location_x,data.user.userInfo.location_y,data.user.userInfo.address)">
-						<p class="iconfont icon-info-address fs-16 fc-9 mr5"></p>
+						<p class="iconfont icon-location fs-16 fc-9 mr5"></p>
 						<p class="fs-13 fc-9 flex1">{{data.user.userInfo.address}}</p>
 					</div>
 				</div>
 			</div>
 		
-			<div class="couponList">
-				<!-- 循环开始 -->
+			<!-- <div class="couponList">
 				<div class="coupon-box p10 mlr10 mtb15"  v-for="v in data.couponLists.data" @click="goto('/pages/business/coupon/show/index?id='+v.id)">
 					<div class="left-img mr15">
 						<image class="img" :src="v.logo ? getSiteName+ '/upload/images/coupon/300_'+v.logo : 'https://boss.doxinsoft.com/images/wap/nocoupon.png'" />
 					</div>
 					<div class="con-info pr20">
-						<p class="title fs-17 fw-bold">{{v.name}}</p><!-- 优惠券名称 -->
-						<p class="price fs-13 fc-orange Arial fs-14 lh-26 h-26">￥<span class="fs-20">{{v.amount}}</span></p><!-- 优惠券面额 -->
-						<p class="dis fs-13"><span class="tag">{{v.discount}}折</span></p><!-- 优惠券折扣 -->
+						<p class="title fs-17 fw-bold">{{v.name}}</p>
+						<p class="price fs-13 fc-orange Arial fs-14 lh-26 h-26">￥<span class="fs-20">{{v.amount}}</span></p>
+						<p class="dis fs-13"><span class="tag">{{v.discount}}折</span></p>
 					</div>
 					<div class="right-status" @click="showModal(v)">
 						<p class="fs-14 s-btn plr20 ptb5 fw-bold">领取</p>
 					</div>
 				</div>
 				
-			</div>
+			</div> -->
 			
 			<div class="bus-detail">
 				<div class="box-title mer-title p15 bg-f">
-					<p class="name fs-16 cur">商家介绍</p>
+					<p class="name fs-16 cur">中心介绍</p>
 				</div>
 				<div class="content bg-f fs-13 plr15 pb15">
 					<u-parse :content="data.detail.content" />
@@ -75,6 +74,10 @@
 			</view>
 		</view>
 		<!-- <Footer :url="formAction" :userId="data.user.id"></Footer> -->
+		<view class="b_fixed Footer flex">
+			<view class="nav dx-btn-blue">一键导航</view>
+			<view class="nav dx-btn-orange">一键拨号</view>
+		</view>
 	</view>
 </template>
 
