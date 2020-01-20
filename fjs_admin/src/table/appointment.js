@@ -1,0 +1,25 @@
+export default{
+    data:{
+        listsAction:'',
+        pageSize:6,
+        tableName:'appointments',
+        createAction:'/admin/appointment/create',
+        editAction:'/admin/appointment/edit',
+        //是否需要审核
+        auditAction:'/admin/appointment/change-status',
+        checkAll:true,
+        fields:[
+            {tableShow:true,prop:'name',label:'业主姓名',minWidth:"90",searchShow:true,formShow:true,formType:'text',datatype:'require'},
+            {tableShow:true,prop:'phone',label:'电话',minWidth:"120",searchShow:true,formShow:true,formType:'text',datatype:'require'},
+            {tableShow:true,prop:'city',label:'城市',minWidth:"120",searchShow:true,formShow:true,formType:'text',datatype:'require'},
+            {tableShow:true,prop:'village',label:'小区/地段',minWidth:"120",searchShow:true,formShow:true,formType:'text',datatype:'require'},
+            {tableShow:true,prop:'building',label:'栋座',minWidth:"80",searchShow:true,formShow:true,formType:'text',datatype:'require'},
+            {tableShow:true,prop:'house_no',label:'房屋号',minWidth:"80",searchShow:true,formShow:true,formType:'text',datatype:'require'},
+            {tableShow:true,prop:'intention',label:'意向',minWidth:"100",formShow:true,formType:'select',datatype:"require",datakey:"intention"},
+            {tableShow:true,prop:'remark',label:'备注',minWidth:"150",searchShow:true,formShow:true,formType:"textarea"},
+            {tableShow:true,prop:'getStatus',label:'审核状态',minWidth:"80"},
+            {tableShow:true,prop:'getPayStatus',label:'交费状态',minWidth:"80"},
+            {tableShow:true,prop:'created_at',label:'日期',minWidth:"80",append_table_created_at:true},
+        ]
+    }
+}

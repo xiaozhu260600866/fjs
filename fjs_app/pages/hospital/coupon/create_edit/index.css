@@ -1,0 +1,4 @@
+page{background: #fff;}
+
+.weui-cell_switch .weui-cell__bd{height:2em;min-height:2em;line-height:2em;}
+.weui-cell_switch .weui-cell__ft{display: flex;}

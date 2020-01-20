@@ -1,0 +1,5 @@
+.count-sec .weui-cells:before,.count-sec .weui-cells:after{border-color: #eee;}
+.count-sec .weui-cell:before{right: 15px;border-color: #eee;}
+.count-sec .img{width: 40px;height: 40px;border-radius: 50%;display: flex;}
+.count-sec .sec-con{padding: 0 15px 20px;}
+.count-sec .nav-group{display: flex;}

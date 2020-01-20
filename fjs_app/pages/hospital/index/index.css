@@ -1,0 +1,20 @@
+
+.Utop-quit{position: absolute;top: 8px;right: 10px;background: #f5f5f5;padding: 0 12px;height: 26px;line-height: 26px;color: #666;font-size: 12px;border-radius: 3px;}
+
+
+.dis-header {position: relative;background: #FE6A00;}
+.date-search{position: absolute;right: 10px;top: 5px;}
+.date-search .search-select .order-picker{height: 26px;line-height: 26px;color:#fff;}
+.date-search .search-select .iconfont{color:#fff;font-size: 12px;}
+.dis-header .item {font-size: 15px;color: #fff;}
+.dis-header .num {height: 50px;line-height: 50px;align-items: center;display: flex;justify-content: space-between;}
+.dis-header .num .n-price{color: #fff;font-size: 40px;font-family: Arial;}
+.dis-header .nav{width: 70px;border-radius: 6px;border: 1px solid #fff;color: #fff;height: 32px;line-height: 30px;text-align: center;background-color: transparent;}
+
+
+.stuff-sec {display: flex;flex-wrap: wrap;}
+.stuff-sec .sec-group {width: 50%;border-right: 1px #e5e5e5 solid;border-bottom: 1px #e5e5e5 solid;box-sizing: border-box;text-align: center;padding: 30px 0;}
+.stuff-sec .sec-group:nth-child(2n) {border-right: none;}
+.stuff-sec .sec-group image {width: 40px;height: 40px;margin-bottom: 15px;}
+.stuff-sec .sec-group .img01{width: 45px;height: 45px;margin-bottom: 10px;}
+.stuff-sec .sec-group .p {font-size: 16px;color: #353535;}

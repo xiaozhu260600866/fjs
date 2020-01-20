@@ -1,0 +1,21 @@
+/* 头部背景 */
+.Uhead-info{position: relative;}
+.Uhead-bg .img,.Uhead-bg img{width: 100%;display: flex;}
+.Utop-quit{position: absolute;top: 8px;right: 10px;background: #f5f5f5;padding: 0 12px;height: 26px;line-height: 26px;color: #666;font-size: 12px;border-radius: 3px;}
+
+
+/* 用户信息 */
+.Utop{width: 100%;}
+.Utop .Uinfo{display: flex;align-items: center;position: relative;height: 50px;}
+.Utop .Uinfo .header-img .img{width: 50px;height: 50px;border-radius: 50%;display: flex;}
+.Utop .Uinfo .info{flex: 1;overflow: hidden;}
+
+
+/* 块按钮 */
+.f-unav{width: 100%;display: flex;flex-wrap: wrap;}
+.f-unav .item{width: 33.3%;text-align: center;padding: 20px 0;color: #555;font-size: 12px;box-sizing: border-box;position: relative;border-right: 1px #eee solid;border-bottom: 1px #eee solid;}
+.f-unav .item:nth-child(3n){border-right: 0;}
+.f-unav .item .unav-tab{height: 30px;width: 30px;margin: 0 auto 10px;line-height: 30px;}
+.f-unav .item .unav-tab .iconfont{font-size: 30px;color: #415161;}
+.f-unav .item .nav-txt{font-size: 15px;line-height: 20px;}
+.f-unav .item .mark{position: absolute;bottom: -12px;left: 0;width: 100%;}

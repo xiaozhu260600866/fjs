@@ -1,0 +1,5 @@
+.company-feedback{margin: 15px 20px 15px 25px;border-left: 1px #eee solid;}
+.feedback-item{position: relative;padding: 15px 0 15px 25px;}
+.feedback-item:before{content: '';display: block;position: absolute;top: 22px;left: -5px;width: 10px;height: 10px;border-radius: 50%;background: #3485fb;}
+.feedback-item .content{font-size: 15px;line-height: 24px;margin-bottom: 5px;text-align: justify;}
+.feedback-item .date{font-size: 13px;line-height: 20px;color: #999;font-family: Arial;}

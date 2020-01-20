@@ -1,0 +1,6 @@
+.couponList .coupon-box{background-image: url('https://card.doxinsoft.com/images/wap/coupon-bg.png');background-color: transparent;display: flex;align-items: center;background-size: 100% 100%;background-repeat: no-repeat;text-align: left;-webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);}
+.couponList .left-img{width: 70px;}
+.couponList .left-img .img{width: 70px;height: 70px;display: flex;border-radius: 5px;}
+.couponList .con-info{flex: 1;overflow: hidden;}
+.couponList .con-info ._p{line-height: 20px;}
+.couponList .right-status .sub-btn-sm{border-radius: 24px;font-size: 11px;}

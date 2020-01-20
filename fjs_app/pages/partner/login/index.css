@@ -1,0 +1,9 @@
+.logo-img .img{width: 80px;height: 80px;border-radius: 6px;margin: 0 auto;}
+
+
+.login-info .licon{width: 20px;height: 20px;margin-right:15px;display: flex;}
+.login-info .weui-cell{padding: 15px;align-content: center;}
+.login-info .weui-input{font-size: 1rem;color: #999;}
+
+
+.dx-btn span{font-size: 16px;}

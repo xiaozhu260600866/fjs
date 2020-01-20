@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 906512 */
+  src: url('//at.alicdn.com/t/font_906512_t7dp7zrk6rg.eot');
+  src: url('//at.alicdn.com/t/font_906512_t7dp7zrk6rg.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_906512_t7dp7zrk6rg.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_906512_t7dp7zrk6rg.woff') format('woff'),
+  url('//at.alicdn.com/t/font_906512_t7dp7zrk6rg.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_906512_t7dp7zrk6rg.svg#iconfont') format('svg');
+}
+
+/* 后台图标 - 通用 */
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+.icon-left:before{content: "\e910";}/* 左 */
+.icon-right:before{content: "\e911";}/* 右 */
+.icon-top:before{content: "\e913";}/* 上 */
+.icon-bottom:before{content: "\e912";}/* 下 */
+.icon-off:before{content: "\ea03";}/* 关闭 */
+
+
+/* 融e推 */
+.icon-e-home:before{content: "\e7e3";}/* 首页 */
+.icon-e-applet:before{content: "\e601";}/* 小程序 */
+.icon-e-shop:before{content: "\e600";}/* 商城 */
+.icon-e-client:before{content: "\e7e4";}/* 客户 */
+.icon-e-website:before{content: "\e7e5";}/* 官网 */
+.icon-e-off:before{content: "\e97b";}/* 关闭 */
+.icon-e-off-o:before{content: "\e97a";}/* 关闭-空 */
+.icon-e-authorize:before{content: "\e639";}/* 授权 */
+.icon-e-config:before{content: "\e63b";}/* 设置 */
+.icon-e-distribution:before{content: "\e6fd";}/* 分销 */
+.icon-e-integral:before{content: "\e97c";}/* 积分 */
+.icon-e-form:before{content: "\e668";}/* 表单 */
+
+
+.icon-sing-songer:before{content: "\e604";}/* 歌手 */
+.icon-sing-song:before{content: "\e66a";}/* 歌曲 */
+
+
+.icon-:before{content: "\e";}/*  */

@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 1179141 */
+  src: url('//at.alicdn.com/t/font_1179141_sdsw7nmibb.eot');
+  src: url('//at.alicdn.com/t/font_1179141_sdsw7nmibb.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1179141_sdsw7nmibb.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1179141_sdsw7nmibb.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1179141_sdsw7nmibb.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1179141_sdsw7nmibb.svg#iconfont') format('svg');
+}
+
+/* 3314024140@qq.com  dx3229010  1名片*/
+
+.iconfont {
+	font-family: "iconfont" !important;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-right:before{content: "\e600";}/* 右 */
+.icon-location-o:before{content: "\e628";}/* 定位 */
+.icon-service-o:before{content: "\e646";}/* 客服 */
+.icon-cart-del:before{content: "\e63f";}/* 删除 */
+
+
+.icon-pay-success:before{content: "\e676";color: #09BB07;}/* 支付成功 */
+.icon-pay-fail:before{content: "\e988";color: #E84335;}/* 支付失败 */
+
+
+
+.icon-:before{content: "\e";}/*  */

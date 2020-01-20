@@ -1,0 +1,77 @@
+
+page{padding-bottom: 0!important;}
+._section{overflow-x: hidden;}
+.box{overflow-x: hidden;}
+
+/* banner轮播 */
+#banner{position: relative;}
+#banner ._img,#banner image{width: 100%!important;border-radius: 6px;}
+
+
+/* nav导航 */
+.fun_button {padding: 10px 0 0px;background: white;}
+.fun_button_con .a {width: 20%;display: block;float: left;margin: 0 auto 10px;text-align: center;text-align: -webkit-center;}
+.fun_button_con .a .button-img {text-align: center;text-align: -webkit-center;margin-bottom: 5px;}
+.fun_button_con .a .button-img image{ width: 40px;height: 40px;display: flex;border-radius: 50%;justify-content: center;}
+
+
+/* 类别 */
+.type_list{position: fixed;top: 50px;left: 5px;width: 120px;z-index: 3;max-height: 60vh;}
+.type_list .type_item{padding: 10px 0;position: relative;-moz-box-shadow:0px -2px 5px #dddddd; -webkit-box-shadow:0px -2px 5px #dddddd; box-shadow:0px -2px 5px #dddddd;height: 60vh;}
+.type_list .type_item:before{content: '';display: block;position: absolute;top: -10px;left: 10px;width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:10px solid #fff;}
+.type_list .type-box{height: 100%;overflow-y: scroll;}
+.type_list .Atype{text-align: center;font-size: 14px;color: #999;line-height: 34px;}
+.type_list .Atype.cur{color: #1F89E8;}
+
+
+/* 块标题 */
+.box-title{display: flex;align-items: center;}
+.box-title .name{position: relative;margin-right: 30px;color: #333;}
+.box-title .cur{font-weight: 700;font-size: 18px;}
+.box-title .cur:before{content: "";display: block;position: absolute;left: 50%;bottom: -6px;height: 3px;width: 26px;margin-left: -13px;background: #0052FF;border-radius: 1px;}
+
+
+/* 最新入驻-标题 */
+.mer-title{display: flex;justify-content: space-between;}
+.mer-title .cur:before{display: none;}
+
+
+/* 最新入驻 */
+.merchantLists{display: flex;white-space: nowrap;}
+.merchant .item_list{display: inline-block;width: 150px;margin-left: 10px;}
+.merchant .sc-item{padding: 0;}
+.merchant .s-img .img{width: 150px;height: 100px;margin: 0;padding: 0;border-radius: 4px 4px 0 0;display: flex;}
+.merchant .s-name{line-height: 20px;}
+
+
+/* 分类-标题 */
+.TopNav {white-space: nowrap; display: flex;background: #fff;padding: 0 12px;}
+.TopNav .liNav {text-align: center;display: inline-block;position: relative;height: 46px;line-height: 46px;padding: 0 12px;}
+.TopNav .liNav .ANav {font-size: 15px;color: #666;}
+.TopNav .cur:before {content: "";display: block;position: absolute;bottom: 0;left: 50%;margin-left: -8px;height: 4px;width: 16px;background: #387ef8;border-radius: 4px;}
+.TopNav .cur .ANav{font-weight: bold;color: #000;}
+
+
+/* 查看更多 */
+.hasMore{background: #fff;}
+.hasMore .weui-loadmore{padding:1.5em 0;margin: 0;width: 100%;}
+
+
+/* 优惠券 */
+/* .couponList .coupon-box{background-image: url('https://card.doxinsoft.com/images/wap/coupon-bg.png');background-color: transparent;display: flex;align-items: center;background-size: 100% 100%;background-repeat: no-repeat;text-align: left;-webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);}
+.couponList .left-img{width: 70px;}
+.couponList .left-img .img{width: 70px;height: 70px;display: flex;border-radius: 5px;}
+.couponList .con-info{flex: 1;overflow: hidden;}
+.couponList .con-info .title{line-height: 20px;}
+.couponList .con-info .tag{background: #FFEBD7;color: #FF8008;height: 18px;line-height: 18px;padding: 0 10px;display: inline-block;}
+.couponList .right-status .s-btn{border-radius: 24px;background: #FFEBD7;color: #FF8008;font-family: '黑体';} */
+
+
+.couponList .item_box {position: relative;display: flex;align-items: center;}
+.couponList .limg .img {border-radius: 5px;width: 84px;height: 84px;display: flex;}
+.couponList .tcon{height: 58px;}
+.couponList .dis {width: 58px;text-align: center;}
+.couponList .dis .price {height: 32px;line-height: 32px;color: #FF8125;background-image: -webkit-linear-gradient(bottom, red, #fd8403, yellow);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
+.couponList .bcon{align-content: center;align-items: center;height: 24px;}
+.couponList .type {background: rgba(255, 129, 37, 0.2);color: #FF8125;width: 46px;height: 18px;line-height: 18px;text-align: center;margin: 3px 6px;}
+.couponList .s-btn{border-radius: 24px;background: #FF8008;color: #FFF;font-family: '黑体';height: 24px;line-height: 24px;}
