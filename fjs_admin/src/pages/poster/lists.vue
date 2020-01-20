@@ -18,6 +18,7 @@
         <el-col :span="24">
             <el-tabs v-model="type" type="card" @tab-click="clickStatus">
                 <el-tab-pane label="首页幻灯片" :name="''+1"></el-tab-pane>
+                <el-tab-pane label="导航" :name="''+3"></el-tab-pane>
             </el-tabs>
         </el-col>
 		<el-table ref="multipleTable" :data="data.lists" border tooltip-effect="dark" style="width: 100%" @selection-change="selsChange" v-loading="data.listLoading">
