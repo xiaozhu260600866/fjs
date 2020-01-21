@@ -3,7 +3,7 @@
 		<page :parentData="data" :formAction="formAction"></page>
 		<view v-if="data.show" class="couponList bg-f">
 			<!-- 循环开始 -->
-			<view class="coupon-box"  v-for="v in data.couponLists.data">
+			<view class="coupon-box"  v-for="v in data.lists.data">
 				<myform :ruleform="{}" :append="true" :vaildate="{}" :data="item" @callBack="goto('/pages/coupon/show/index?id='+v.id,1)">
 					<view slot="content" class="list_item plr15">
 						<view class="item_box ptb15 bd-be">
@@ -34,7 +34,7 @@
 					</view>
 				</myform>
 			</view>
-			<hasMore :data="data" message="暂无优惠券" source="iconNo"></hasMore>
+			<hasMore :parentData="data" message="暂无优惠券" source="iconNo"></hasMore>
 		</view>
 	</view>
 </template>
@@ -44,7 +44,7 @@
 	export default {
 		data() {
 			return {
-				formAction: '/wapindex',
+				formAction: '/coupon-lists.html',
 				mpType: 'page', //用来分清父和子组件
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),

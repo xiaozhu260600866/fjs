@@ -15,9 +15,7 @@
 						</view>
 						<view class="location flex flex-wrap text-center">
 							<p class="name w-b100 fs-12 lh-18 h-18 fc-9">距离</p>
-							<p class="num w-b100 fs-12 fc-9 lh-18 h-18" v-if="key == 0">1.6km</p>
-							<p class="num w-b100 fs-12 fc-9 lh-18 h-18" v-else-if="key == 1">2.6km</p>
-							<p class="num w-b100 fs-12 fc-9 lh-18 h-18" v-else>2.7km</p>
+							<filterKim v-model="v.location"></filterKim>
 						</view>
 					</view>
 				</view>
@@ -26,8 +24,12 @@
 	</view>
 </template>
 <script>
+	import filterKim from "@/components/filterKm";
 	export default{
 		props:["data"],
+		components:{
+			filterKim
+		},
 		data() {
 			return {
 				getSiteName: this.getSiteName(),

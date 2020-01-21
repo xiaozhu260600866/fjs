@@ -60,6 +60,14 @@ export default {
         },
         {
             "name": "",
+            "prop": "city",
+            "minWidth": "180",
+            "width": "",
+            "append_table_": 0,
+            "label": "城市"
+        },
+        {
+            "name": "",
             "prop": "phone",
             "minWidth": "180",
             "width": "",
@@ -109,6 +117,15 @@ export default {
         },
         {
             "name": "",
+            "prop": "city",
+            "datatype": "require",
+            "type": "select",
+            "datakey":'city',
+            "append_form_": 0,
+            "label": "城市"
+        },
+        {
+            "name": "",
             "prop": "address",
             "datatype": "require",
             "type": "location",
@@ -123,7 +140,7 @@ export default {
             "append_form_": 0,
             "label": "详情"
         },
-        
+
         {
             "name": "",
             "prop": "mien_pic",

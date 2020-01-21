@@ -41,6 +41,7 @@
 .icon-myAcclunt:before{content: "\e640";}/* 余额 */
 .icon-share:before{content: "\e654";}/* 分享达人 */
 .icon-search:before{content: "\e615";}/* 搜索 */
+.icon-home:before{content: "\ef36";}/* 首页 */
 
 
 .icon-intergral-record:before{content: "\e69a";}/* 兑换记录 */
@@ -55,6 +56,8 @@
 .icon-user-tel:before{content: "\e608";color: #E84335;}/* 电话 */
 .icon-user-store:before{content: "\e61a";color: #2AC17E;}/* 商家中心 */
 
+
+.icon-float-share-o:before{content: "\e696";}/* 浮动分享-小 */
 
 
 .icon-:before{content: "\e";}/*  */

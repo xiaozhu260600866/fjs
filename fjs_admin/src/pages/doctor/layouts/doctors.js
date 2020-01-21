@@ -53,6 +53,14 @@ export default {
         },
         {
             "name": "",
+            "prop": "city",
+            "minWidth": "180",
+            "width": "",
+            "append_table_": 0,
+            "label": "城市"
+        },
+        {
+            "name": "",
             "prop": "address",
             "minWidth": "180",
             "width": "",
@@ -85,6 +93,15 @@ export default {
             "label": "地址"
         },
         {
+            "name": "",
+            "prop": "city",
+            "datatype": "require",
+            "type": "select",
+            "datakey":'city',
+            "append_form_": 0,
+            "label": "城市"
+        },
+        {
             "prop": "logo",
             "datatype": "array",
             "type": "upload",
@@ -93,6 +110,7 @@ export default {
             "allowUpLoadNum": "1",
             "upurl": "coupon"
         },
+
         {
             "name": "",
             "prop": "content",
@@ -101,7 +119,7 @@ export default {
             "append_form_": 0,
             "label": "详情"
         },
-        
+
         ]
     }
 }

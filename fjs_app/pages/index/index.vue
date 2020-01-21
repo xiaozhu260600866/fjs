@@ -84,20 +84,22 @@
 		onShareAppMessage() {
 			return this.shareSource(this, '商城');
 		},
-		onLoad(options) {
-			this.ajax();
+		onShow() {
 			if (wx.getStorageSync('city')) {
+				console.log(11);
 				this.otherData.city = wx.getStorageSync('city');
 			}else{
 				wx.setStorageSync('city', "江门市");
 			}
+			this.getMyAddress(this).then(msg=>{
+				this.ajax();
+			});;
 		},
-		onLoad() {
-			this.ajax();
+		onLoad(options) {
+			
+			
 		},
-		onShow() {
-			this.onShow(this);
-		},
+		
 		methods: {
 			ajax() {
 				this.getAjax(this).then(msg => {

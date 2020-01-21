@@ -65,7 +65,24 @@ uni-page-body{height: 100%;}
 
 
 /* 按钮组:start */
+	/* 脚部按钮 */
+	 #footer-btn{position: fixed;bottom: 0;left: 0;height: 56px;display: flex;box-shadow: none;padding: 5px 20rpx;width: 100%;box-sizing: border-box;background: #fff;z-index: 10;}
+	 #footer-btn myform{width: 100%;}
+	 #footer-btn .f-dx-btn{line-height: 46px!important;height: 46px!important;font-size: 17px!important;}
+	 /* box-shadow: 0 0 20rpx 0 hsla(0, 6%, 58%, .2);-webkit-box-shadow: 0 0 20rpx 0 hsla(0, 6%, 58%, .2);-moz-box-shadow: 0 0 20rpx 0 hsla(0, 6%, 58%, .2); */ 
+	 #footer-btn .f-btn-blue{height: 46px;line-height: 46px;width: 100%;text-align: center;border-radius: 6px;color:  #fff;font-size: 17px;background: #387ef8;}
+	 #footer-btn .f-btn-orange{height: 46px;line-height: 46px;width: 100%;text-align: center;border-radius: 6px;color:  #fff;font-size: 17px;
+	  background: -webkit-linear-gradient(left, #ff721f, #fc8a3a);
+	  background: -o-linear-gradient(left, #ff721f, #fc8a3a);
+	  background: -moz-linear-gradient(left, #ff721f, #fc8a3a);
+	  background: linear-gradient(left, #ff721f, #fc8a3a);
+	 }
+	 #footer-btn .f-btn-green{height: 46px;line-height: 46px;width: 100%;text-align: center;border-radius: 40px;color: #fff;font-size: 17px;background: #13cc0c;}
 	
+	 #footer-btn .f-btn-default{height: 46px;line-height: 46px;width: 100%;text-align: center;border-radius: 6px;color: #999;font-size: 17px;background: #fff;border: 1px #aaa solid;}
+	 #footer-btn .nav-btn{background: #fff;padding: 0;width: 70px;text-align: center;}
+	 #footer-btn .nav-btn .iconfont{height: 28px;line-height: 30px;font-size: 20px;}
+	 #footer-btn .nav-btn .name{font-size: 11px;line-height: 16px;color: #666;}
 
 /* 按钮组:ending */
 

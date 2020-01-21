@@ -28,25 +28,10 @@
 
             </el-tab-pane>
             <!-- 网站配置结束 -->
-         <!--   <el-tab-pane label="科目" name="seventh">
+            <el-tab-pane label="城市" name="seventh">
                 <my-category :lists="data.category" actionPrefix="/admin/system" actionUrl="/admin/system" type="1"
                     :canupload="false" :hasSon="false"></my-category>
-            </el-tab-pane> -->
-            <el-tab-pane label="支付" name="seventh">
-                <el-form-item label="支付费用" prop="price" :rules="[{ required: true, message: '内容不能为空'},]">
-                    <el-input v-model="ruleForm.price" class="CinputWidth"></el-input>
-                </el-form-item>
-                <el-form-item label="是否允许置顶" prop="top" :rules="[{ required: true, message: '内容不能为空'},]">
-                    <el-switch v-model="ruleForm.top" on-text="" off-text="" active-value="1" inactive-value="0"></el-switch>
-                </el-form-item>
-
-                 <el-form-item label="置顶费" prop="top_price" :rules="[{ required: true, message: '内容不能为空'},]">
-                     <el-input v-model="ruleForm.top_price" class="CinputWidth"></el-input>
-                 </el-form-item>
-                  <el-form-item label="置顶增幅" prop="top_price_between" :rules="[{ required: true, message: '内容不能为空'},]">
-                      <el-input v-model="ruleForm.top_price_between" class="CinputWidth"></el-input>
-                  </el-form-item>
-            </el-tab-pane>
+            </el-tab-pane> 
         </el-tabs>
 
         <el-form-item>
