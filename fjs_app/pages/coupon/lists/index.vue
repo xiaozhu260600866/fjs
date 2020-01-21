@@ -1,25 +1,41 @@
 <template>
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
-		<div v-if="data.show">
-			<div class="couponList">
-				<!-- 循环开始 -->
-				<button hover-class="none" class="coupon-box p10 mlr10 mtb15" @click="goto('/pages/user/coupon/details/main?id='+v.id)" v-for="v in data.lists.data">
-					<div class="left-img mr15">
-						<img class="img" :src="getSiteName+ '/upload/images/coupon/'+v.getCoupon.logo" />
-					</div>
-					<div class="con-info pr30">
-						<p class="fs-14 title">{{ v.getCoupon.name }}1</p><!-- 优惠券名称 -->
-						<p class="fs-12 fc-9 desc">{{ v.getCoupon.getUser.userInfo.company_name }}</p><!-- 商家名称 -->
-						<p class="fs-13 fc-orange Arial price">￥<span class="fs-16">{{ v.getCoupon.amount }}</span></p>
-					</div>
-					<div class="right-status">
-						<p class="fs-14 fc-orange dx-btn-xs dx-btn-orange-o plr10">{{ v.getStatus }}</p>
-					</div>
-				</button>
-			</div>
+		<view v-if="data.show" class="couponList bg-f">
+			<!-- 循环开始 -->
+			<view class="coupon-box"  v-for="v in data.couponLists.data">
+				<myform :ruleform="{}" :append="true" :vaildate="{}" :data="item" @callBack="goto('/pages/coupon/show/index?id='+v.id,1)">
+					<view slot="content" class="list_item plr15">
+						<view class="item_box ptb15 bd-be">
+							<view class="limg pr15">
+								<image class="img" mode="aspectFill"
+								 :src="v.logo ? getSiteName+ '/upload/images/coupon/300_'+v.logo : 'https://boss.doxinsoft.com/images/wap/nocoupon.png'" />
+							</view>
+							<view class="rinfo flex1 flex-between">
+								<view class="lcon flex1 flex flex-wrap pr15">
+									<view class="info w-b100 mb10">
+										<p class="ctitle fs-15 lh-22">{{v.name}}</p>
+										<p class="ctitle fs-12 fc-6 lh-20">{{v.hospital_name}}</p>
+									</view>
+									<view class="bcon w-b100">
+										<p class="fs-12 lh-16 fc-6">使用须知：{{v.need_remark}}</p>
+									</view>
+								</view>
+								<view class="rdis flex flex-wrap">
+									<p class="fs-12 fw-bold price w-b100" v-if="v.discount"><span class="fs-30">{{v.discount}}</span>折</p>
+									<p class="fs-14 s-btn plr15 w-b100" :style="!v.discount ? 'margin-top: 32px': ''">领取</p>
+									<view class="btip w-b100">
+										<p class="fs-12 fw-bold type" v-if="v.discount">折扣券</p>
+										<p class="fs-12 fw-bold type" v-if="!v.discount">代金券</p>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</myform>
+			</view>
 			<hasMore :data="data" message="暂无优惠券" source="iconNo"></hasMore>
-		</div>
+		</view>
 	</view>
 </template>
 
@@ -28,7 +44,7 @@
 	export default {
 		data() {
 			return {
-				formAction: '/user/coupon/order/lists',
+				formAction: '/wapindex',
 				mpType: 'page', //用来分清父和子组件
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),

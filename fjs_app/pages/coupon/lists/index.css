@@ -1,6 +1,7 @@
-.couponList .coupon-box{background-image: url('https://card.doxinsoft.com/images/wap/coupon-bg.png');background-color: transparent;display: flex;align-items: center;background-size: 100% 100%;background-repeat: no-repeat;text-align: left;-webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);}
-.couponList .left-img{width: 70px;}
-.couponList .left-img .img{width: 70px;height: 70px;display: flex;border-radius: 5px;}
-.couponList .con-info{flex: 1;overflow: hidden;}
-.couponList .con-info ._p{line-height: 20px;}
-.couponList .right-status .sub-btn-sm{border-radius: 24px;font-size: 11px;}
+.couponList .item_box {position: relative;display: flex;align-items: center;}
+.couponList .limg .img {border-radius: 5px;width: 84px;height: 84px;display: flex;}
+.couponList .lcon{min-height: 84px;align-content: space-between;}
+.couponList .rdis{width: 58px;text-align: center;align-content: center;}
+.couponList .rdis .price {height: 32px;line-height: 32px;color: #FF8125;background-image: -webkit-linear-gradient(bottom, red, #fd8403, yellow);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
+.couponList .type {background: rgba(255, 129, 37, 0.2);color: #FF8125;width: 46px;height: 18px;line-height: 18px;text-align: center;margin: 5px 6px 0;}
+.couponList .s-btn{border-radius: 24px;background: #FF8008;color: #FFF;font-family: '黑体';height: 24px;line-height: 24px;}

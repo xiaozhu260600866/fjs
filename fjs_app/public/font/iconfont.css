@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'iconfont';  /* project id 594334 */
-  src: url('//at.alicdn.com/t/font_594334_beqr5825b8g.eot');
-  src: url('//at.alicdn.com/t/font_594334_beqr5825b8g.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_594334_beqr5825b8g.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_594334_beqr5825b8g.woff') format('woff'),
-  url('//at.alicdn.com/t/font_594334_beqr5825b8g.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_594334_beqr5825b8g.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_594334_0juwc2aljnvc.eot');
+  src: url('//at.alicdn.com/t/font_594334_0juwc2aljnvc.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_594334_0juwc2aljnvc.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_594334_0juwc2aljnvc.woff') format('woff'),
+  url('//at.alicdn.com/t/font_594334_0juwc2aljnvc.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_594334_0juwc2aljnvc.svg#iconfont') format('svg');
 }
 
 /* 3314024140@qq.com  dx3229010  融E修 */
@@ -49,9 +49,10 @@
 .icon-pay-yes:before{content: "\e989";color: #09BB07;}/* 支付成功 */
 
 
-.icon-user-coupon-e:before{content: "\e976";color: #00beaf;}/* 优惠券 */
-.icon-user-about:before{content: "\e74f";color: #4A81C3;}/* 优惠券 */
-.icon-user-tel:before{content: "\e608";color: #2AC17E;}/* 优惠券 */
+.icon-user-coupon-e:before{content: "\e976";color: #FE9679;}/* 优惠券 */
+.icon-user-about:before{content: "\e74f";color: #4A81C3;}/* 关于我们 */
+.icon-user-tel:before{content: "\e608";color: #E84335;}/* 电话 */
+.icon-user-store:before{content: "\e61a";color: #2AC17E;}/* 商家中心 */
 
 
 

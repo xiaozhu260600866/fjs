@@ -10,7 +10,7 @@
 						</view>
 						<view class="fc-white info">
 							<p class="fs-20">{{ data.user.userInfo.name }}</p>
-							<p class="Arial">{{ data.user.userInfo.phone }}</p>
+							<p class="Arial fs-16">{{ data.user.userInfo.phone }}</p>
 						</view>
 					</view>
 				</view>
@@ -19,21 +19,27 @@
 			<view class="f-unav">
 				<view class="item" @click="goto('/pages/coupon/order_lists/index?status=12',1)">
 					<p class="unav-tab">
-						<span class="iconfont icon-user-coupon-e fc-orange"></span>
+						<span class="iconfont icon-user-coupon-e"></span>
 					</p>
 					<p class="nav-txt">我的优惠券</p>
 				</view>
 				<view class="item" @click="checkHospital">
 					<p class="unav-tab">
-						<span class="iconfont icon-user-about fc-orange"></span>
+						<span class="iconfont icon-user-about"></span>
 					</p>
 					<p class="nav-txt">关于我们</p>
 				</view>
 				<view class="item">
 					<p class="unav-tab">
-						<span class="iconfont icon-user-tel fc-orange"></span>
+						<span class="iconfont icon-user-tel"></span>
 					</p>
 					<p class="nav-txt">一键电话</p>
+				</view>
+				<view class="item">
+					<p class="unav-tab">
+						<span class="iconfont icon-user-store"></span>
+					</p>
+					<p class="nav-txt">商家中心</p>
 				</view>
 			</view>
 		</view>

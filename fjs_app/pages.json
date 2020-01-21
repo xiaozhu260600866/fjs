@@ -25,9 +25,25 @@
 			}
 		},
 		{
+			"path": "pages/coupon/lists/index",
+			"style": {
+				"navigationBarTitleText": "优惠券",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		{
 			"path": "pages/coupon/order_lists/index",
 			"style": {
 				"navigationBarTitleText": "我的优惠券",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		{
+			"path": "pages/coupon/show/index",
+			"style": {
+				"navigationBarTitleText": "优惠券详情",
 				"enablePullDownRefresh": true
 				
 			}
@@ -170,8 +186,6 @@
 				
 			}
 		}
-		
-		
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

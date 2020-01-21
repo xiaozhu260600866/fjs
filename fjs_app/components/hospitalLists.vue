@@ -1,27 +1,29 @@
 <template>
-	<view class="hospital_item" v-for="v in data.lists.data">
-		<myform :ruleform="{}" :append="true" :vaildate="{}" :data="item" @callBack="goto('/pages/hospital/show/index?id='+v.id,1)">
-			<view slot="content" class="item_box flex p15 bd-be">
-				<view class="limg pr10">
-					<image class="img" mode="aspectFill" :src="v.userInfo.company_logo ? getSiteName+ '/upload/images/user/300_'+v.userInfo.company_logo :
-					 'https://boss.doxinsoft.com/images/nopic.jpg'" />
-				</view>
-				<view class="rinfo flex1 flex">
-					<view class="info flex1 pr10 flex-wrap">
-						<p class="ctitle w-b100 fs-16 lh-22 pb15">{{v.userInfo.company_name}}</p>
-						<view class="w-b100">
-							<p class="clist fs-12 fc-9 lh-20">电话：{{ v.userInfo.phone }}</p>
-							<p class="clist fs-12 fc-9 lh-20">地址：{{ v.userInfo.address }}</p>
+	<view class="hospital_item">
+		<view v-for="(v,key) in data.lists.data">
+			<myform :ruleform="{}" :append="true" :vaildate="{}" :data="item" @callBack="goto('/pages/hospital/show/index?id='+v.id,1)">
+				<view slot="content" class="item_box flex p15 bd-be">
+					<view class="limg pr10">
+						<image class="img" mode="aspectFill" :src="v.userInfo.company_logo ? getSiteName+ '/upload/images/user/300_'+v.userInfo.company_logo :
+						 'https://boss.doxinsoft.com/images/nopic.jpg'" />
+					</view>
+					<view class="rinfo flex1 flex">
+						<view class="info flex1 pr10 flex-wrap">
+							<p class="ctitle w-b100 fs-16 lh-22 pb15">{{v.userInfo.company_name}}</p>
+							<view class="w-b100">
+								<p class="clist fs-12 fc-9 lh-20">电话：{{ v.userInfo.phone }}</p>
+								<p class="clist fs-12 fc-9 lh-20">地址：{{ v.userInfo.address }}</p>
+							</view>
+							<!-- <p class="ccon fs-12 fc-6 lh-18 wrap2">{{v.content}}</p> -->
 						</view>
-						<!-- <p class="ccon fs-12 fc-6 lh-18 wrap2">{{v.content}}</p> -->
-					</view>
-					<view class="location flex flex-wrap text-center">
-						<p class="name w-b100 fs-12 lh-18 h-18 fc-9">距离</p>
-						<p class="num w-b100 fs-12 fc-9 lh-18 h-18">5.7km</p>
+						<view class="location flex flex-wrap text-center">
+							<p class="name w-b100 fs-12 lh-18 h-18 fc-9">距离</p>
+							<p class="num w-b100 fs-12 fc-9 lh-18 h-18">5.7km</p>
+						</view>
 					</view>
 				</view>
-			</view>
-		</myform>
+			</myform>
+		</view>
 	</view>
 </template>
 <script>
