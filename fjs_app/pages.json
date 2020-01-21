@@ -185,6 +185,13 @@
 				"enablePullDownRefresh": true
 				
 			}
+		},
+		{
+			"path": "pages/search/searchCity/index",
+			"style": {
+				"navigationBarTitleText": "搜索",
+				"enablePullDownRefresh": true
+			}
 		}
 	],
 	"globalStyle": {

@@ -40,6 +40,7 @@
 .icon-user:before{content: "\e616";}/* 用户 */
 .icon-myAcclunt:before{content: "\e640";}/* 余额 */
 .icon-share:before{content: "\e654";}/* 分享达人 */
+.icon-search:before{content: "\e615";}/* 搜索 */
 
 
 .icon-intergral-record:before{content: "\e69a";}/* 兑换记录 */

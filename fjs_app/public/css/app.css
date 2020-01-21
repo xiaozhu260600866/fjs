@@ -19,6 +19,15 @@ uni-page-body{height: 100%;}
 .share-overlay{ position:fixed; top:0px; right:0; bottom:0; left:0; z-index:20; width:100%; height:800px; background:#000; filter:alpha(opacity=60); -moz-opacity:0.6; opacity:0.6;}
 
 
+/* 顶部搜索框 */
+.searchTop {width: 100%;height: 80rpx;line-height: 80rpx;font-size: 21px;border-bottom: 1px solid rgba(223, 223, 221,0);display: flex;z-index: 2;}
+.searchTop .select-city{padding: 0 20rpx;width: 200rpx;}
+.searchTop .select-city .iconfont{font-size: 24rpx!important;}
+.searchTop .search-input{margin: 6rpx 10rpx;position: relative;background: rgba(255,255,255,0.7);border-radius: 20px;border: 1px #ddd solid;width: 100%;line-height: 68rpx;}
+.searchTop .search-input .a{display: flex;align-items: center;height: 64rpx;padding-left: 20rpx;line-height: 64rpx;}
+.searchTop .search-input .span{display: flex;line-height: 64rpx;padding-left: 15px;}
+
+
 /* weui自定义样式 */
 .weui-cell .weui-label,
 .weui-cell .weui-input,

@@ -2,6 +2,17 @@
 	<view>
 		<page :parentData="data" :formAction="formAction" ref="page"></page>
 		<view v-if="data.show">
+			<div class="search-top p10 bg-f">
+				<div class="search-box bg-e flex-middle bg-f lh-34 bdr6">
+					<div class="select-city fs-14 fc-6 plr15" @click="goto('/pages/search/searchCity/index',1)">
+						{{ otherData.city }}<span class="iconfont icon-bottom fs12"></span>
+					</div>
+					<div class="search-input w-b100 flex1" @click="goto('/pages/search/product/index',1)">
+						<span class="iconfont icon-search fs-16 fc-9"></span>
+						<span class="fs-14 fc-9 pl5">请输入搜索内容</span>
+					</div>
+				</div>
+			</div>
 			<view class="banner">
 				<myswiper :lists="data.silders.data"></myswiper>
 			</view>
@@ -60,6 +71,7 @@
 				mpType: 'page', //用来分清父和子组件
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),
+				otherData: { showMenu: 0, city: '江门市',ANavType: 0 }
 			}
 		},
 		onReachBottom() {
@@ -74,6 +86,11 @@
 		},
 		onLoad(options) {
 			this.ajax();
+			if (wx.getStorageSync('city')) {
+				this.otherData.city = wx.getStorageSync('city');
+			}else{
+				wx.setStorageSync('city', "江门市");
+			}
 		},
 		onLoad() {
 			this.ajax();

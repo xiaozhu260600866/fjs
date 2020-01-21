@@ -1,0 +1,29 @@
+page{padding-bottom: 60px!important;}
+
+.banner{position: relative;}
+.banner .img{width: 100%;display: flex;}
+
+
+.other{display: flex;}
+.other ._p{font-size: 14px;color: #999;}
+.other .date{width: 50%;}
+.other .count-num{width: 25%;text-align: right;}
+
+
+.coupon-show .weui-cells:after{border: 0;}
+.coupon-show .detail-shop .weui-cell:before{border-color: #eee!important;}
+.coupon-show .detail-shop .weui-cell{padding: 10px 15px!important;}
+.coupon-show .detail-shop ._button{padding: 0;}
+.coupon-show .detail-shop .coupon-price{display: flex;align-items: flex-end;line-height: 20px;height: 30px;}
+.coupon-show .detail-shop .num-group{align-items: flex-end;}
+
+
+.shop-contact{position: relative;padding: 10px 15px;}
+.shop-contact:before{top: 0;border-top: 1px solid #d9d9d9;-webkit-transform-origin: 0 0;transform-origin: 0 0;-webkit-transform: scaleY(.5);transform: scaleY(.5);content: " ";position: absolute;left: 15px;right: 0;height: 1px;color: #d9d9d9;}
+.shop-contact .address{padding-right: 50px;overflow: hidden;white-space: normal;text-overflow: ellipsis;font-size: 15px;color: inherit;display: block;}
+.shop-contact .tel{position: absolute;right: 0;top: 10px;border-left: 1px solid #d9d9d9;display: block;width: 60px;text-align: center;color: #000;height: 20px;line-height: 20px;}
+.shop-contact .tel ._span{font-size: 18px;}
+
+.con-title ._span{border-bottom: 3px #ff4400 solid;padding: 8px 15px;}
+
+button.weui-cell,button.address{text-align: left;}
