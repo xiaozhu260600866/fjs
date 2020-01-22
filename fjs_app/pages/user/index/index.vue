@@ -23,7 +23,7 @@
 					</p>
 					<p class="nav-txt">我的优惠券</p>
 				</view>
-				<view class="item" @click="checkHospital">
+				<view class="item" >
 					<p class="unav-tab">
 						<span class="iconfont icon-user-about"></span>
 					</p>
@@ -35,11 +35,11 @@
 					</p>
 					<p class="nav-txt">一键电话</p>
 				</view>
-				<view class="item">
+				<view class="item" @click="checkHospital">
 					<p class="unav-tab">
 						<span class="iconfont icon-user-store"></span>
 					</p>
-					<p class="nav-txt">商家中心</p>
+					<p class="nav-txt">医院中心</p>
 				</view>
 			</view>
 		</view>
