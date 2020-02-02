@@ -22,6 +22,7 @@
 					<div class="flex lh-20 pt15" @click="phone(data.user.userInfo.phone)">
 						<p class="iconfont icon-phone fs-14 fc-9 mr5"></p>
 						<p class="fs-13 fc-9 flex1" >{{data.user.userInfo.phone}}</p>
+						<p class="fs-13 fc-9 flex1" v-if="data.user.userInfo.line_phone">{{data.user.userInfo.line_phone}}</p>
 					</div>
 					<div class="flex lh-20 pt15" @click="location(data.user.userInfo.location_x,data.user.userInfo.location_y,data.user.userInfo.address)">
 						<p class="iconfont icon-location fs-16 fc-9 mr5"></p>
@@ -75,8 +76,8 @@
 		</view>
 		<!-- <Footer :url="formAction" :userId="data.user.id"></Footer> -->
 		<view class="b_fixed Footer flex">
-			<view class="nav dx-btn-blue">一键导航</view>
-			<view class="nav dx-btn-orange">一键拨号</view>
+			<view class="nav dx-btn-blue" @click="location(data.detail.location_y,data.detail.location_x,data.detail.userInfo.address)">一键导航</view>
+			<view class="nav dx-btn-orange" @click="phone(data.detail.userInfo.phone)">一键拨号</view>
 		</view>
 	</view>
 </template>

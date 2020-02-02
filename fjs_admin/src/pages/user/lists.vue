@@ -4,18 +4,14 @@
 		<section v-if="data.show">
 			<dx-table :data="data" :globalData="globalData" :operateWidth="430">
 				<div slot="operate" slot-scope="scope">
-					<div>
-						<el-button type="primary" size="mini" @click="showFeedback(scope.row)">留言</el-button>
-						<el-button size="mini" @click="showCompany(scope.row)">修改</el-button>
-					</div>
+
 				</div>
 				<div slot="header" slot-scope="scope">
 
 				</div>
 			</dx-table>
 		</section>
-		<company ref="company"></company>
-		<feedback ref="feedback"></feedback>
+		
 		<!-- 如果是商城+登陆版本end -->
 	</div>
 </template>
@@ -54,8 +50,7 @@
 		},
 		components: {
 			'dx-table': resolve => require(['xiaozhu/vue/components/admin/dx_table.vue'], resolve),
-			"company":company,
-			"feedback":feedback
+			
 
 		}
 

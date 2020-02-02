@@ -4,6 +4,9 @@
             <div slot="header">
 
             </div>
+            <div slot="append_table_putaway" slot-scope="scope">
+               <el-switch v-model="scope.row.putaway " on-text="" off-text="" :active-value="1" :inactive-value="0" @change="editField(scope.row,'putaway')"> </el-switch>
+            </div>
             <div slot="append_form_hospital_name" slot-scope="scope">
                 <el-button @click="searchSonger(scope.row)">选择医院</el-button>
                 <el-tag type="gray"   v-if="scope.row.hospital_name">{{ scope.row.hospital_name}}</el-tag>
@@ -33,7 +36,7 @@
         },
         methods: {
             editField(row,field){
-            	this.postAjax("/admin/song/editField", { id:row.id,field:field,value:row[field] }, msg => {
+            	this.postAjax("/admin/coupon/edit-field", { id:row.id,field:field,value:row[field] }, msg => {
             		if (msg.data.status == 3) {
             			row[field] =0;
             		}

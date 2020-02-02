@@ -19,10 +19,12 @@ export default{
         }, */
         tableFields:[
             {prop:'name',label:'优惠券名称',minWidth:"150"},
+            {prop:'hospital_name',label:'使用医院',minWidth:"200"},
+            {prop:'amount',label:'优惠券金额',minWidth:"200"},
             {prop:'start_at',label:'开始日期',minWidth:"200"},
-            {prop:'amount',label:'金额',minWidth:"200"},
             {prop:'end_at',label:'结束日期',minWidth:"200"},
-            {prop:'hospital_name',label:'医院',minWidth:"200"},
+            {prop:'putaway',label:'上架/下架',minWidth:"200",append_table_putaway:true},
+
         ],
         searchFields:[
             {prop:'name',label:'优惠券名称'},
@@ -30,12 +32,12 @@ export default{
         formFields:[
             {prop:'name',label:'优惠券名称',type:'text',datatype:'require'},
             {prop:'num',label:'优惠券数量',type:'text',datatype:'require'},
-            {prop:'discount',label:'折扣',type:'text',datatype:'require'},
-            {prop:'need_remark',label:'使用需知',type:'textarea',datatype:'require'},
+
+          
             {prop:'start_at',label:'开始日期',type:'date',datatype:'require'},
             {prop:'end_at',label:'结束日期',type:'date',datatype:'require'},
             {prop:'amount',label:'金额',type:'text',datatype:'require|price'},
-            {prop:'hospital_name',label:'升级条件',defaultValue:0,append_form_hospital_name:true},
+            {prop:'hospital_name',label:'选择医院',defaultValue:0,append_form_hospital_name:true},
             {
                 "prop": "logo",
                 "datatype": "array",
@@ -54,6 +56,7 @@ export default{
                 "allowUpLoadNum": "5",
                 "upurl": "coupon"
             },
+              {prop:'need_remark',label:'使用需知',type:'textarea'},
            /*  {prop:'pic',label:'图片',type:'upload',allowUpLoadNum:1,upurl:'user'}, */
         ]
     }

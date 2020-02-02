@@ -10,12 +10,12 @@
 				<button class="sub-btn-big sub-btn-orange" @click="toSubmit">核销</button>
 			</div>
 		</div>
-		<div class="cancel-sec">
+		<!-- <div class="cancel-sec">
 			<div class="cancel-box">
 				<p class="sec-title">扫码核销</p>
 				<button class="sub-btn-big mt40 sub-btn-orange" @click="scan">扫一扫</button>
 			</div>
-		</div>
+		</div> -->
 	</view>
 </template>
 

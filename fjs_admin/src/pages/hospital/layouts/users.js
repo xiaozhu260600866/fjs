@@ -8,12 +8,21 @@ export default {
         "createAction": "/admin/user/create",
         "editAction": "/admin/user/edit",
         "checkAll": true,
-        "searchFields": [{
+        "searchFields": [
+         {
             "name": "",
-            "prop": "name",
+            "prop": "company_name",
             "type": "text",
-            "label": "医院姓名"
-        }],
+            "label": "医院名称"
+        },
+        {
+            "name": "",
+            "prop": "phone",
+            "type": "text",
+            "label": "电话"
+        },
+        
+        ],
        /* "tarbars": {
             "prop": "type",
             "data": [{
@@ -36,6 +45,14 @@ export default {
         "tableFields": [
             {
                 "name": "",
+                "prop": "company_name",
+                "minWidth": "180",
+                "width": "",
+                "append_table_": 0,
+                "label": "医院名称"
+            },
+            {
+                "name": "",
                 "prop": "username",
                 "minWidth": "180",
                 "width": "",
@@ -48,23 +65,17 @@ export default {
             "minWidth": "180",
             "width": "",
             "append_table_": 0,
-            "label": "姓名"
+            "label": "联系人"
         },
+
+
         {
             "name": "",
-            "prop": "company_name",
+            "prop": "line_phone",
             "minWidth": "180",
             "width": "",
             "append_table_": 0,
-            "label": "医院名称"
-        },
-        {
-            "name": "",
-            "prop": "city",
-            "minWidth": "180",
-            "width": "",
-            "append_table_": 0,
-            "label": "城市"
+            "label": "联系电话"
         },
         {
             "name": "",
@@ -72,8 +83,17 @@ export default {
             "minWidth": "180",
             "width": "",
             "append_table_": 0,
-            "label": "电话"
-        }, ],
+            "label": "手机"
+        },
+        {
+            "name": "",
+            "prop": "city",
+            "minWidth": "180",
+            "width": "",
+            "append_table_": 0,
+            "label": "所在城市"
+        },
+        ],
         "formFields": [
             {
                 "name": "",
@@ -91,13 +111,15 @@ export default {
             "append_form_": 0,
             "label": "联系人"
         },
+
+
         {
             "name": "",
             "prop": "username",
-            "datatype": "require",
+            "datatype": "require|phone",
             "type": "text",
             "append_form_": 0,
-            "label": "帐号"
+            "label": "手机"
         },
         {
             "name": "",
@@ -109,21 +131,13 @@ export default {
         },
         {
             "name": "",
-            "prop": "phone",
-            "datatype": "require|phone",
+            "prop": "line_phone",
+            "datatype": "require",
             "type": "text",
             "append_form_": 0,
-            "label": "电话"
+            "label": "联系电话"
         },
-        {
-            "name": "",
-            "prop": "city",
-            "datatype": "require",
-            "type": "select",
-            "datakey":'city',
-            "append_form_": 0,
-            "label": "城市"
-        },
+
         {
             "name": "",
             "prop": "address",
@@ -134,12 +148,25 @@ export default {
         },
         {
             "name": "",
-            "prop": "content",
-            "datatype": "",
-            "type": "editor",
+            "prop": "city",
+            "datatype": "require",
+            "type": "select",
+            "datakey":'city',
             "append_form_": 0,
-            "label": "详情"
+            "label": "城市"
         },
+
+        {
+            "name": "",
+            "prop": "company_logo",
+            "datatype": "array",
+            "type": "upload",
+            "append_form_": 0,
+            "label": "医院log",
+            "allowUpLoadNum": "5",
+            "upurl": "user"
+        },
+
 
         {
             "name": "",
@@ -157,20 +184,19 @@ export default {
             "datatype": "array",
             "type": "upload",
             "append_form_": 0,
-            "label": "官网滚动图片",
+            "label": "滚动图片",
             "allowUpLoadNum": "5",
             "upurl": "user"
         },
         {
             "name": "",
-            "prop": "company_logo",
-            "datatype": "array",
-            "type": "upload",
+            "prop": "content",
+            "datatype": "",
+            "type": "editor",
             "append_form_": 0,
-            "label": "公司log",
-            "allowUpLoadNum": "5",
-            "upurl": "user"
+            "label": "基本介绍"
         },
+
 
 
         ]

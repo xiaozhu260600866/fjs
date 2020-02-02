@@ -17,15 +17,16 @@
 						</div>
 					</div>
 				</div>
+				<div class="weui-cell bg-f lh50" @click="goto('/pages/business/show/index?user_id='+data.detail.getUser.id,1)">
+					<div class="weui-cell__bd fs-14"><span class="iconfont icon-shop fc-9 fs-16"></span>  {{ data.detail.getUser.userInfo.company_name }} </div>
+					<div class="weui-cell__ft"><span class="iconfont icon-right fs-12 fc-9"></span></div>
+				</div>
 				<div class="weui-cell lh50">
 					<div class="weui-cell__bd">
 						<p class="date fs-14">使用有效期：<span class="Arial">{{  data.detail.start_at }} - {{ data.detail.end_at }}</span></p>
 					</div>
 				</div>
-				<div class="weui-cell bg-f lh50" @click="goto('/pages/business/show/index?user_id='+data.detail.getUser.id,1)">
-					<div class="weui-cell__bd fs-14"><span class="iconfont icon-shop fc-9 fs-16"></span>  {{ data.detail.getUser.userInfo.company_name }} </div>
-					<div class="weui-cell__ft"><span class="iconfont icon-right fs-12 fc-9"></span></div>
-				</div>
+				
 				<div class="shop-contact">
 					<div class="address bgf lh30"
 					 @click="location(data.detail.getUser.userInfo.location_y,data.detail.getUser.userInfo.location_x,data.detail.getUser.userInfo.address)">

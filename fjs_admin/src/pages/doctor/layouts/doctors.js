@@ -49,6 +49,14 @@ export default {
             "minWidth": "180",
             "width": "",
             "append_table_": 0,
+            "label": "手機"
+        },
+        {
+            "name": "",
+            "prop": "line_phone",
+            "minWidth": "180",
+            "width": "",
+            "append_table_": 0,
             "label": "电话"
         },
         {
@@ -76,13 +84,21 @@ export default {
                 "append_form_": 0,
                 "label": "姓名"
             },
+            {
+                "name": "",
+                "prop": "line_phone",
+                "datatype": "require",
+                "type": "text",
+                "append_form_": 0,
+                "label": "电话"
+            },
            {
             "name": "",
             "prop": "phone",
-            "datatype": "require",
+            "datatype": "require|phone",
             "type": "text",
             "append_form_": 0,
-            "label": "电话"
+            "label": "手機"
         },
         {
             "name": "",

@@ -17,15 +17,7 @@ export default new Router({
 			iconCls: 'iconfont icon8', //图标样式class
 			component: resolve => require(['../default'], resolve),
 			children: [
-				{
-					iconCls: 'iconfont icon-e-home', //图标样式class
-					path: 'index*',
-					url: '/vueadmin/index',
-					name: '首页',
-					component: resolve => require(['../pages/order/count'], resolve),
-					open: false,
-					permission: []
-				},
+				
                 {
                 	path: 'user*',
                 	url: 'user',
@@ -101,7 +93,8 @@ export default new Router({
                 	open: false,
                 	iconCls: 'iconfont icon-sing-songer', //图标样式class
                 	component: resolve => require(['../p'], resolve),
-                	children: [{
+                	children: [
+                        {
                 			path: 'lists*',
                 			url: '/vueadmin/article/lists',
                 			name: '文章管理',
@@ -109,6 +102,24 @@ export default new Router({
                 			component: resolve => require(['../pages/article/lists'], resolve),
                 			permission: [],
                 		},
+                        {
+                        	path: 'create*',
+                        	url: '/vueadmin/article/create',
+                        	name: '文章新建',
+                            hidden:true,
+                        	iconCls: 'iconfont icon8', //图标样式class
+                        	component: resolve => require(['../pages/article/create_edit'], resolve),
+                        	permission: [],
+                        },
+                       {
+                       	path: 'edit*',
+                       	url: '/vueadmin/article/edit',
+                       	name: '文章新建',
+                           hidden:true,
+                       	iconCls: 'iconfont icon8', //图标样式class
+                       	component: resolve => require(['../pages/article/create_edit'], resolve),
+                       	permission: [],
+                       },
                 	]
                 },
 

@@ -9,6 +9,14 @@
 			}
 		},
 		{
+			"path": "pages/news/show/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		{
 			"path": "pages/doctor/lists/index",
 			"style": {
 				"navigationBarTitleText": "医生",

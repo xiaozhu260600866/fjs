@@ -12,7 +12,7 @@
 				<div class="order_date plr10 bd-be">
 					<div class="time fs-12">
 						<p class="lh-18">
-							<span class="fc-6">下单日期：</span>
+							<span class="fc-6">領券日期：</span>
 							<span class="Arial">{{parent.created_at}}</span>
 						</p>
 						<p class="lh-18">
@@ -38,15 +38,13 @@
 							
 							</div>
 							<div class="w-b100">
-								<p class="fs-12 fc-6">数量 × <span>1</span></p>
+								<p class="fs-12 fc-6" v-if="parent.getCoupon.content">{{parent.getCoupon.content}}</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			
-				<div class="order_count bd-be plr10 fs-13">共<span class="Arial">1</span>件商品
-					实付：￥<span class="Arial fs-16">{{parent.amount}}</span>
-				</div>
+			
 				<div class="btn-group ptb8 plr10">
 					<div class="btn-item" v-if="parent.status == 3" @click="previewImage(parent.order_no+'.png','order')">
 						<div class="btn-nav obtn" @click="goto('/pages/shop/order/after-sale/index?order_no='+parent.order_no,1)">核销</div>

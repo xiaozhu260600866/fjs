@@ -23,6 +23,7 @@
 					<div class="flex lh-20 pt15" @click="phone(data.detail.phone)">
 						<p class="iconfont icon-phone fs-14 fc-9 mr5"></p>
 						<p class="fs-13 fc-9 flex1" >{{data.detail.phone}}</p>
+						<p class="fs-13 fc-9 flex1" v-if="data.detail.line_phone">{{data.detail.line_phone}}</p>
 					</div>
 					<div class="flex lh-20 pt15" @click="location(data.detail.location_x,data.detail.location_y,data.detail.address)">
 						<p class="iconfont icon-location fs-16 fc-9 mr5"></p>
@@ -39,7 +40,7 @@
 				</div>
 			</div>
 			
-			<view class="b_fixed Footer flex">
+			<view class="b_fixed Footer flex" @click="phone(data.detail.phone)">
 				<view class="nav dx-btn-blue">一键拨号</view>
 			</view>
 		</view>

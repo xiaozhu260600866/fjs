@@ -22,12 +22,7 @@
 									</view>
 								</view>
 								<view class="rdis flex flex-wrap">
-									<p class="fs-12 fw-bold price w-b100" v-if="v.discount"><span class="fs-30">{{v.discount}}</span>折</p>
-									<p class="fs-14 s-btn plr15 w-b100" :style="!v.discount ? 'margin-top: 32px': ''">领取</p>
-									<view class="btip w-b100">
-										<p class="fs-12 fw-bold type" v-if="v.discount">折扣券</p>
-										<p class="fs-12 fw-bold type" v-if="!v.discount">代金券</p>
-									</view>
+									<p class="fs-14 s-btn plr15 w-b100" :style="!v.discount ? 'margin-top: 32px': ''" >{{v.status == 1? '已' :""}}领取</p>
 								</view>
 							</view>
 						</view>
