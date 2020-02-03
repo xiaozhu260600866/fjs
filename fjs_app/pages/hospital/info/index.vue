@@ -3,19 +3,24 @@
 		<page :parentData="data" :formAction="formAction"></page>
 		<div v-if="data.show">
 			<div class="list-group" style="padding-bottom: 50px;">
+				<weui-input v-model="ruleform.company_name" label="医院名称" type="text" name="name" datatype="require"></weui-input>
 				<weui-input v-model="ruleform.name" label="联系人" type="text" name="name" datatype="require"></weui-input>
 				<weui-input v-model="ruleform.phone" label="手机" placeholder="请一键授权手机号" type="text" name="phone" datatype="require" :disabled="false">
 					<div slot="right">
 						<button hover-class="none" class="fs-12 location-nav dx-btn-blue-o ml10" open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">一键授权</button>
 					</div>
 				</weui-input>
-				<weui-input v-model="ruleform.company_name" label="公司" type="text" name="company_name" datatype="require"></weui-input>
-				<div class="weui-cells__title mark-title m0 lh40 plr15 fs14">公司logo</div>
+				<weui-input v-model="ruleform.password" label="登录密码" type="password" name="password"></weui-input>
+				<weui-input v-model="ruleform.line_phone" label="联系电话" type="text" name="line_phone"></weui-input>
+				<weui-input v-model="ruleform.city" label="城市" type="text" name="city" :disabled="true"></weui-input>
+				<weui-input v-model="ruleform.address" label="地址" type="location" name="address"></weui-input>
+				<div class="weui-cells__title mark-title m0 lh40 plr15 fs14">医院logo</div>
 				<weui-input myclass="pt8" v-model="ruleform.company_logo" type="upload" upurl='user' allowUpLoadNum="1"></weui-input>
-				<div class="weui-cells__title mark-title m0 lh40 plr15 fs14">官网滚动图片<span class="fs12 font_grey">(图片尺寸640*350)</span></div>
+				<div class="weui-cells__title mark-title m0 lh40 plr15 fs14">官网图片<span class="fs12 font_grey">(图片尺寸640*350)</span></div>
 				<weui-input myclass="pb10 pt8" v-model="ruleform.swiper" type="upload" upurl='user' allowUpLoadNum="3"></weui-input>
 				<div class="weui-cells__title mark-title m0 lh40 plr15 fs14">展示图片</div>
 				<weui-input myclass="pb10 pt8" v-model="ruleform.mien_pic" type="upload" upurl='user' allowUpLoadNum="3"></weui-input>
+				<weui-input v-model="ruleform.address" label="地址" type="location" name="address"></weui-input>
 			</div>
 		</div>
 		<myform :ruleform="ruleform" :vaildate="vaildate" @callBack="formSubmit" :append="true">

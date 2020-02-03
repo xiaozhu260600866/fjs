@@ -3,7 +3,7 @@
 		<page :parentData="data" :formAction="formAction"></page>
 		<div v-if="data.show">
 			<div class="order-class bd-b bg-f mb10">
-				<p :class="['nav-tab',data.query.status == 0 ? 'selected' :'']" @click="data.query.status = 0;ajax()">未使用({{data.order3Count}})</p>
+				<p :class="['nav-tab',data.query.status == 0 ? 'selected' :'']" @click="data.query.status = 0;ajax()">待使用({{data.order3Count}})</p>
 				<p :class="['nav-tab',data.query.status == 1 ? 'selected' :'']" @click="data.query.status = 1;ajax()">已使用({{data.order9Count}})</p>
 			</div>
 			<div class="order-list mb8 pb10" v-for="(item,key) in data.lists.data">

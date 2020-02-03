@@ -116,7 +116,7 @@
 		{
 			"path": "pages/hospital/coupon/order-list/index",
 			"style": {
-				"navigationBarTitleText": "我的订单",
+				"navigationBarTitleText": "优惠券管理",
 				"enablePullDownRefresh": true
 				
 			}

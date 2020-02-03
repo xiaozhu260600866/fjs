@@ -17,7 +17,7 @@ export default new Router({
 			iconCls: 'iconfont icon8', //图标样式class
 			component: resolve => require(['../default'], resolve),
 			children: [
-				
+
                 {
                 	path: 'user*',
                 	url: 'user',
@@ -76,7 +76,8 @@ export default new Router({
                 	open: false,
                 	iconCls: 'iconfont icon-sing-songer', //图标样式class
                 	component: resolve => require(['../p'], resolve),
-                	children: [{
+                	children: [
+                        {
                 			path: 'lists*',
                 			url: '/vueadmin/coupon/lists',
                 			name: '优惠券管理',
@@ -84,6 +85,14 @@ export default new Router({
                 			component: resolve => require(['../pages/coupon/lists'], resolve),
                 			permission: [],
                 		},
+                        {
+                        	path: 'record*',
+                        	url: '/vueadmin/coupon/record?status=0',
+                        	name: '领取记录',
+                        	iconCls: 'iconfont icon8', //图标样式class
+                        	component: resolve => require(['../pages/couponUser/lists'], resolve),
+                        	permission: [],
+                        },
                 	]
                 },
                 {
