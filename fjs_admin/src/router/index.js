@@ -23,7 +23,7 @@ export default new Router({
                 	url: 'user',
                 	name: '会员管理',
                 	open: false,
-                	iconCls: 'iconfont icon-sing-songer', //图标样式class
+                	iconCls: 'iconfont icon-fjs-vip', //图标样式class
                 	component: resolve => require(['../p'], resolve),
                 	children: [{
                 			path: 'lists*',
@@ -40,7 +40,7 @@ export default new Router({
                 	url: 'hospital',
                 	name: '医院管理',
                 	open: false,
-                	iconCls: 'iconfont icon-sing-songer', //图标样式class
+                	iconCls: 'iconfont icon-fjs-hospital', //图标样式class
                 	component: resolve => require(['../p'], resolve),
                 	children: [{
                 			path: 'lists*',
@@ -57,7 +57,7 @@ export default new Router({
                 	url: 'doctor',
                 	name: '医生管理',
                 	open: false,
-                	iconCls: 'iconfont icon-sing-songer', //图标样式class
+                	iconCls: 'iconfont icon-fjs-doctor', //图标样式class
                 	component: resolve => require(['../p'], resolve),
                 	children: [{
                 			path: 'lists*',
@@ -74,7 +74,7 @@ export default new Router({
                 	url: 'coupon',
                 	name: '优惠券管理',
                 	open: false,
-                	iconCls: 'iconfont icon-sing-songer', //图标样式class
+                	iconCls: 'iconfont icon-fjs-coupon', //图标样式class
                 	component: resolve => require(['../p'], resolve),
                 	children: [
                         {
@@ -100,7 +100,7 @@ export default new Router({
                 	url: 'article',
                 	name: '文章管理',
                 	open: false,
-                	iconCls: 'iconfont icon-sing-songer', //图标样式class
+                	iconCls: 'iconfont icon-fjs-article', //图标样式class
                 	component: resolve => require(['../p'], resolve),
                 	children: [
                         {
@@ -139,7 +139,7 @@ export default new Router({
 					url: '/vueadmin/system',
 					name: '系统管理',
 					open: false,
-					iconCls: 'iconfont icon-e-config', //图标样式class
+					iconCls: 'iconfont icon-fjs-config', //图标样式class
 					component: resolve => require(['../p'], resolve),
 					children: [
 						{

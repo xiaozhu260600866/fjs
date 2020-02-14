@@ -38,7 +38,7 @@ export default {
            {
             "name": "",
             "prop": "name",
-            "minWidth": "180",
+            "minWidth": "100",
             "width": "",
             "append_table_": 0,
             "label": "姓名"
@@ -46,15 +46,15 @@ export default {
         {
             "name": "",
             "prop": "phone",
-            "minWidth": "180",
+            "minWidth": "120",
             "width": "",
             "append_table_": 0,
-            "label": "手機"
+            "label": "手机"
         },
         {
             "name": "",
             "prop": "line_phone",
-            "minWidth": "180",
+            "minWidth": "120",
             "width": "",
             "append_table_": 0,
             "label": "电话"
@@ -62,7 +62,7 @@ export default {
         {
             "name": "",
             "prop": "city",
-            "minWidth": "180",
+            "minWidth": "80",
             "width": "",
             "append_table_": 0,
             "label": "城市"
@@ -70,7 +70,7 @@ export default {
         {
             "name": "",
             "prop": "address",
-            "minWidth": "180",
+            "minWidth": "260",
             "width": "",
             "append_table_": 0,
             "label": "地址"

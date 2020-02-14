@@ -41,6 +41,7 @@ export default{
 }	
 </script>
 <style type="text/css">
+.coupon-lists{border-bottom: 1px #eee solid;}
 .coupon-lists .weui-media-box{padding: 15px;}
 .coupon-lists .weui-media-box_appmsg{align-items: initial;-webkit-box-align:initial;text-align: left;}
 .coupon-lists .weui-media-box_appmsg .weui-media-box__hd{width: 70px;height: 70px;border-radius: 5px;}

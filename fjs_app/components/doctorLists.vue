@@ -15,7 +15,7 @@
 						</view>
 						<view class="location flex flex-wrap text-center">
 							<p class="name w-b100 fs-12 lh-18 h-18 fc-9">距离</p>
-							<filterKim v-model="v.location"></filterKim>
+							<view class="w-b100 fs-12 fc-9 lh-20"><filterKim v-model="v.location"></filterKim></view>
 						</view>
 					</view>
 				</view>
@@ -40,5 +40,5 @@
 <style>
 .doctor-box .limg .img{width: 100px;height: 100px;display: flex;}
 .doctor-box .rinfo .info{display: flex;align-content: space-between;height: 100px;}
-.doctor-box .rinfo .location{align-content: center;}
+.doctor-box .rinfo .location{align-content: center;text-align: right;}
 </style>

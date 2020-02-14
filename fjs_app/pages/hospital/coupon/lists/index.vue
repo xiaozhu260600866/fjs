@@ -2,13 +2,6 @@
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
 		<div v-if="data.show">
-			<div class="topNav bg-f mb8">
-				<div class="navItem">
-					<p :class="['aLink','fs-15',showMenu == 1 ? 'cur': '']" @click="showMenu = 1"><span class="span">发布</span></p>
-					<!-- <p :class="['aLink','fs-15',showMenu == 2 ? 'cur': '']" @click="showMenu = 2"><span class="span">领取</span></p>
-					<p :class="['aLink','fs-15',showMenu == 3 ? 'cur': '']" @click="showMenu = 3"><span class="span">核销</span></p> -->
-				</div>
-			</div>
 			<div v-if="showMenu == 1">
 				<div class="weui-panel weui-panel_access mt0">
 					<div class="weui-panel__bd">

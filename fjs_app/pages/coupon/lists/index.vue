@@ -22,7 +22,8 @@
 									</view>
 								</view>
 								<view class="rdis flex flex-wrap">
-									<p class="fs-14 s-btn plr15 w-b100" :style="!v.discount ? 'margin-top: 32px': ''" >{{v.status == 1? '已' :""}}领取</p>
+									<p :class="['fs-14 s-btn plr15 w-b100',v.status == 1 ? 'dx-btn-default': 'dx-btn-orange']"
+									 :style="!v.discount ? 'margin-top: 32px': ''" >{{v.status == 1? '已领' :"领取"}}</p>
 								</view>
 							</view>
 						</view>

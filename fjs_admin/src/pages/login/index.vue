@@ -2,11 +2,11 @@
 	<section>
 		<div class="login-header">
 			<div class="main-width">
-				<div class="login-logo"><img src="https://website.doxinsoft.com/images/admin/logo02.jpg"></div>
+				<div class="login-logo"><img src="https://fjs.doxinsoft.com/images/admin/fjs-logo.png"></div>
 				<!-- <div class="service float_r">技术服务：0750-3229010</div> -->
 			</div>
 		</div>
-		<div id="login-content" style="background-image: url(https://website.doxinsoft.com/images/admin/login_bg02.jpg);background-position: center center;background-repeat: no-repeat;">
+		<div id="login-content" style="background-image: url(https://fjs.doxinsoft.com/images/admin/login_bg.jpg);background-position: center center;background-repeat: no-repeat;">
 			<div class="main-width clear widthLimit">
 				<div class="loginForm">
 					<div class="control-box">
@@ -34,7 +34,7 @@
 		</div>
 		<div class="login-footer">
 			<p><span>专注移动应用开发，让商业变得更智慧</span></p>
-			<p><a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备14075094号-1</a></p>
+			<!-- <p><a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备14075094号-1</a></p> -->
 		</div>
 	</section>
 </template>

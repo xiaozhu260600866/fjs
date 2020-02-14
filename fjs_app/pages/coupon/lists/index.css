@@ -4,4 +4,4 @@
 .couponList .rdis{width: 58px;text-align: center;align-content: center;}
 .couponList .rdis .price {height: 32px;line-height: 32px;color: #FF8125;background-image: -webkit-linear-gradient(bottom, red, #fd8403, yellow);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
 .couponList .type {background: rgba(255, 129, 37, 0.2);color: #FF8125;width: 46px;height: 18px;line-height: 18px;text-align: center;margin: 5px 6px 0;}
-.couponList .s-btn{border-radius: 24px;background: #FF8008;color: #FFF;font-family: '黑体';height: 24px;line-height: 24px;}
+.couponList .s-btn{border-radius: 24px;color: #FFF;font-family: '黑体';height: 24px;line-height: 24px;}
