@@ -9,6 +9,30 @@
 			}
 		},
 		{
+			"path": "pages/news/lists/index",
+			"style": {
+				"navigationBarTitleText": "新闻列表",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		{
+			"path": "pages/video/lists/index",
+			"style": {
+				"navigationBarTitleText": "视频列表",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		{
+			"path": "pages/video/show/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		{
 			"path": "pages/news/show/index",
 			"style": {
 				"navigationBarTitleText": "",

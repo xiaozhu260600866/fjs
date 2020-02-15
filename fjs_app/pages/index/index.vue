@@ -82,7 +82,7 @@
 			this.ajax();
 		},
 		onShareAppMessage() {
-			return this.shareSource(this, '商城');
+			return this.shareSource(this, '福加斯大健康信息平台');
 		},
 		onShow() {
 			if (wx.getStorageSync('city')) {

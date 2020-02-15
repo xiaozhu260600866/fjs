@@ -9,11 +9,11 @@ this.$refs.searchStaff.ajax(); //函数内为调用的URL
  -->
 <template>
     <section>
-        <el-dialog :title="'选择歌手' " :visible.sync="dialogVisible" :top="top" :before-close="handleClose" append-to-body>
+        <el-dialog :title="'选择医院' " :visible.sync="dialogVisible" :top="top" :before-close="handleClose" append-to-body>
             <el-col :span="24" class="toolbar">
                 <el-form :inline="true" id="search">
                     <el-form-item>
-                        <input autocomplete="off" :placeholder="'歌手名称'" v-model="name" type="text" name="name" rows="2"
+                        <input autocomplete="off" :placeholder="'医院名称'" v-model="company_name" type="text" name="name" rows="2"
                             validateevent="true" class="el-input__inner" @keyup="toSearch">
                     </el-form-item>
                     <el-form-item>
@@ -28,8 +28,8 @@ this.$refs.searchStaff.ajax(); //函数内为调用的URL
                 <el-table ref="multipleTable" :data="data.lists" border tooltip-effect="dark" v-loading="data.listLoading"
                     style="width:100%" @selection-change="selsChange">
                     <el-table-column type="selection" min-width="30"> </el-table-column>
-                    <el-table-column label="姓名" min-width="60">
-                        <template scope="scope">{{ scope.row.userInfo.name }}</template>
+                    <el-table-column label="医院" min-width="60">
+                        <template scope="scope">{{ scope.row.userInfo.company_name }}</template>
                     </el-table-column>
                     <el-table-column label="电话" min-width="140">
                         <template scope="scope">{{ scope.row.userInfo.phone }}</template>
@@ -63,6 +63,7 @@ this.$refs.searchStaff.ajax(); //函数内为调用的URL
                 fclassArr: [],
                 department: 0,
                 classVal: 0,
+                company_name:'',
                 sels: [],
             }
         },
@@ -72,7 +73,7 @@ this.$refs.searchStaff.ajax(); //函数内为调用的URL
                 this.getAjax(this, {
                     department: this.department,
                     class: this.classVal,
-                    user_name: this.name,
+                    company_name: this.company_name,
                     page: this.page
                 }, msg => {
 

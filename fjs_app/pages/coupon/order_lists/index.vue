@@ -22,9 +22,9 @@
 					</div>
 					<div class="state flex-middle">
 						<p class="fc-orange fs-12 pr8">{{parent.status_message}}</p>
-						<div v-if="data.query.status == 1 || data.query.status == 9 || data.query.status == 0">
+						<!-- <div v-if="data.query.status == 1 || data.query.status == 9 || data.query.status == 0">
 							<p class="del-icon bg-f3 iconfont icon-cart-del fs-14" @click="delOrder(parent)"></p>
-						</div>
+						</div> -->
 					</div>
 				</div>
 				<div>
@@ -35,7 +35,7 @@
 						<div class="pro_right">
 							<div class="tInfo w-b100">
 								<p class="fs-14 lh-20 wrap2">{{parent.getCoupon.name}}</p>
-							
+								<p class="fs-14 lh-20 wrap2 mt10">{{parent.getCoupon.need_remark}}</p>
 							</div>
 							<div class="w-b100">
 								<p class="fs-12 fc-6" v-if="parent.getCoupon.content">{{parent.getCoupon.content}}</p>

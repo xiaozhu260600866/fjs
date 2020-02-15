@@ -1,8 +1,9 @@
 <template>
     <section>
-        <div id="editor" type="text/plain" style="width:100%;height:500px;"></div>
+        <div id="editor" type="text/plain" style="width:100%;height:500px;z-index: 3000;"></div>
     </section>
 </template>
+
 <script type="text/javascript">
 import "../../static/utf8-php/ueditor.config.js";
 import "../../static/utf8-php/ueditor.all.min.js";
@@ -14,7 +15,7 @@ export default {
         this.ue = UE.getEditor('editor', {
             BaseUrl: '',
             UEDITOR_HOME_URL: '/static/utf8-php/',
-            // toolbars:[] 
+            // toolbars:[]
         });
         let timeEr = setInterval(() => {
             if (this.content) {
@@ -24,6 +25,11 @@ export default {
                 });
             }
         }, 1000)
+        setTimeout(()=>{
+                $("#edui1").removeAttr("style","");
+               $("#edui1").css("z-index", "3000");
+
+        },1000);
     },
     methods: {
         getContent() {

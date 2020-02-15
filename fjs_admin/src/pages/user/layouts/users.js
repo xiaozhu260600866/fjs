@@ -10,9 +10,8 @@ export default{
         //auditAction:'/admin/user/change-status',
         checkAll:true,
         tableFields:[
-            {prop:'source',label:'来源',width:"100"},
-         
             {prop:'nickname',label:'呢称',minwidth:"100"},
+            {prop:'userInfo.name',label:'姓名',minwidth:"100"},
             {prop:'phone',label:'电话',width:"150"},
             {prop:'created_at',label:'关注时间',width:"170"}
         ],

@@ -1,24 +1,23 @@
 export default {
     data: {
         "listsAction": "",
-        "pageSize": 15,
+        "pageSize": 30,
         "canCreate": 1,
         "canEdit": 1,
-        "tableName": "doctors",
-        "createAction": "/admin/doctor/create",
-        "editAction": "/admin/doctor/edit",
+        "tableName": "videos",
+        "createAction": "/admin/video/create",
+        "editAction": "/admin/video/edit",
+         classAction:'/admin/video/',
+         classUrl:"/pages/video/lists/index?fclass=",
         "checkAll": true,
-        "searchFields": [{
+        "searchFields": [
+          {
             "name": "",
             "prop": "name",
             "type": "text",
-            "label": "医生姓名"
-        },{
-            "name": "",
-            "prop": "phone",
-            "type": "text",
-            "label": "医生电话"
-        }],
+            "label": "视频名称"
+        },
+        ],
        /* "tarbars": {
             "prop": "type",
             "data": [{
@@ -39,88 +38,81 @@ export default {
             }]
         }, */
         "tableFields": [
-
            {
             "name": "",
             "prop": "name",
-            "minWidth": "100",
+            "minWidth": "180",
             "width": "",
             "append_table_": 0,
-            "label": "姓名"
+            "label": "视频名称"
         },
         {
             "name": "",
-            "prop": "phone",
-            "minWidth": "120",
+            "prop": "fclassName",
+            "minWidth": "180",
             "width": "",
             "append_table_": 0,
-            "label": "手机"
+            "label": "分类名"
+        },
+
+        {
+            "name": "",
+            "prop": "url",
+            "minWidth": "180",
+            "width": "",
+            "append_table_": 0,
+            "label": "url地址"
         },
         {
             "name": "",
-            "prop": "line_phone",
-            "minWidth": "120",
+            "prop": "sort",
+            "minWidth": "180",
             "width": "",
-            "append_table_": 0,
-            "label": "电话"
+            "append_table_sort": 1,
+            "label": "排序"
         },
         {
             "name": "",
-            "prop": "city",
-            "minWidth": "80",
+            "prop": "created_at",
+            "minWidth": "180",
             "width": "",
             "append_table_": 0,
-            "label": "城市"
-        },
-        {
-            "name": "",
-            "prop": "address",
-            "minWidth": "260",
-            "width": "",
-            "append_table_": 0,
-            "label": "地址"
+            "label": "时间"
         }, ],
         "formFields": [
-            {
-                "name": "",
-                "prop": "name",
-                "datatype": "require",
-                "type": "text",
-                "append_form_": 0,
-                "label": "姓名"
-            },
-            {
-                "name": "",
-                "prop": "line_phone",
-                "datatype": "require",
-                "type": "text",
-                "append_form_": 0,
-                "label": "电话"
-            },
            {
             "name": "",
-            "prop": "phone",
-            "datatype": "require|phone",
+            "prop": "name",
+            "datatype": "require",
             "type": "text",
             "append_form_": 0,
-            "label": "手机"
+            "label": "视频名称"
         },
         {
             "name": "",
-            "prop": "address",
-            "datatype": "require",
-            "type": "location",
-            "append_form_": 0,
-            "label": "地址"
-        },
-        {
-            "name": "",
-            "prop": "city",
+            "prop": "fclass",
             "datatype": "require",
             "type": "select",
-            "datakey":'city',
+            "datakey":"videoClass",
             "append_form_": 0,
-            "label": "城市"
+            "label": "分类"
+        },
+        {
+            "name": "",
+            "prop": "sort",
+            "datatype": "require|number",
+            "type": "text",
+            "defaultValue":0,
+            "append_form_": 0,
+            "label": "排序"
+        },
+        {
+            "name": "",
+            "prop": "url",
+            "datatype": "require",
+            "type": "text",
+            "append_form_url": 0,
+            "label": "视频url"
         },
         {
             "prop": "logo",
@@ -129,7 +121,7 @@ export default {
             "append_form_": 0,
             "label": "logo",
             "allowUpLoadNum": "1",
-            "upurl": "coupon"
+            "upurl": "video"
         },
 
         {
@@ -140,7 +132,6 @@ export default {
             "append_form_": 0,
             "label": "详情"
         },
-
-        ]
+       ]
     }
 }
