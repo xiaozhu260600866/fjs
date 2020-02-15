@@ -91,12 +91,12 @@
 			}else{
 				wx.setStorageSync('city', "江门市");
 			}
+			
+		},
+		onLoad(options) {
 			this.getMyAddress(this).then(msg=>{
 				this.ajax();
 			});;
-		},
-		onLoad(options) {
-			
 			
 		},
 		

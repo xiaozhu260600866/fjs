@@ -115,7 +115,7 @@ export default {
 
         {
             "name": "",
-            "prop": "username",
+            "prop": "phone",
             "datatype": "require|phone",
             "type": "text",
             "append_form_": 0,
