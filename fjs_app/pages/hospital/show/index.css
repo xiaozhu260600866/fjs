@@ -1,8 +1,14 @@
-
-
 /* 商家详情 */
 .shop-info .limg .img{border-radius: 5px;width: 84px;height: 84px;display: flex;}
 .shop-info .bottom-item .iconfont{width: 20px;}
+
+
+/* 标题 */
+.box-title{padding: 12px 15px;display: flex;justify-content: space-between;align-items: center;}
+.box-title .name{font-size: 16px;padding-left: 15px;position: relative;}
+.box-title .name::before{content: '';display: block;width: 4px;height: 16px;background: #007AFF;position: absolute;top: 50%;margin-top: -8px;left: 0;}
+.box-title .more{font-size: 12px;color: #999;line-height: 20px;}
+.box-title .more .iconfont{font-size: 11px;padding-left: 5px;}
 
 
 /* 优惠券 */
@@ -15,19 +21,41 @@
 .couponList .right-status .s-btn{border-radius: 24px;background: #FFEBD7;color: #FF8008;font-family: '黑体';}
 
 
-/* 最新入驻-标题 */
-.mer-title{display: flex;justify-content: space-between;}
-.mer-title .cur:before{display: none;}
+/* 标题 */
+.all-title {font-size: 16px; text-align: center;padding: 10px 0;position: relative;}
+.all-title .name{position: relative;}
+.all-title .name:before{content: '';display: block;position: absolute;top: 11px;right: -26px;width: 16px;height: 1px;background: #666;}
+.all-title .name:after{content: '';display: block;position: absolute;top: 11px;left: -26px;width: 16px;height: 1px;background: #666;}
+.all-title .more {position: absolute;display: inline-block;top: 0;right: 0;line-height: 46px;color: #666;}
 
 
-/* 最新入驻 */
-.merchantLists{display: flex;white-space: nowrap;}
-.merchant .item_list{display: inline-block;width: 150px;margin-left: 10px;}
-.merchant .sc-item{padding: 0;}
-.merchant .s-img {position: relative;}
-.merchant .s-img .img{width: 150px;height: 100px;margin: 0;padding: 0;border-radius: 6px;display: flex;}
-.merchant .s-img .tag{position: absolute;right: 0;bottom: 0;padding: 2px 10px;background: rgba(0,0,0,0.4);color: #fff;border-radius: 6px 0 6px 0;}
-.merchant .s-name{line-height: 20px;}
+/* 滚动块 */
+.Hs-list{width: 100%;overflow: hidden;background: #fff;white-space: nowrap;}
+.Hs-item{display: inline-block;margin: 0 5px;padding-bottom: 15px;overflow: hidden;flex: 1;overflow: hidden;width: 100px;}
+.Hs-img .img{width: 100%;height: 100px;display: flex;border: 1px #f9f9f9 solid;}
+.Hs-name{font-size: 15px;line-height: 20px;padding: 5px 0;}
+.Hs-mark{font-size: 12px;color: #666;overflow: hidden;text-overflow: ellipsis;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}
+
+
+/* 医生 */
+
+
+/* 特色项目 */
+
+
+/* 最新资讯 */
+.Hnews .weui-media-box__hd{width: 60px;height: 60px;margin-right: 15px;}
+.Hnews .weui-media-box__desc{line-height: 1.4;}
+
+
+.scenery{background: #fff;}
+.scenery-list{overflow: hidden;display: flex;}
+.scenery .scenery-item .s-img{display: flex;}
+.scenery .scenery-item .s-img image{width: 160px;height: 160px;border-radius: 4px;}
+.scenery-list .s-name{width: 100%;height: 20px;line-height: 20px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-size: 13px;}
+.scenery-list .s-mark{font-size: 12px;color: #666;line-height: 20px;height: 20px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.item_list{width: 160px;height: auto;margin-right: 15px;display: inline-block;}
+.thumbUpDiv{text-align: center;border-radius: 30px;border: 1px #ddd solid;height: 32px;line-height: 30px;}
 
 
 /*底部抽屉样式 start*/

@@ -1,9 +1,16 @@
 <template>
 	<view>
-		<page :parentData="data" :formAction="formAction" ref="page"></page>
+		<page :parentData="data" :formAction="formAction" ref="page" Fbottom="bottom: 25px">
+			<div slot="floatBtn">
+				<div @click="phone(data.config.web_phone)">
+					<floatBtn type="2" icon="icon-float-tel-o" iSize="fs-17" title="电话"></floatBtn>
+				</div>
+				<floatBtn type="2" icon="icon-float-feedback-o" iSize="fs-19" openType="contact" title="咨询" v-if="!data.canAppointemt"></floatBtn>
+			</div>
+		</page>
 		<view v-if="data.show">
-			<div class="search-top p10 bg-f">
-				<div class="search-box bg-e flex-middle bg-f lh-34 bdr6">
+			<div class="search-top p10 main-bg">
+				<div class="search-box flex-middle bg-f lh-34 bdr17">
 					<div class="select-city fs-14 fc-6 plr15" @click="goto('/pages/search/searchCity/index',1)">
 						{{ otherData.city }}<span class="iconfont icon-bottom fs12"></span>
 					</div>
@@ -13,7 +20,7 @@
 					</div>
 				</div>
 			</div>
-			<view class="banner">
+			<view class="banner pt50">
 				<myswiper :lists="data.silders.data"></myswiper>
 			</view>
 			
@@ -44,7 +51,7 @@
 			</view>
 			
 			<view class="doctor bg-f mb12">
-				<view class="ass-title p15 pr0 bg-f" @click="goto('/pages/doctor/lists/index',2)">
+				<view class="ass-title p15 pr0 bg-f" @click="goto('/pages/doctor/lists/index',1)">
 					<view class="name fs-16">医生推荐</view>
 					<view class="icon iconfont icon-right fc-9 fs-13 pr15"></view>
 				</view>

@@ -1,0 +1,7 @@
+.tui-header-box {width: 100%;background: #fff;padding: 5px 15px;}
+.tui-header {display: flex;align-items: flex-start;}
+.tui-back {margin-left: 8rpx;height: 32px !important;width: 32px !important;}
+.tui-searchbox {width: 100%;height: 30px;border-radius: 15px;font-size: 12px;background: #f7f7f7;padding: 3px 10px;box-sizing: border-box;color: #999;display: flex;align-items: center;overflow: hidden;}
+.tui-search-text {padding-left: 16rpx;}
+.tui-search-key {max-width: 80%;height: 100%;padding: 0 16rpx;margin-left: 12rpx;display: flex;align-items: center;border-radius: 15px;background: rgba(0, 0, 0, 0.5);color: #fff;}
+.tui-key-text {box-sizing: border-box;padding-right: 12rpx;font-size: 12px;line-height: 12px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
