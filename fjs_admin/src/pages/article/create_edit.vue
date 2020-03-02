@@ -82,6 +82,14 @@ export default {
                     this.ruleForm = msg.detail;
                     this.ruleForm.cover = this.ruleForm.cover ? this.splitCover(this.ruleForm.cover, "article") : [];
                     this.ruleForm.fclass = this.ruleForm.fclassArr;
+                    this.$nextTick(()=>{
+                         this.$refs.editor.setContent(this.ruleForm.content);
+                    })
+
+                }else{
+                    this.$nextTick(()=>{
+                        this.$refs.editor.setContent("");
+                    });
                 }
             });
         },

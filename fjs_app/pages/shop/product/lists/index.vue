@@ -2,7 +2,7 @@
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
 		<div v-if="data.show">
-			<view class="tui-header-box">
+		<!-- 	<view class="tui-header-box">
 				<view class="tui-header" :style="{width:width+'px',height:height+'px'}">
 					<view class="tui-searchbox tui-search-mr" :style="{marginTop:inputTop+'px'}" @tap="search">
 						<text class="tui-search-text" v-if="!searchKey">搜索商品</text>
@@ -12,7 +12,7 @@
 						</view>
 					</view>
 				</view>
-			</view>
+			</view> -->
 			<productLists :data="data" :style="{marginTop:px(dropScreenH-155)}"></productLists>
 		</div>
 	</view>
@@ -27,7 +27,7 @@
 		},
 		data() {
 			return {
-				formAction: '/wapindex',
+				formAction: '/shop.html',
 				mpType: 'page', //用来分清父和子组件
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),

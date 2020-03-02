@@ -10,8 +10,8 @@
 			<view v-if="data.index_link.data.length">
 				<view class="fun_button mb12">
 					<view class="fun_button_con">
-						<view class="a ptb8" v-for="(v,index) in links" :key="index">
-							<myform :ruleform="{}" :append="true" :vaildate="{}" :data="v" @callBack="goto('/pages/shop/product/lists/index',1)">
+						<view class="a ptb8" v-for="(v,index) in data.index_link.data" :key="index">
+							<myform :ruleform="{}" :append="true" :vaildate="{}" :data="v" @callBack="goto(v.url,1)">
 								<view slot="content">
 									<view :class="['button-img']">
 										<image :src=" v.cover " :class="['img']" />
@@ -42,7 +42,7 @@
 		},
 		data() {
 			return {
-				formAction: '/wapindex',
+				formAction: '/shop.html',
 				mpType: 'page', //用来分清父和子组件
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),

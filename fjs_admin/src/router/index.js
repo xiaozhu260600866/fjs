@@ -87,6 +87,23 @@ export default new Router({
                 	]
                 },
                 {
+                	path: 'product*',
+                	url: 'product',
+                	name: '产品管理',
+                	open: false,
+                	iconCls: 'iconfont icon-fjs-doctor', //图标样式class
+                	component: resolve => require(['../p'], resolve),
+                	children: [{
+                			path: 'lists*',
+                			url: '/vueadmin/product/lists',
+                			name: '产品管理',
+                			iconCls: 'iconfont icon8', //图标样式class
+                			component: resolve => require(['../pages/product/lists'], resolve),
+                			permission: [],
+                		},
+                	]
+                },
+                {
                 	path: 'coupon*',
                 	url: 'coupon',
                 	name: '优惠券管理',

@@ -1,15 +1,15 @@
 <template>
 	<view class="tui-product-list pb15">
 		<view class="tui-product-container">
-			<block v-for="(item,index) in productList" :key="index" v-if="(index+1)%2!=0 || isList">
-				<myform :ruleform="{}" :append="true" :vaildate="{}" :data="item" @callBack="goto('/pages/shop/product/show/index',1)">
+			<block v-for="(item,index) in data.lists.data" :key="index" v-if="(index+1)%2!=0 || isList">
+				<myform :ruleform="{}" :append="true" :vaildate="{}" :data="item" @callBack="goto('/pages/shop/product/show/index?id='+item.id,1)">
 					<div slot="content">
 						<view class="tui-pro-item">
-							<image class="tui-pro-img" :src="'/static/pro/'+item.img+'.jpg'" mode="widthFix" />
+							<image class="tui-pro-img" :src="item.firstCover" mode="widthFix" />
 							<view class="tui-pro-content">
 								<view class="tui-pro-tit lh-20 mb8">{{item.name}}</view>
 								<view class="tui-pro-price lh-20">
-									<text class="tui-sale-price">￥{{item.sale}}</text>
+									<text class="tui-sale-price">￥{{item.price}}</text>
 								</view>
 							</view>
 						</view>
@@ -18,15 +18,15 @@
 			</block>
 		</view>
 		<view class="tui-product-container" v-if="!isList">
-			<block v-for="(item,index) in  productList" :key="index" v-if="(index+1)%2==0">
-				<myform :ruleform="{}" :append="true" :vaildate="{}" :data="item" @callBack="goto('/pages/shop/product/show/index',1)">
+			<block v-for="(item,index) in  data.lists.data" :key="index" v-if="(index+1)%2==0">
+				<myform :ruleform="{}" :append="true" :vaildate="{}" :data="item" @callBack="goto('/pages/shop/product/show/index?id='+item.id,1)">
 					<div slot="content">
 						<view class="tui-pro-item">
-							<image class="tui-pro-img" :src="'/static/pro/'+item.img+'.jpg'" mode="widthFix" />
+							<image class="tui-pro-img" :src="item.firstCover" mode="widthFix" />
 							<view class="tui-pro-content">
 								<view class="tui-pro-tit lh-20 mb8">{{item.name}}</view>
 								<view class="tui-pro-price lh-20">
-									<text class="tui-sale-price">￥{{item.sale}}</text>
+									<text class="tui-sale-price">￥{{item.price}}</text>
 								</view>
 							</view>
 						</view>

@@ -19,10 +19,12 @@
             <el-tabs v-model="type" type="card" @tab-click="clickStatus">
                 <el-tab-pane label="首页幻灯片" :name="''+1"></el-tab-pane>
                 <el-tab-pane label="导航" :name="''+3"></el-tab-pane>
+                <el-tab-pane label="商城幻灯片" :name="''+4"></el-tab-pane>
+                <el-tab-pane label="商城导航" :name="''+5"></el-tab-pane>
             </el-tabs>
         </el-col>
 		<el-table ref="multipleTable" :data="data.lists" border tooltip-effect="dark" style="width: 100%" @selection-change="selsChange" v-loading="data.listLoading">
-			<el-table-column type="selection"width="40"> </el-table-column>
+			<el-table-column type="selection" width="40"> </el-table-column>
 			<el-table-column prop="name" label="名称" min-width="120"> </el-table-column>
 			<el-table-column prop="url" label="url地址" min-width="200"> </el-table-column>
 			<el-table-column prop="sort" label="排序" width="60"> </el-table-column>
