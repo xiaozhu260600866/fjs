@@ -60,51 +60,16 @@
 			<div class="Hdoctor Hscroll mb10 bg-f">
 				<view class="box-title">
 					<view class="name fs-16">医生</view>
-					<view class="more">查看更多<span class="iconfont icon-right"></span></view>
+					<view class="more" @click="goto('/pages/hospital_record/lists/index?type=1',1)">查看更多<span class="iconfont icon-right"></span></view>
 				</view>
 				<div class="Hs-list">
 					<scroll-view class="pl5" scroll-x="true">
-						<div class="Hs-item Hd-item">
+						<div class="Hs-item Hd-item" v-for="v in data.detail.doctor_lists">
 							<div class="Hs-img Hd-img">
-								<img class="img" src="https://fjs.doxinsoft.com/upload/images/coupon/300_i6nZ1QZSnt.jpg" mode="aspectFill" />
+								<img class="img" :src="v.getLogo" mode="aspectFill" />
 							</div>
-							<div class="Hs-name nowrap">陈医生</div>
-							<div class="Hs-mark">主任医师</div>
-						</div>
-						<div class="Hs-item Hd-item">
-							<div class="Hs-img Hd-img">
-								<img class="img" src="https://fjs.doxinsoft.com/upload/images/coupon/300_nQFSipJT4k.jpg" mode="aspectFill" />
-							</div>
-							<div class="Hs-name nowrap">林医生</div>
-							<div class="Hs-mark">主任医师</div>
-						</div>
-						<div class="Hs-item Hd-item">
-							<div class="Hs-img Hd-img">
-								<img class="img" src="https://fjs.doxinsoft.com/upload/images/coupon/300_i6nZ1QZSnt.jpg" mode="aspectFill" />
-							</div>
-							<div class="Hs-name nowrap">陈医生</div>
-							<div class="Hs-mark">主任医师</div>
-						</div>
-						<div class="Hs-item Hd-item">
-							<div class="Hs-img Hd-img">
-								<img class="img" src="https://fjs.doxinsoft.com/upload/images/coupon/300_nQFSipJT4k.jpg" mode="aspectFill" />
-							</div>
-							<div class="Hs-name nowrap">林医生</div>
-							<div class="Hs-mark">主任医师</div>
-						</div>
-						<div class="Hs-item Hd-item">
-							<div class="Hs-img Hd-img">
-								<img class="img" src="https://fjs.doxinsoft.com/upload/images/coupon/300_i6nZ1QZSnt.jpg" mode="aspectFill" />
-							</div>
-							<div class="Hs-name nowrap">陈医生</div>
-							<div class="Hs-mark">主任医师</div>
-						</div>
-						<div class="Hs-item Hd-item">
-							<div class="Hs-img Hd-img">
-								<img class="img" src="https://fjs.doxinsoft.com/upload/images/coupon/300_nQFSipJT4k.jpg" mode="aspectFill" />
-							</div>
-							<div class="Hs-name nowrap">林医生</div>
-							<div class="Hs-mark">主任医师</div>
+							<div class="Hs-name nowrap">{{v.name}}</div>
+							<div class="Hs-mark">{{v.position}}</div>
 						</div>
 					</scroll-view>
 				</div>
@@ -113,51 +78,16 @@
 			<div class="Hitem Hscroll mb10 bg-f">
 				<view class="box-title">
 					<view class="name fs-16">特色项目</view>
-					<view class="more">查看更多<span class="iconfont icon-right"></span></view>
+					<view class="more" @click="goto('/pages/hospital_record/lists/index?type=2',1)">查看更多<span class="iconfont icon-right"></span></view>
 				</view>
 				<div class="Hs-list">
 					<scroll-view class="pl5" scroll-x="true">
-						<div class="Hs-item Hi-item">
+						<div class="Hs-item Hi-item" v-for="v in data.detail.project_lists">
 							<div class="Hs-img Hi-img">
-								<img class="img" src="https://fjs.doxinsoft.com/upload/images/coupon/300_nQFSipJT4k.jpg" mode="aspectFill" />
+								<img class="img" :src="v.getLogo" mode="aspectFill" />
 							</div>
-							<div class="Hs-name nowrap">医教于心，心手相连</div>
-							<div class="Hs-mark">教学中心体验日</div>
-						</div>
-						<div class="Hs-item Hi-item">
-							<div class="Hs-img Hi-img">
-								<img class="img" src="https://fjs.doxinsoft.com/ueditor/php/upload/image/20200228/1582854570499421.jpg" mode="aspectFill" />
-							</div>
-							<div class="Hs-name nowrap">三伏贴</div>
-							<div class="Hs-mark">是一种传统中医的治疗法、预防医学手段</div>
-						</div>
-						<div class="Hs-item Hi-item">
-							<div class="Hs-img Hi-img">
-								<img class="img" src="https://fjs.doxinsoft.com/ueditor/php/upload/image/20200228/1582854718672117.gif" mode="aspectFill" />
-							</div>
-							<div class="Hs-name nowrap">中医科</div>
-							<div class="Hs-mark">通过经络、腧穴的传导作用，以及应用一定的操作法，来治疗全身疾病</div>
-						</div>
-						<div class="Hs-item Hi-item">
-							<div class="Hs-img Hi-img">
-								<img class="img" src="https://fjs.doxinsoft.com/upload/images/coupon/300_nQFSipJT4k.jpg" mode="aspectFill" />
-							</div>
-							<div class="Hs-name nowrap">医教于心，心手相连</div>
-							<div class="Hs-mark">教学中心体验日</div>
-						</div>
-						<div class="Hs-item Hi-item">
-							<div class="Hs-img Hi-img">
-								<img class="img" src="https://fjs.doxinsoft.com/ueditor/php/upload/image/20200228/1582854570499421.jpg" mode="aspectFill" />
-							</div>
-							<div class="Hs-name nowrap">三伏贴</div>
-							<div class="Hs-mark">是一种传统中医的治疗法、预防医学手段</div>
-						</div>
-						<div class="Hs-item Hi-item">
-							<div class="Hs-img Hi-img">
-								<img class="img" src="https://fjs.doxinsoft.com/ueditor/php/upload/image/20200228/1582854718672117.gif" mode="aspectFill" />
-							</div>
-							<div class="Hs-name nowrap">中医科</div>
-							<div class="Hs-mark">通过经络、腧穴的传导作用，以及应用一定的操作法，来治疗全身疾病</div>
+							<div class="Hs-name nowrap">{{v.name}}</div>
+							<!-- <div class="Hs-mark">教学中心体验日</div> -->
 						</div>
 					</scroll-view>
 				</div>
@@ -167,51 +97,16 @@
 			<div class="Hcase Hscroll mb10 bg-f">
 				<view class="box-title">
 					<view class="name fs-16">案例分享</view>
-					<view class="more">查看更多<span class="iconfont icon-right"></span></view>
+					<view class="more" @click="goto('/pages/hospital_record/lists/index?type=3',1)">查看更多<span class="iconfont icon-right"></span></view>
 				</view>
 				<div class="Hs-list">
 					<scroll-view class="pl5" scroll-x="true">
-						<div class="Hs-item Hc-item">
-							<div class="Hs-img Hc-img">
-								<img class="img" src="https://fjs.doxinsoft.com/upload/images/coupon/300_nQFSipJT4k.jpg" mode="aspectFill" />
+						<div class="Hs-item Hi-item" v-for="v in data.detail.case_lists">
+							<div class="Hs-img Hi-img">
+								<img class="img" :src="v.getLogo" mode="aspectFill" />
 							</div>
-							<div class="Hs-name nowrap">医教于心，心手相连</div>
-							<div class="Hs-mark">教学中心体验日</div>
-						</div>
-						<div class="Hs-item Hc-item">
-							<div class="Hs-img Hc-img">
-								<img class="img" src="https://fjs.doxinsoft.com/ueditor/php/upload/image/20200228/1582854570499421.jpg" mode="aspectFill" />
-							</div>
-							<div class="Hs-name nowrap">三伏贴</div>
-							<div class="Hs-mark">是一种传统中医的治疗法、预防医学手段</div>
-						</div>
-						<div class="Hs-item Hc-item">
-							<div class="Hs-img Hc-img">
-								<img class="img" src="https://fjs.doxinsoft.com/ueditor/php/upload/image/20200228/1582854718672117.gif" mode="aspectFill" />
-							</div>
-							<div class="Hs-name nowrap">中医科</div>
-							<div class="Hs-mark">通过经络、腧穴的传导作用，以及应用一定的操作法，来治疗全身疾病</div>
-						</div>
-						<div class="Hs-item Hc-item">
-							<div class="Hs-img Hc-img">
-								<img class="img" src="https://fjs.doxinsoft.com/upload/images/coupon/300_nQFSipJT4k.jpg" mode="aspectFill" />
-							</div>
-							<div class="Hs-name nowrap">医教于心，心手相连</div>
-							<div class="Hs-mark">教学中心体验日</div>
-						</div>
-						<div class="Hs-item Hc-item">
-							<div class="Hs-img Hc-img">
-								<img class="img" src="https://fjs.doxinsoft.com/ueditor/php/upload/image/20200228/1582854570499421.jpg" mode="aspectFill" />
-							</div>
-							<div class="Hs-name nowrap">三伏贴</div>
-							<div class="Hs-mark">是一种传统中医的治疗法、预防医学手段</div>
-						</div>
-						<div class="Hs-item Hc-item">
-							<div class="Hs-img Hc-img">
-								<img class="img" src="https://fjs.doxinsoft.com/ueditor/php/upload/image/20200228/1582854718672117.gif" mode="aspectFill" />
-							</div>
-							<div class="Hs-name nowrap">中医科</div>
-							<div class="Hs-mark">通过经络、腧穴的传导作用，以及应用一定的操作法，来治疗全身疾病</div>
+							<div class="Hs-name nowrap">{{v.name}}</div>
+							<!-- <div class="Hs-mark">教学中心体验日</div> -->
 						</div>
 					</scroll-view>
 				</div>
@@ -220,34 +115,16 @@
 			<div class="Hnews mb10 bg-f">
 				<view class="box-title">
 					<view class="name fs-16">最新资讯</view>
-					<view class="more">查看更多<span class="iconfont icon-right"></span></view>
+					<view class="more" @click="goto('/pages/hospital_record/lists/index?type=4',1)">查看更多<span class="iconfont icon-right"></span></view>
 				</view>
 				<view class="Hn-lists">
-					<view class="weui-media-box weui-media-box_appmsg">
+					<view class="weui-media-box weui-media-box_appmsg" v-for="v in data.detail.news_lists">
 						<view class="weui-media-box__hd">
-							<img class="weui-media-box__thumb" src="https://fjs.doxinsoft.com/upload/images/coupon/300_nQFSipJT4k.jpg" mode="aspectFill">
+							<img class="weui-media-box__thumb" :src="v.getLogo" mode="aspectFill">
 						</view>
 						<view class="weui-media-box__bd flex1">
-							<view class="weui-media-box__title lh-20 mb5">北京日报评论：全球战“疫”必须互帮互鉴共度难关</view>
-							<view class="weui-media-box__desc">对于很多疾疫，包括新冠肺炎，人类的未知都远远大于已知。正如世卫专家考察组所言，希望“向世界敞开一扇门”，让外界看到中国采取了果敢的做法，而不是听天由命，以此鼓舞各国“像中国这样去做吧，这样可以拯救生命”。</view>
-						</view>
-					</view>
-					<view class="weui-media-box weui-media-box_appmsg">
-						<view class="weui-media-box__hd">
-							<img class="weui-media-box__thumb" src="https://fjs.doxinsoft.com/upload/images/coupon/300_nQFSipJT4k.jpg" mode="aspectFill">
-						</view>
-						<view class="weui-media-box__bd flex1">
-							<view class="weui-media-box__title lh-20 mb5">北京日报评论：全球战“疫”必须互帮互鉴共度难关</view>
-							<view class="weui-media-box__desc">对于很多疾疫，包括新冠肺炎，人类的未知都远远大于已知。正如世卫专家考察组所言，希望“向世界敞开一扇门”，让外界看到中国采取了果敢的做法，而不是听天由命，以此鼓舞各国“像中国这样去做吧，这样可以拯救生命”。</view>
-						</view>
-					</view>
-					<view class="weui-media-box weui-media-box_appmsg">
-						<view class="weui-media-box__hd">
-							<img class="weui-media-box__thumb" src="https://fjs.doxinsoft.com/upload/images/coupon/300_nQFSipJT4k.jpg" mode="aspectFill">
-						</view>
-						<view class="weui-media-box__bd flex1">
-							<view class="weui-media-box__title lh-20 mb5">北京日报评论：全球战“疫”必须互帮互鉴共度难关</view>
-							<view class="weui-media-box__desc">对于很多疾疫，包括新冠肺炎，人类的未知都远远大于已知。正如世卫专家考察组所言，希望“向世界敞开一扇门”，让外界看到中国采取了果敢的做法，而不是听天由命，以此鼓舞各国“像中国这样去做吧，这样可以拯救生命”。</view>
+							<view class="weui-media-box__title lh-20 mb5">{{v.name}}</view>
+							<view class="weui-media-box__desc">{{v.position}}</view>
 						</view>
 					</view>
 				</view>

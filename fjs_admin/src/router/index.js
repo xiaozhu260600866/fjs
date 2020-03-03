@@ -42,7 +42,8 @@ export default new Router({
                 	open: false,
                 	iconCls: 'iconfont icon-fjs-hospital', //图标样式class
                 	component: resolve => require(['../p'], resolve),
-                	children: [{
+                	children: [
+                        {
                 			path: 'lists*',
                 			url: '/vueadmin/hospital/lists',
                 			name: '医院管理',
@@ -50,6 +51,38 @@ export default new Router({
                 			component: resolve => require(['../pages/hospital/lists'], resolve),
                 			permission: [],
                 		},
+                        {
+                        	path: 'doctor-lists*',
+                        	url: '/vueadmin/hospital/doctor-lists',
+                        	name: '医生管理',
+                        	iconCls: 'iconfont icon8', //图标样式class
+                        	component: resolve => require(['../pages/hospital_record/doctor_lists'], resolve),
+                        	permission: [],
+                        },
+                        {
+                        	path: 'project-lists*',
+                        	url: '/vueadmin/hospital/project-lists',
+                        	name: '特色项目',
+                        	iconCls: 'iconfont icon8', //图标样式class
+                        	component: resolve => require(['../pages/hospital_record/project_lists'], resolve),
+                        	permission: [],
+                        },
+                        {
+                        	path: 'case-lists*',
+                        	url: '/vueadmin/hospital/case-lists',
+                        	name: '案例项目',
+                        	iconCls: 'iconfont icon8', //图标样式class
+                        	component: resolve => require(['../pages/hospital_record/case_lists'], resolve),
+                        	permission: [],
+                        },
+                        {
+                        	path: 'news-lists*',
+                        	url: '/vueadmin/hospital/news-lists',
+                        	name: '最新资讯',
+                        	iconCls: 'iconfont icon8', //图标样式class
+                        	component: resolve => require(['../pages/hospital_record/news_lists'], resolve),
+                        	permission: [],
+                        },
                 	]
                 },
                 {

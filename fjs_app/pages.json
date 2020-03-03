@@ -8,6 +8,27 @@
 				
 			}
 		},
+		
+		{
+			"path": "pages/hospital_record/lists/index",
+			"style": {
+				"navigationBarTitleText": "列表",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		
+		{
+			"path": "pages/hospital_record/show/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		
+		
+		
 		{
 			"path": "pages/news/lists/index",
 			"style": {
