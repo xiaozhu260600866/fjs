@@ -28,12 +28,23 @@
 				<view class="fun_button mb12">
 					<view class="fun_button_con">
 						<view class="a ptb8" v-for="(v,index) in data.index_link.data" :key="index">
-							<myform :ruleform="{}" :append="true" :vaildate="{}" :data="v" @callBack="goto(v.url,v.redirect_type)">
+							<myform :ruleform="{}" :append="true" :vaildate="{}" :data="v" @callBack="goto(v.url,1)">
 								<view slot="content">
 									<view :class="['button-img']">
 										<image :src=" v.cover " :class="['img']" />
 									</view>
-									<view :class="['button-txt','pt5', 'fs-13','fc-3','text-center','lh-20']"><span>{{v.name}}</span></view>
+									<view class="button-txt pt5 fs-13 fc-3 text-center lh-20"><span>{{v.name}}</span></view>
+								</view>
+							</myform>
+						</view>
+						
+						<view class="a ptb8">
+							<myform :ruleform="{}" :append="true" :vaildate="{}" :data="v" @callBack="goto('/pages/shop/index/index',2)">
+								<view slot="content">
+									<view class="button-img">
+										<image src="https://fjs.doxinsoft.com/upload/images/poster/zDdKdqkCqb.png" class="img" />
+									</view>
+									<view class="button-txt pt5 fs-13 fc-3 text-center lh-20"><span>产品简介</span></view>
 								</view>
 							</myform>
 						</view>

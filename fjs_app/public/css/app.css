@@ -132,3 +132,17 @@ uni-page-body{height: 100%;}
 .pro_lists .cms_mark{color: #999;line-height: 18px;height: 36px;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;width: 100%;}
 .pro_lists .cms_price{line-height: 20px;align-items: flex-end;}
 .pro_lists .cms_price .cprice{padding: 4px 0 0 5px;line-height: 16px;}
+
+
+/* 医生列表 */
+.doctor-box .limg .img{width: 100px;height: 100px;display: flex;}
+.doctor-box .rinfo .info{display: flex;align-content: space-between;height: 100px;padding-right: 15px;}
+.doctor-box .rinfo .location{align-content: center;text-align: right;}
+
+
+/* 新闻列表 */
+#article_list .item{border-bottom: 1px solid #ebebeb;}
+#article_list .item .img {width: 95px;height: 72px;border-radius: 3px;}
+#article_list .item .rt {color: #666;}
+#article_list .item .rt .tt {color: #333;line-height: 1;font-weight: bold;}
+#article_list .item .rt .td {color: #979797;line-height: 1.5;}

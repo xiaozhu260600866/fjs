@@ -1,0 +1,3 @@
+
+.news_lists.weui-cells:before,.news_lists.weui-cells:after{border: 0;}
+.news_lists .weui-cell:before{border-color: #eee;left: 0;}

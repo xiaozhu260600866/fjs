@@ -2,46 +2,13 @@
 	<view class="pb50">
 		<page :parentData="data" :formAction="formAction"></page>
 		<view v-if='data.show'>
-			<div class="show-img">
-				<image class="img w-b100 flex" mode="widthFix":src="getSiteName+ '/upload/images/coupon/'+data.detail.logo" />
-			</div>
-			<div class="shop-info bg-f mb10 p15">
-				<div class="top-item flex-between">
-					<div class="rinfo flex1">
-						<p class="ctitle fs-20">{{data.detail.name}}</p>
-						<p class="lh-20 star"><tui-rate :current="index" @change="change" :disabled="true"></tui-rate></p>
-						<p class="industry fs-12 fc-9 lh-22"></p>
-					</div>
-					<div class="ricon flex pl10">
-						<button class="iitem plr8 text-center bg-f" hover-class="none" open-type="share">
-							<p class="iconfont icon-share fc-6 fs-18 lh-20 mb5"></p>
-							<p class="name fs-12 fc-6 lh-18">分享</p>
-						</button>
-					</div>
-				</div>
-				<div class="bottom-item" >
-					<div class="flex lh-20 pt15" @click="phone(data.detail.phone)">
-						<p class="iconfont icon-phone fs-14 fc-9 mr5"></p>
-						<p class="fs-13 fc-9 flex1" >{{data.detail.phone}}</p>
-						<p class="fs-13 fc-9" v-if="data.detail.line_phone">{{data.detail.line_phone}}</p>
-					</div>
-					<div class="flex lh-20 pt15" @click="location(data.detail.location_x,data.detail.location_y,data.detail.address)">
-						<p class="iconfont icon-location fs-16 fc-9 mr5"></p>
-						<p class="fs-13 fc-9 flex1">{{data.detail.address}}</p>
-					</div>
-				</div>
-			</div>
-			<div class="bus-detail mb12">
-				<div class="box-title mer-title p15 bg-f">
-					<p class="name fs-16 cur">个人介绍</p>
-				</div>
-				<div class="content bg-f fs-13 plr15 pb15">
-					<u-parse :content="data.detail.content" />
-				</div>
-			</div>
-			
-			<view class="b_fixed Footer flex" @click="phone(data.detail.phone)">
-				<view class="nav dx-btn-blue">一键拨号</view>
+			<view class="p15 fs-18 lh-24">标题名称</view>
+			<view class="mark fc-9 fs-12 flex-between flex-middle plr15 pb15">
+				<view class="date">2020-03-04</view>
+				<view class="hos">华顺口腔诊所</view>
+			</view>
+			<view class="content bg-f fs-15 plr15 pb15">
+				<u-parse :content="data.detail.content" />
 			</view>
 		</view>
 	</view>

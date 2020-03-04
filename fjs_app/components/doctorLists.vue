@@ -37,8 +37,3 @@
 		},
 	}
 </script>
-<style>
-.doctor-box .limg .img{width: 100px;height: 100px;display: flex;}
-.doctor-box .rinfo .info{display: flex;align-content: space-between;height: 100px;}
-.doctor-box .rinfo .location{align-content: center;text-align: right;}
-</style>

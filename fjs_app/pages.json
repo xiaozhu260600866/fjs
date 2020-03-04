@@ -26,9 +26,6 @@
 				
 			}
 		},
-		
-		
-		
 		{
 			"path": "pages/news/lists/index",
 			"style": {
@@ -178,6 +175,55 @@
 			"path": "pages/hospital/coupon/cancel/index",
 			"style": {
 				"navigationBarTitleText": "优惠券核销",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		{
+			"path": "pages/hospital/doctor/lists/index",
+			"style": {
+				"navigationBarTitleText": "医生列表",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		{
+			"path": "pages/hospital/doctor/show/index",
+			"style": {
+				"navigationBarTitleText": "医生详情",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		{
+			"path": "pages/hospital/item/lists/index",
+			"style": {
+				"navigationBarTitleText": "列表",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		{
+			"path": "pages/hospital/item/show/index",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		// 医学资讯
+		{
+			"path": "pages/medical_news/lists/index",
+			"style": {
+				"navigationBarTitleText": "医学资讯",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		{
+			"path": "pages/medical_news/show/index",
+			"style": {
+				"navigationBarTitleText": "医学资讯详情",
 				"enablePullDownRefresh": true
 				
 			}

@@ -1,2 +1,6 @@
 page{background: #fff;}
+
+.video{border-bottom: 12px #f5f5f5 solid;}
+.video video{width: 100%;display: flex;}
+
 .con ._p{font-size: 15px;color: #333;line-height: 22px;margin: 0 0 10px 0;}

@@ -2,7 +2,7 @@
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
 		<div class="content" v-if="data.show">
-			<video :src="videoSrc" autoplay="true"></video>
+			<view class="video"><video :src="videoSrc" autoplay="true"></video></view>
 			<div class="con p15 pt5">
 				<u-parse :content="data.detail.content" />
 			</div>

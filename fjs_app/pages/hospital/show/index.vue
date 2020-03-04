@@ -60,16 +60,17 @@
 			<div class="Hdoctor Hscroll mb10 bg-f">
 				<view class="box-title">
 					<view class="name fs-16">医生</view>
-					<view class="more" @click="goto('/pages/hospital_record/lists/index?type=1',1)">查看更多<span class="iconfont icon-right"></span></view>
+					<view class="more" @click="goto('/pages/hospital/doctor/lists/index?type=1',1)">查看更多<span class="iconfont icon-right"></span></view>
 				</view>
 				<div class="Hs-list">
 					<scroll-view class="pl5" scroll-x="true">
-						<div class="Hs-item Hd-item" v-for="v in data.detail.doctor_lists">
+						<div class="Hs-item Hd-item" v-for="v in data.detail.doctor_lists"
+						 @click="goto('/pages/hospital/doctor/show/index?id='+v.id,1)">
 							<div class="Hs-img Hd-img">
 								<img class="img" :src="v.getLogo" mode="aspectFill" />
 							</div>
 							<div class="Hs-name nowrap">{{v.name}}</div>
-							<div class="Hs-mark">{{v.position}}</div>
+							<!-- <div class="Hs-mark">{{v.position}}</div> -->
 						</div>
 					</scroll-view>
 				</div>
@@ -78,11 +79,12 @@
 			<div class="Hitem Hscroll mb10 bg-f">
 				<view class="box-title">
 					<view class="name fs-16">特色项目</view>
-					<view class="more" @click="goto('/pages/hospital_record/lists/index?type=2',1)">查看更多<span class="iconfont icon-right"></span></view>
+					<view class="more" @click="goto('/pages/hospital/item/lists/index?type=2',1)">查看更多<span class="iconfont icon-right"></span></view>
 				</view>
 				<div class="Hs-list">
 					<scroll-view class="pl5" scroll-x="true">
-						<div class="Hs-item Hi-item" v-for="v in data.detail.project_lists">
+						<div class="Hs-item Hi-item" v-for="v in data.detail.project_lists"
+						 @click="goto('/pages/hospital/item/show/index?id='+v.id,1)">
 							<div class="Hs-img Hi-img">
 								<img class="img" :src="v.getLogo" mode="aspectFill" />
 							</div>
@@ -97,11 +99,12 @@
 			<div class="Hcase Hscroll mb10 bg-f">
 				<view class="box-title">
 					<view class="name fs-16">案例分享</view>
-					<view class="more" @click="goto('/pages/hospital_record/lists/index?type=3',1)">查看更多<span class="iconfont icon-right"></span></view>
+					<view class="more" @click="goto('/pages/hospital/item/lists/index?type=3',1)">查看更多<span class="iconfont icon-right"></span></view>
 				</view>
 				<div class="Hs-list">
 					<scroll-view class="pl5" scroll-x="true">
-						<div class="Hs-item Hi-item" v-for="v in data.detail.case_lists">
+						<div class="Hs-item Hi-item" v-for="v in data.detail.case_lists"
+						 @click="goto('/pages/hospital/item/show/index?id='+v.id,1)">
 							<div class="Hs-img Hi-img">
 								<img class="img" :src="v.getLogo" mode="aspectFill" />
 							</div>
@@ -115,10 +118,11 @@
 			<div class="Hnews mb10 bg-f">
 				<view class="box-title">
 					<view class="name fs-16">最新资讯</view>
-					<view class="more" @click="goto('/pages/hospital_record/lists/index?type=4',1)">查看更多<span class="iconfont icon-right"></span></view>
+					<view class="more" @click="goto('/pages/hospital/item/lists/index?type=4',1)">查看更多<span class="iconfont icon-right"></span></view>
 				</view>
 				<view class="Hn-lists">
-					<view class="weui-media-box weui-media-box_appmsg" v-for="v in data.detail.news_lists">
+					<view class="weui-media-box weui-media-box_appmsg" v-for="v in data.detail.news_lists"
+					 @click="goto('/pages/hospital/item/show/index?id='+v.id,1)">
 						<view class="weui-media-box__hd">
 							<img class="weui-media-box__thumb" :src="v.getLogo" mode="aspectFill">
 						</view>
