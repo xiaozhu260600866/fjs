@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'iconfont';  /* project id 906512 */
-  src: url('//at.alicdn.com/t/font_906512_ra54m41azyn.eot');
-  src: url('//at.alicdn.com/t/font_906512_ra54m41azyn.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_906512_ra54m41azyn.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_906512_ra54m41azyn.woff') format('woff'),
-  url('//at.alicdn.com/t/font_906512_ra54m41azyn.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_906512_ra54m41azyn.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_906512_28prserxxkt.eot');
+  src: url('//at.alicdn.com/t/font_906512_28prserxxkt.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_906512_28prserxxkt.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_906512_28prserxxkt.woff') format('woff'),
+  url('//at.alicdn.com/t/font_906512_28prserxxkt.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_906512_28prserxxkt.svg#iconfont') format('svg');
 }
 
 /* 后台图标 - 通用 */
@@ -32,6 +32,9 @@
 .icon-fjs-coupon:before{content: "\e6a7";}/* 优惠券 */
 .icon-fjs-article:before{content: "\e6e6";}/* 文章管理 */
 .icon-fjs-config:before{content: "\e63b";}/* 设置 */
+.icon-fjs-video:before{content: "\e73f";}/* 视频管理 */
+.icon-fjs-pro:before{content: "\e68a";}/* 产品管理 */
+
 
 
 .icon-fjs-:before{content: "\e";}/*  */

@@ -107,7 +107,7 @@ export default new Router({
                 	url: 'video',
                 	name: '视频管理',
                 	open: false,
-                	iconCls: 'iconfont icon-fjs-doctor', //图标样式class
+                	iconCls: 'iconfont icon-fjs-video', //图标样式class
                 	component: resolve => require(['../p'], resolve),
                 	children: [{
                 			path: 'lists*',
@@ -124,7 +124,7 @@ export default new Router({
                 	url: 'product',
                 	name: '产品管理',
                 	open: false,
-                	iconCls: 'iconfont icon-fjs-doctor', //图标样式class
+                	iconCls: 'iconfont icon-fjs-pro', //图标样式class
                 	component: resolve => require(['../p'], resolve),
                 	children: [{
                 			path: 'lists*',

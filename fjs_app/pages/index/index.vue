@@ -54,7 +54,7 @@
 			
 			<view class="hospital bg-f mb12">
 				<view class="ass-title p15 pr0 bg-f" @click="goto('/pages/hospital/lists/index',2)">
-					<view class="name fs-16">医院推荐</view>
+					<view class="name fs-16">医疗机构推荐</view>
 					<view class="icon iconfont icon-right fc-9 fs-13 pr15"></view>
 				</view>
 				<!-- 循环开始 -->

@@ -129,7 +129,7 @@ export default {
             "datatype": "array",
             "type": "upload",
             "append_form_": 0,
-            "label": "logo",
+            "label": "图片",
             "allowUpLoadNum": "1",
             "upurl": "coupon"
         },

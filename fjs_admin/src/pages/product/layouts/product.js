@@ -82,6 +82,7 @@ export default {
             "prop": "name",
             "datatype": "require",
             "type": "text",
+            "style": "width: 350px;",
             "append_form_": 0,
             "label": "产品名称"
         },
@@ -100,6 +101,7 @@ export default {
             "datatype": "require|number",
             "type": "text",
             "defaultValue":0,
+            "style": "width: 200px;",
             "append_form_": 0,
             "label": "排序"
         },
@@ -108,6 +110,7 @@ export default {
             "prop": "price",
             "datatype": "require|price",
             "type": "text",
+            "style": "width: 200px;",
             "append_form_url": 0,
             "label": "金额"
         },

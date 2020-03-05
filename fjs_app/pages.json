@@ -134,7 +134,7 @@
 		{
 			"path": "pages/hospital/lists/index",
 			"style": {
-				"navigationBarTitleText": "医院",
+				"navigationBarTitleText": "医疗机构",
 				"enablePullDownRefresh": true
 				
 			}
