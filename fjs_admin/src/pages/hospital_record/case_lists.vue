@@ -11,7 +11,7 @@
 </template>
 <script type="text/javascript">
     import searchSonger from "@/components/searchHospital";
-    import globalData from "./layouts/hospitalRecord.js";
+    import globalData from "./layouts/case.js";
     export default {
         data() {
             return {
@@ -36,7 +36,7 @@
         methods: {
             searchCallBack(rows) {
                 if (rows.length) {
-                    this.$set(this.ruleForm, 'hospital_name', rows[0].name);
+                    this.$set(this.ruleForm, 'hospital_name', rows[0].userInfo.company_name);
                     this.$set(this.ruleForm, 'hospital_userid', rows[0].id);
 
                     console.log(this.ruleForm);

@@ -90,6 +90,15 @@ export default {
 				"append_form_": 0,
 				"label": "姓名"
 			},
+            {
+            	"name": "",
+            	"prop": "position",
+            	"datatype": "require",
+            	"type": "text",
+            	"style":"width: 200px",
+            	"append_form_": 0,
+            	"label": "职称"
+            },
 			{
 				"name": "",
 				"prop": "line_phone",
@@ -103,28 +112,28 @@ export default {
 				"name": "",
 				"prop": "phone",
 				"datatype": "require|phone",
-					"style":"width: 200px",
+				"style":"width: 200px",
 				"type": "text",
 				"append_form_": 0,
 				"label": "手机"
 			},
-			// {
-			// 	"name": "",
-			// 	"prop": "address",
-			// 	"datatype": "require",
-			// 	"type": "location",
-			// 	"append_form_": 0,
-			// 	"label": "地址"
-			// },
-			// {
-			// 	"name": "",
-			// 	"prop": "city",
-			// 	"datatype": "require",
-			// 	"type": "select",
-			// 	"datakey":'city',
-			// 	"append_form_": 0,
-			// 	"label": "城市"
-			// },
+			{
+				"name": "",
+				"prop": "address",
+				"datatype": "require",
+				"type": "location",
+				"append_form_": 0,
+				"label": "地址"
+			},
+			{
+				"name": "",
+				"prop": "city",
+				"datatype": "require",
+				"type": "select",
+				"datakey":'city',
+				"append_form_": 0,
+				"label": "城市"
+			},
 			{
 				"prop": "logo",
 				"datatype": "array",

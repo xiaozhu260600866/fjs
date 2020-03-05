@@ -54,7 +54,7 @@ export default {
             "minWidth": "100",
             "width": "",
             "append_table_": 0,
-            "label": "姓名"
+            "label": "医生姓名"
         },
         {
             "name": "",
@@ -62,7 +62,7 @@ export default {
             "minWidth": "120",
             "width": "",
             "append_table_": 0,
-            "label": "手机"
+            "label": "医生手机"
         },
 
         // {
@@ -80,7 +80,7 @@ export default {
         //     "width": "",
         //     "append_table_": 0,
         //     "label": "地址"
-        // }, 
+        // },
         ],
         "formFields": [
             {
@@ -97,7 +97,7 @@ export default {
                 "datatype": "require",
                 "type": "text",
                 "append_form_": 0,
-                "label": "姓名"
+                "label": "医生姓名"
             },
 
            {
@@ -106,16 +106,16 @@ export default {
             "datatype": "require|phone",
             "type": "text",
             "append_form_": 0,
-            "label": "手机"
+            "label": "医生手机"
         },
-        // {
-        //     "name": "",
-        //     "prop": "address",
-        //     "datatype": "require",
-        //     "type": "location",
-        //     "append_form_": 0,
-        //     "label": "地址"
-        // },
+        {
+            "name": "",
+            "prop": "position",
+            "datatype": "require",
+            "type": "text",
+            "append_form_": 0,
+            "label": "职称"
+        },
         // {
         //     "name": "",
         //     "prop": "city",

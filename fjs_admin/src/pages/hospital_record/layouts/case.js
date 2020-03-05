@@ -80,7 +80,7 @@ export default {
         //     "width": "",
         //     "append_table_": 0,
         //     "label": "地址"
-        // }, 
+        // },
         ],
         "formFields": [
             {

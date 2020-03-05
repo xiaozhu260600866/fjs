@@ -11,7 +11,7 @@
 </template>
 <script type="text/javascript">
     import searchSonger from "@/components/searchHospital";
-    import globalData from "./layouts/hospitalRecord.js";
+    import globalData from "./layouts/doctor.js";
     export default {
         data() {
             return {
@@ -22,15 +22,7 @@
             }
         },
         mounted() {
-            this.globalData.data.searchFields[0].label = "医生姓名";
-            this.globalData.data.searchFields[1].label = "医生电话";
-            this.globalData.data.tableFields[1].label = "医生电话";
-            this.globalData.data.tableFields[2].label = "医生电话";
-            this.globalData.data.formFields[2].label = "医生电话";
-            this.globalData.data.formFields[1].label = "医生姓名";
-            this.globalData.data.formFields.push(
-                    {datatype:'require',label:"职称",prop:'position',type:'text'}
-            );
+          
             this.ajax();
         },
         watch: {
@@ -39,7 +31,7 @@
         methods: {
             searchCallBack(rows) {
                 if (rows.length) {
-                    this.$set(this.ruleForm, 'hospital_name', rows[0].name);
+                    this.$set(this.ruleForm, 'hospital_name', rows[0].userInfo.company_name);
                     this.$set(this.ruleForm, 'hospital_userid', rows[0].id);
 
                     console.log(this.ruleForm);

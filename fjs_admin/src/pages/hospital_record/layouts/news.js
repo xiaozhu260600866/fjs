@@ -12,12 +12,7 @@ export default {
             "name": "",
             "prop": "name",
             "type": "text",
-            "label": "医生姓名"
-        },{
-            "name": "",
-            "prop": "phone",
-            "type": "text",
-            "label": "医生电话"
+            "label": "资讯名称"
         }],
        /* "tarbars": {
             "prop": "type",
@@ -54,16 +49,9 @@ export default {
             "minWidth": "100",
             "width": "",
             "append_table_": 0,
-            "label": "姓名"
+            "label": "资讯名称"
         },
-        {
-            "name": "",
-            "prop": "phone",
-            "minWidth": "120",
-            "width": "",
-            "append_table_": 0,
-            "label": "手机"
-        },
+
 
         // {
         //     "name": "",
@@ -80,7 +68,7 @@ export default {
         //     "width": "",
         //     "append_table_": 0,
         //     "label": "地址"
-        // }, 
+        // },
         ],
         "formFields": [
             {
@@ -97,25 +85,18 @@ export default {
                 "datatype": "require",
                 "type": "text",
                 "append_form_": 0,
-                "label": "姓名"
+                "label": "资讯名称"
             },
 
-           {
+
+        {
             "name": "",
-            "prop": "phone",
-            "datatype": "require|phone",
+            "prop": "position",
+            "datatype": "",
             "type": "text",
             "append_form_": 0,
-            "label": "手机"
+            "label": "备注"
         },
-        // {
-        //     "name": "",
-        //     "prop": "address",
-        //     "datatype": "require",
-        //     "type": "location",
-        //     "append_form_": 0,
-        //     "label": "地址"
-        // },
         // {
         //     "name": "",
         //     "prop": "city",
