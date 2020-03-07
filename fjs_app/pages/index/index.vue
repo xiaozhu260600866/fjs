@@ -9,18 +9,18 @@
 			</div>
 		</page>
 		<view v-if="data.show">
-			<div class="search-top p10 main-bg">
+			<div class="search-top p10 main-bg" @click="goto('/pages/search/searchCity/index',1)">
 				<div class="search-box flex-middle bg-f lh-34 bdr17">
-					<div class="select-city fs-14 fc-6 plr15" @click="goto('/pages/search/searchCity/index',1)">
+					<div class="select-city fs-14 fc-6 plr15" >
 						{{ otherData.city }}<span class="iconfont icon-bottom fs12"></span>
 					</div>
-					<div class="search-input w-b100 flex1" @click="goto('/pages/search/product/index',1)">
+					<!-- <div class="search-input w-b100 flex1" @click="goto('/pages/search/product/index',1)">
 						<span class="iconfont icon-search fs-16 fc-9"></span>
 						<span class="fs-14 fc-9 pl5">请输入搜索内容</span>
-					</div>
+					</div> -->
 				</div>
-			</div>
-			<view class="banner pt50">
+			</div> 
+			<view class="banner">
 				<myswiper :lists="data.silders.data"></myswiper>
 			</view>
 			

@@ -41,6 +41,13 @@
 			this.shareSource(this, '商城');
 		},
 		onLoad(options) {
+			if(options.type == 2){
+				this.setTitle('特色项目');
+			}else if(options.type == 3){
+				this.setTitle('案例项目');
+			}else if(options.type == 4){
+				this.setTitle('最新资讯');
+			}
 			this.ajax();
 		},
 		methods: {

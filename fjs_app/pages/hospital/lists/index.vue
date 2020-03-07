@@ -33,11 +33,11 @@
 			return this.shareSource(this, '商城');
 		},
 		onLoad(options) {
-			this.ajax();
+			this.getMyAddress(this).then(msg=>{
+				this.ajax();
+			});;
 		},
-		onLoad() {
-			this.ajax();
-		},
+		
 		onShow() {
 			this.onShow(this);
 		},

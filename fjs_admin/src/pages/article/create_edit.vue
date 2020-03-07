@@ -5,6 +5,9 @@
             <el-form-item label="新闻标题" prop="title" :rules="[{ required: true, message: '新闻标题不能为空'},]">
                 <el-input v-model="ruleForm.title" style="width:40%"></el-input>
             </el-form-item>
+            <el-form-item label="备注" prop="intro" :rules="[{ required: true, message: '备注不能为空'},]">
+                <el-input v-model="ruleForm.intro" style="width:40%" type="textarea"></el-input>
+            </el-form-item>
             <el-form-item label="请选择分类" prop="fclass" :rules="[{ required: true, message: '分类不能为空'},]">
                 <el-cascader placeholder="请输入分类" expand-trigger="hover" :options="data.fclass" v-model="ruleForm.fclass"></el-cascader>
             </el-form-item>
@@ -15,10 +18,10 @@
                     </el-form-item>
                 </el-col>
             </el-form-item>
-        <!--    <div class="el-form-item">
-                <label class="el-form-item__label" style="width:100px">上传图片</label>
-                <my-upload upurl="article" :uploadLength="5" :fileList="ruleForm.cover" :sizearr="300"></my-upload>
-            </div> -->
+           <div class="el-form-item">
+              <label class="el-form-item__label" style="width:100px">缩略图</label>
+              <my-upload upurl="article" :uploadLength="1" :fileList="ruleForm.thumb_pic" :sizearr="300"></my-upload>
+           </div>
             <div class="el-form-item" style="padding-left: 100px">
                 <div class="el-form-item__content" style="">
                     <myeditor :content="ruleForm.content ? ruleForm.content : ''" ref="editor"></myeditor>
@@ -51,6 +54,7 @@ export default {
                 published_at: '',
                 sort: 0,
                 cover: [],
+                thumb_pic:[]
             },
             formAction: '',
             getSiteName: this.getSiteName(),
@@ -81,6 +85,7 @@ export default {
                 if ("detail" in msg) {
                     this.ruleForm = msg.detail;
                     this.ruleForm.cover = this.ruleForm.cover ? this.splitCover(this.ruleForm.cover, "article") : [];
+                    this.ruleForm.thumb_pic = this.ruleForm.thumb_pic ? this.splitCover(this.ruleForm.thumb_pic, "article") : [];
                     this.ruleForm.fclass = this.ruleForm.fclassArr;
                     this.$nextTick(()=>{
                          this.$refs.editor.setContent(this.ruleForm.content);

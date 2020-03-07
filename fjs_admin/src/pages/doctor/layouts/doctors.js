@@ -143,6 +143,15 @@ export default {
 				"allowUpLoadNum": "1",
 				"upurl": "coupon"
 			},
+            {
+            	"prop": "intro",
+            	
+            	"type": "textarea",
+            	"append_form_": 0,
+            	"label": "备注",
+            	"allowUpLoadNum": "1",
+            	"upurl": "coupon"
+            },
 
 			{
 				"name": "",

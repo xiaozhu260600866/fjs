@@ -3,10 +3,8 @@
 		<page :parentData="data" :formAction="formAction"></page>
 		<div v-if="data.show">
 			<view class="block-nav">
-				<view :class="['nav',fnav == 0 ? 'act':'']" @click="fnav = 0">全部</view>
-				<view :class="['nav',fnav == 1 ? 'act':'']" @click="fnav = 1">子类别一</view>
-				<view :class="['nav',fnav == 2 ? 'act':'']" @click="fnav = 2">子类别二</view>
-				<view :class="['nav',fnav == 3 ? 'act':'']" @click="fnav = 3">子类别三</view>
+				<view :class="['nav',fclass == 0 ? 'act':'']" @click="fclass = 0">全部</view>
+				<view :class="['nav',fclass == v.value ? 'act':'']" @click="search(v)" v-for="v in data.class">{{v.label}}</view>
 			</view>
 			<view class="case_list pt15">
 				<view class="list p15 pt0" v-for="v in data.lists.data"> 
@@ -33,7 +31,7 @@
 				mpType: 'page', //用来分清父和子组件
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),
-				fnav: 0,
+				fclass: 0,
 			}
 		},
 		onReachBottom() {
@@ -50,9 +48,12 @@
 			this.ajax();
 		},
 		methods: {
+			search(v){
+				this.fclass = v.value;this.ajax()
+			},
 			ajax() {
-				this.getAjax(this).then(msg => {
-					this.setTitle(msg.lists.data[0].fclassname[0]);
+				this.getAjax(this,{fclass:this.fclass}).then(msg => {
+					//this.setTitle(msg.lists.data[0].fclassname[0]);
 				});
 			}
 		}

@@ -60,7 +60,7 @@
 			<div class="Hdoctor Hscroll mb10 bg-f">
 				<view class="box-title">
 					<view class="name fs-16">医生</view>
-					<view class="more" @click="goto('/pages/hospital/doctor/lists/index?type=1',1)">查看更多<span class="iconfont icon-right"></span></view>
+					<view class="more" @click="goto('/pages/hospital/doctor/lists/index?type=1&hospital_userid='+data.detail.id,1)">查看更多<span class="iconfont icon-right"></span></view>
 				</view>
 				<div class="Hs-list">
 					<scroll-view class="pl5" scroll-x="true">
@@ -79,7 +79,7 @@
 			<div class="Hitem Hscroll mb10 bg-f">
 				<view class="box-title">
 					<view class="name fs-16">特色项目</view>
-					<view class="more" @click="goto('/pages/hospital/item/lists/index?type=2',1)">查看更多<span class="iconfont icon-right"></span></view>
+					<view class="more" @click="goto('/pages/hospital/item/lists/index?type=2&hospital_userid='+data.detail.id,1)">查看更多<span class="iconfont icon-right"></span></view>
 				</view>
 				<div class="Hs-list">
 					<scroll-view class="pl5" scroll-x="true">
@@ -99,7 +99,7 @@
 			<div class="Hcase Hscroll mb10 bg-f">
 				<view class="box-title">
 					<view class="name fs-16">案例分享</view>
-					<view class="more" @click="goto('/pages/hospital/item/lists/index?type=3',1)">查看更多<span class="iconfont icon-right"></span></view>
+					<view class="more" @click="goto('/pages/hospital/item/lists/index?type=3&hospital_userid='+data.detail.id,1)">查看更多<span class="iconfont icon-right"></span></view>
 				</view>
 				<div class="Hs-list">
 					<scroll-view class="pl5" scroll-x="true">
@@ -118,7 +118,7 @@
 			<div class="Hnews mb10 bg-f">
 				<view class="box-title">
 					<view class="name fs-16">最新资讯</view>
-					<view class="more" @click="goto('/pages/hospital/item/lists/index?type=4',1)">查看更多<span class="iconfont icon-right"></span></view>
+					<view class="more" @click="goto('/pages/hospital/item/lists/index?type=4&hospital_userid='+data.detail.id,1)">查看更多<span class="iconfont icon-right"></span></view>
 				</view>
 				<view class="Hn-lists">
 					<view class="weui-media-box weui-media-box_appmsg" v-for="v in data.detail.news_lists"
