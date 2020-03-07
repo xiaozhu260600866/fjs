@@ -1,6 +1,6 @@
 <template>
     <div>
-        <dx-table :data="data" :globalData="globalData" @submitBeforeCallBack="submitBeforeCallBack" :operateWidth="280">
+        <dx-table :data="data" :globalData="globalData" @submitBeforeCallBack="submitBeforeCallBack" :operateWidth="280" createEditDiagWidth="1000px">
             <div slot="append_form_hospital_userid" slot-scope="scope">
                 <el-button @click="searchSonger(scope.row)">选择医院</el-button>
                 <el-tag type="gray" v-if="scope.row.hospital_name">{{ scope.row.hospital_name}}</el-tag>

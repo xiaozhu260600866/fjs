@@ -18,186 +18,186 @@ export default new Router({
 			component: resolve => require(['../default'], resolve),
 			children: [
 
-                {
-                	path: 'user*',
-                	url: 'user',
-                	name: '会员管理',
-                	open: false,
-                	iconCls: 'iconfont icon-fjs-vip', //图标样式class
-                	component: resolve => require(['../p'], resolve),
-                	children: [{
-                			path: 'lists*',
-                			url: '/vueadmin/user/lists',
-                			name: '会员管理',
-                			iconCls: 'iconfont icon8', //图标样式class
-                			component: resolve => require(['../pages/user/lists'], resolve),
-                			permission: [],
-                		},
-                	]
-                },
-                {
-                	path: 'hospital*',
-                	url: 'hospital',
-                	name: '医院管理',
-                	open: false,
-                	iconCls: 'iconfont icon-fjs-hospital', //图标样式class
-                	component: resolve => require(['../p'], resolve),
-                	children: [
-                        {
-                			path: 'lists*',
-                			url: '/vueadmin/hospital/lists',
-                			name: '医院管理',
-                			iconCls: 'iconfont icon8', //图标样式class
-                			component: resolve => require(['../pages/hospital/lists'], resolve),
-                			permission: [],
-                		},
-                        {
-                        	path: 'doctor-lists*',
-                        	url: '/vueadmin/hospital/doctor-lists',
-                        	name: '医生管理',
-                        	iconCls: 'iconfont icon8', //图标样式class
-                        	component: resolve => require(['../pages/hospital_record/doctor_lists'], resolve),
-                        	permission: [],
-                        },
-                        {
-                        	path: 'project-lists*',
-                        	url: '/vueadmin/hospital/project-lists',
-                        	name: '特色项目',
-                        	iconCls: 'iconfont icon8', //图标样式class
-                        	component: resolve => require(['../pages/hospital_record/project_lists'], resolve),
-                        	permission: [],
-                        },
-                        {
-                        	path: 'case-lists*',
-                        	url: '/vueadmin/hospital/case-lists',
-                        	name: '案例项目',
-                        	iconCls: 'iconfont icon8', //图标样式class
-                        	component: resolve => require(['../pages/hospital_record/case_lists'], resolve),
-                        	permission: [],
-                        },
-                        {
-                        	path: 'news-lists*',
-                        	url: '/vueadmin/hospital/news-lists',
-                        	name: '最新资讯',
-                        	iconCls: 'iconfont icon8', //图标样式class
-                        	component: resolve => require(['../pages/hospital_record/news_lists'], resolve),
-                        	permission: [],
-                        },
-                	]
-                },
-                {
-                	path: 'doctor*',
-                	url: 'doctor',
-                	name: '医生管理',
-                	open: false,
-                	iconCls: 'iconfont icon-fjs-doctor', //图标样式class
-                	component: resolve => require(['../p'], resolve),
-                	children: [{
-                			path: 'lists*',
-                			url: '/vueadmin/doctor/lists',
-                			name: '医生管理',
-                			iconCls: 'iconfont icon8', //图标样式class
-                			component: resolve => require(['../pages/doctor/lists'], resolve),
-                			permission: [],
-                		},
-                	]
-                },
-                {
-                	path: 'video*',
-                	url: 'video',
-                	name: '视频管理',
-                	open: false,
-                	iconCls: 'iconfont icon-fjs-video', //图标样式class
-                	component: resolve => require(['../p'], resolve),
-                	children: [{
-                			path: 'lists*',
-                			url: '/vueadmin/video/lists',
-                			name: '视频管理',
-                			iconCls: 'iconfont icon8', //图标样式class
-                			component: resolve => require(['../pages/video/lists'], resolve),
-                			permission: [],
-                		},
-                	]
-                },
-                {
-                	path: 'product*',
-                	url: 'product',
-                	name: '产品管理',
-                	open: false,
-                	iconCls: 'iconfont icon-fjs-pro', //图标样式class
-                	component: resolve => require(['../p'], resolve),
-                	children: [{
-                			path: 'lists*',
-                			url: '/vueadmin/product/lists',
-                			name: '产品管理',
-                			iconCls: 'iconfont icon8', //图标样式class
-                			component: resolve => require(['../pages/product/lists'], resolve),
-                			permission: [],
-                		},
-                	]
-                },
-                {
-                	path: 'coupon*',
-                	url: 'coupon',
-                	name: '优惠券管理',
-                	open: false,
-                	iconCls: 'iconfont icon-fjs-coupon', //图标样式class
-                	component: resolve => require(['../p'], resolve),
-                	children: [
-                        {
-                			path: 'lists*',
-                			url: '/vueadmin/coupon/lists',
-                			name: '优惠券管理',
-                			iconCls: 'iconfont icon8', //图标样式class
-                			component: resolve => require(['../pages/coupon/lists'], resolve),
-                			permission: [],
-                		},
-                        {
-                        	path: 'record*',
-                        	url: '/vueadmin/coupon/record?status=0',
-                        	name: '领取记录',
-                        	iconCls: 'iconfont icon8', //图标样式class
-                        	component: resolve => require(['../pages/couponUser/lists'], resolve),
-                        	permission: [],
-                        },
-                	]
-                },
-                {
-                	path: 'article*',
-                	url: 'article',
-                	name: '文章管理',
-                	open: false,
-                	iconCls: 'iconfont icon-fjs-article', //图标样式class
-                	component: resolve => require(['../p'], resolve),
-                	children: [
-                        {
-                			path: 'lists*',
-                			url: '/vueadmin/article/lists',
-                			name: '文章管理',
-                			iconCls: 'iconfont icon8', //图标样式class
-                			component: resolve => require(['../pages/article/lists'], resolve),
-                			permission: [],
-                		},
-                        {
-                        	path: 'create*',
-                        	url: '/vueadmin/article/create',
-                        	name: '文章新建',
-                            hidden:true,
-                        	iconCls: 'iconfont icon8', //图标样式class
-                        	component: resolve => require(['../pages/article/create_edit'], resolve),
-                        	permission: [],
-                        },
-                       {
-                       	path: 'edit*',
-                       	url: '/vueadmin/article/edit',
-                       	name: '文章新建',
-                           hidden:true,
-                       	iconCls: 'iconfont icon8', //图标样式class
-                       	component: resolve => require(['../pages/article/create_edit'], resolve),
-                       	permission: [],
-                       },
-                	]
-                },
+				{
+					path: 'user*',
+					url: 'user',
+					name: '会员管理',
+					open: false,
+					iconCls: 'iconfont icon-fjs-vip', //图标样式class
+					component: resolve => require(['../p'], resolve),
+					children: [{
+							path: 'lists*',
+							url: '/vueadmin/user/lists',
+							name: '会员管理',
+							iconCls: 'iconfont icon8', //图标样式class
+							component: resolve => require(['../pages/user/lists'], resolve),
+							permission: [],
+						},
+					]
+				},
+				{
+					path: 'hospital*',
+					url: 'hospital',
+					name: '医院管理',
+					open: false,
+					iconCls: 'iconfont icon-fjs-hospital', //图标样式class
+					component: resolve => require(['../p'], resolve),
+					children: [
+						{
+							path: 'lists*',
+							url: '/vueadmin/hospital/lists',
+							name: '医院管理',
+							iconCls: 'iconfont icon8', //图标样式class
+							component: resolve => require(['../pages/hospital/lists'], resolve),
+							permission: [],
+						},
+						{
+							path: 'doctor-lists*',
+							url: '/vueadmin/hospital/doctor-lists',
+							name: '医生管理',
+							iconCls: 'iconfont icon8', //图标样式class
+							component: resolve => require(['../pages/hospital_record/doctor_lists'], resolve),
+							permission: [],
+						},
+						{
+							path: 'project-lists*',
+							url: '/vueadmin/hospital/project-lists',
+							name: '特色项目',
+							iconCls: 'iconfont icon8', //图标样式class
+							component: resolve => require(['../pages/hospital_record/project_lists'], resolve),
+							permission: [],
+						},
+						{
+							path: 'case-lists*',
+							url: '/vueadmin/hospital/case-lists',
+							name: '案例项目',
+							iconCls: 'iconfont icon8', //图标样式class
+							component: resolve => require(['../pages/hospital_record/case_lists'], resolve),
+							permission: [],
+						},
+						{
+							path: 'news-lists*',
+							url: '/vueadmin/hospital/news-lists',
+							name: '最新资讯',
+							iconCls: 'iconfont icon8', //图标样式class
+							component: resolve => require(['../pages/hospital_record/news_lists'], resolve),
+							permission: [],
+						},
+					]
+				},
+				// {
+				// 	path: 'doctor*',
+				// 	url: 'doctor',
+				// 	name: '医生管理',
+				// 	open: false,
+				// 	iconCls: 'iconfont icon-fjs-doctor', //图标样式class
+				// 	component: resolve => require(['../p'], resolve),
+				// 	children: [{
+				// 			path: 'lists*',
+				// 			url: '/vueadmin/doctor/lists',
+				// 			name: '医生管理',
+				// 			iconCls: 'iconfont icon8', //图标样式class
+				// 			component: resolve => require(['../pages/doctor/lists'], resolve),
+				// 			permission: [],
+				// 		},
+				// 	]
+				// },
+				{
+					path: 'video*',
+					url: 'video',
+					name: '视频管理',
+					open: false,
+					iconCls: 'iconfont icon-fjs-video', //图标样式class
+					component: resolve => require(['../p'], resolve),
+					children: [{
+							path: 'lists*',
+							url: '/vueadmin/video/lists',
+							name: '视频管理',
+							iconCls: 'iconfont icon8', //图标样式class
+							component: resolve => require(['../pages/video/lists'], resolve),
+							permission: [],
+						},
+					]
+				},
+				{
+					path: 'product*',
+					url: 'product',
+					name: '产品管理',
+					open: false,
+					iconCls: 'iconfont icon-fjs-pro', //图标样式class
+					component: resolve => require(['../p'], resolve),
+					children: [{
+							path: 'lists*',
+							url: '/vueadmin/product/lists',
+							name: '产品管理',
+							iconCls: 'iconfont icon8', //图标样式class
+							component: resolve => require(['../pages/product/lists'], resolve),
+							permission: [],
+						},
+					]
+				},
+				{
+					path: 'coupon*',
+					url: 'coupon',
+					name: '优惠券管理',
+					open: false,
+					iconCls: 'iconfont icon-fjs-coupon', //图标样式class
+					component: resolve => require(['../p'], resolve),
+					children: [
+						{
+							path: 'lists*',
+							url: '/vueadmin/coupon/lists',
+							name: '优惠券管理',
+							iconCls: 'iconfont icon8', //图标样式class
+							component: resolve => require(['../pages/coupon/lists'], resolve),
+							permission: [],
+						},
+						{
+							path: 'record*',
+							url: '/vueadmin/coupon/record?status=0',
+							name: '领取记录',
+							iconCls: 'iconfont icon8', //图标样式class
+							component: resolve => require(['../pages/couponUser/lists'], resolve),
+							permission: [],
+						},
+					]
+				},
+				{
+					path: 'article*',
+					url: 'article',
+					name: '文章管理',
+					open: false,
+					iconCls: 'iconfont icon-fjs-article', //图标样式class
+					component: resolve => require(['../p'], resolve),
+					children: [
+						{
+							path: 'lists*',
+							url: '/vueadmin/article/lists',
+							name: '文章管理',
+							iconCls: 'iconfont icon8', //图标样式class
+							component: resolve => require(['../pages/article/lists'], resolve),
+							permission: [],
+						},
+						{
+							path: 'create*',
+							url: '/vueadmin/article/create',
+							name: '文章新建',
+							hidden:true,
+							iconCls: 'iconfont icon8', //图标样式class
+							component: resolve => require(['../pages/article/create_edit'], resolve),
+							permission: [],
+						},
+					   {
+						path: 'edit*',
+						url: '/vueadmin/article/edit',
+						name: '文章新建',
+						   hidden:true,
+						iconCls: 'iconfont icon8', //图标样式class
+						component: resolve => require(['../pages/article/create_edit'], resolve),
+						permission: [],
+					   },
+					]
+				},
 
 
 
@@ -224,13 +224,13 @@ export default new Router({
 							url: '/vueadmin/system/password',
 							component: resolve => require(['../pages/system/password'], resolve),
 						},
-                        {
-                        	path: 'poster*',
-                        	name: '广告位管理',
-                        	permission: [],
-                        	url: '/vueadmin/system/poster',
-                        	component: resolve => require(['../pages/poster/lists'], resolve),
-                        },
+						{
+							path: 'poster*',
+							name: '广告位管理',
+							permission: [],
+							url: '/vueadmin/system/poster',
+							component: resolve => require(['../pages/poster/lists'], resolve),
+						},
 
 					]
 				},
