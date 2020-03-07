@@ -28,6 +28,11 @@
 			<el-table-column prop="name" label="名称" min-width="120"> </el-table-column>
 			<el-table-column prop="url" label="url地址" min-width="200"> </el-table-column>
 			<el-table-column prop="sort" label="排序" width="60"> </el-table-column>
+            <el-table-column align="center" label="显示/隐藏" width="80" >
+            	<template scope="scope">
+            		 <el-switch v-model="scope.row.is_index " on-text="" off-text="" :active-value="1" :inactive-value="0" @change="editField(scope.row,'is_index')"> </el-switch>
+            	</template>
+            </el-table-column>
 			<el-table-column label="日期" width="160">
 				<template scope="scope">{{ scope.row.created_at }}</template>
 			</el-table-column>
@@ -69,6 +74,16 @@ export default {
 		"$route": "ajax"
 	},
 	methods: {
+       editField(row,field){
+       	this.postAjax("/admin/poster/editField", { id:row.id,field:field,value:row[field] }, msg => {
+       		if (msg.data.status == 3) {
+       			row[field] =0;
+       		}
+               if(msg.data.status == 2){
+                   this.ajax();
+               }
+       	});
+       },
 		ajax() {
 			this.getAjax(this, { type: this.type }, msg => {});
 		},

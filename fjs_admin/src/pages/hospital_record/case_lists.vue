@@ -22,12 +22,6 @@
             }
         },
         mounted() {
-            this.globalData.data.searchFields[0].label = "案例姓名";
-            this.globalData.data.searchFields[1].label = "案例电话";
-            this.globalData.data.tableFields[1].label = "案例电话";
-            this.globalData.data.tableFields[2].label = "案例电话";
-            this.globalData.data.formFields[2].label = "案例电话";
-            this.globalData.data.formFields[1].label = "案例姓名";
             this.ajax();
         },
         watch: {

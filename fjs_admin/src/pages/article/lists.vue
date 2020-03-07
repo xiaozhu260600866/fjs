@@ -97,7 +97,7 @@
             }
         },
         components: {
-            "my-class": resolve => require(['@/components/class.vue'], resolve),
+            "my-class": resolve => require(['xiaozhu/vue/components/admin/class.vue'], resolve),
         }
 
     }

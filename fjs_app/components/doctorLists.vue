@@ -10,8 +10,8 @@
 					<view class="rinfo flex1 flex">
 						<view class="info flex1 flex-wrap">
 							<p class="clist w-b100 fs-16 lh-20 mb5">{{v.name}}</p>
-							<p class="clist w-b100 fs-13 fc-6 lh-20">{{v.position || ""}}</p><!-- 职称 -->
-							<p class="ccon w-b100 fs-13 fc-6 lh-20 wrap2">{{v.intro || ""}}</p>
+							<p class="ccon w-b100 fs-13 fc-6 lh-20 wrap2">{{v.position || ""}}</p>
+							<p class="clist w-b100 fs-13 fc-6 lh-20">{{v.getHospital.company_name || ""}}</p><!-- 职称 -->
 						</view>
 						<view class="location flex flex-wrap text-center">
 							<p class="name w-b100 fs-12 lh-18 h-18 fc-9">距离</p>

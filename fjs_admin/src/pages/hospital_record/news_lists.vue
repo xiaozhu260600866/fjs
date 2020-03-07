@@ -22,13 +22,6 @@
             }
         },
         mounted() {
-            this.globalData.data.searchFields[0].label = "资讯姓名";
-            this.globalData.data.searchFields[1].label = "资讯电话";
-            this.globalData.data.tableFields[1].label = "资讯电话";
-            this.globalData.data.tableFields[2].label = "资讯电话";
-            this.globalData.data.formFields[2].label = "资讯电话";
-            this.globalData.data.formFields[1].label = "资讯姓名";
-          
             this.ajax();
         },
         watch: {
