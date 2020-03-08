@@ -100,7 +100,7 @@
 			this.ajax();
 		},
 		onShareAppMessage() {
-			return this.shareSource(this, '福加斯大健康信息平台');
+			return this.shareSource(this, '福加斯大健康信息平台','notshare');
 		},
 		onShow() {
 			if (wx.getStorageSync('city')) {

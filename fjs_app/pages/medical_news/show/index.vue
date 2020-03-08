@@ -1,15 +1,14 @@
 <template>
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
-		<view>
-			<view class="p15 fs-18 lh-24">标题名称</view>
+		<view v-if="data.show">
+			<view class="p15 fs-18 lh-24">{{data.detail.title}}</view>
 			<view class="mark fc-9 fs-12 flex-between flex-middle plr15 pb15">
-				<view class="date">2020-03-04</view>
-				<view class="hos">华顺口腔诊所</view>
+				<view class="date">{{data.detail.created_at}}</view>
+				<!-- <view class="hos">华顺口腔诊所</view> -->
 			</view>
 			<view class="content bg-f fs-15 plr15 pb15">
-				一项新的研究结果显示，多发性硬化（MS）患者发生多种类型感染的风险增加，其中与肾道感染相关的风险最高。
-				<!-- <u-parse :content="data.detail.content" /> -->
+				 <u-parse :content="data.detail.content" />
 			</view>
 		</view>
 	</view>
@@ -17,14 +16,18 @@
 
 <script>
 	import "./index.css";
+	import uParse from '@/components/gaoyia-parse/parse.vue'
 	export default {
 		data() {
 			return {
-				formAction: '/doctor.html',
+				formAction: '/newShow.html',
 				mpType: 'page', //用来分清父和子组件
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),
 			}
+		},
+		components:{
+			uParse
 		},
 		onReachBottom() {
 			this.hasMore(this);
@@ -34,10 +37,10 @@
 			//this.ajax();
 		},
 		onShareAppMessage() {
-			this.shareSource(this, '商城');
+			this.shareSource(this, this.data.detail.title);
 		},
 		onLoad(options) {
-			//this.ajax();
+			this.ajax();
 		},
 		methods: {
 			ajax() {

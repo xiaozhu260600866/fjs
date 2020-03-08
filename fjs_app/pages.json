@@ -223,7 +223,7 @@
 		{
 			"path": "pages/medical_news/show/index",
 			"style": {
-				"navigationBarTitleText": "医学资讯详情",
+				"navigationBarTitleText": "",
 				"enablePullDownRefresh": true
 				
 			}
