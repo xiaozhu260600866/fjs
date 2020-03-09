@@ -11,7 +11,7 @@
 					<view class="item bg-f flex p15" @click="goto('/pages/medical_news/show/index?id='+v.id,1)">
 						<view class="limg mr15"><img class="img lazy flex" :src="v.firstCover"></view>
 						<view class="rt flex1">
-							<view class="tt fs-16 nowrap pt5">{{v.name}}</view>
+							<view class="tt fs-16 nowrap pt5">{{v.title}}</view>
 							<view class="td fs-13 mt10 wrap2" >{{v.intro}}</view>
 						</view>
 					</view>

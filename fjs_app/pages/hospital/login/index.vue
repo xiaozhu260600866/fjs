@@ -1,5 +1,5 @@
 <template class="user-body">
-	<view>
+	<view class="bg-f">
 		<page :parentData="data" :formAction="formAction"></page>
 		<view class="logo-img pt40 text-center">
 			<img class="img" :src="getSiteName+'/upload/images/product/'+data.siteConfig.web_logo">

@@ -9,8 +9,10 @@
 					</view>
 					<view class="rinfo flex1 flex">
 						<view class="info flex1 flex-wrap">
-							<p class="clist w-b100 fs-16 lh-20 mb5">{{v.name}}</p>
-							<p class="ccon w-b100 fs-13 fc-6 lh-20 wrap2">{{v.position || ""}}</p>
+							<div class="w-b100">
+								<p class="clist fs-16 lh-20 mb5">{{v.name}}</p>
+								<p class="ccon fs-13 fc-6 lh-20 wrap2">{{v.position || ""}}</p>
+							</div>
 							<p class="clist w-b100 fs-13 fc-6 lh-20">{{v.getHospital.company_name || ""}}</p><!-- 职称 -->
 						</view>
 						<view class="location flex flex-wrap text-center">

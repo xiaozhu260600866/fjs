@@ -102,7 +102,7 @@
 		{
 			"path": "pages/hospital/index/index",
 			"style": {
-				"navigationBarTitleText": "个人中心",
+				"navigationBarTitleText": "会员中心",
 				"enablePullDownRefresh": true
 				
 			}
@@ -281,6 +281,14 @@
 			"path": "pages/user/info/index",
 			"style": {
 				"navigationBarTitleText": "企业信息",
+				"enablePullDownRefresh": true
+				
+			}
+		},
+		{
+			"path": "pages/search/search/index",
+			"style": {
+				"navigationBarTitleText": "搜索",
 				"enablePullDownRefresh": true
 				
 			}
