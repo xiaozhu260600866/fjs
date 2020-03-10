@@ -52,7 +52,7 @@
 				</view>
 			</view>
 			
-			<view class="hospital bg-f mb12">
+			<view class="hospital bg-f mb12" v-if="data.lists.data.length">
 				<view class="ass-title p15 pr0 bg-f" @click="goto('/pages/hospital/lists/index',2)">
 					<view class="name fs-16">医疗机构推荐</view>
 					<view class="icon iconfont icon-right fc-9 fs-13 pr15"></view>
@@ -61,13 +61,43 @@
 				<hospitalLists :data="data"></hospitalLists>
 			</view>
 			
-			<view class="doctor bg-f mb12">
+			<view class="doctor bg-f mb12" v-if="data.doctor_lists.data.length">
 				<view class="ass-title p15 pr0 bg-f" @click="goto('/pages/doctor/lists/index',1)">
 					<view class="name fs-16">医生推荐</view>
 					<view class="icon iconfont icon-right fc-9 fs-13 pr15"></view>
 				</view>
 				<!-- 循环开始 -->
 				<doctorLists :data="data"></doctorLists>
+			</view>
+			
+			<view class="doctor bg-f mb12" v-if="data.article_lists.data.length">
+				<view class="ass-title p15 pr0 bg-f" @click="goto('/pages/doctor/lists/index',1)">
+					<view class="name fs-16">最新资讯</view>
+					<view class="icon iconfont icon-right fc-9 fs-13 pr15"></view>
+				</view>
+				<!-- 循环开始 -->
+				<view class="hospital_item">
+					<view v-for="(v,key) in data.article_lists.data">
+						<myform :ruleform="{}" :append="true" :vaildate="{}" :data="item" @callBack="goto('/pages/medical_news/show/index?id='+v.id,1)">
+							<view slot="content" class="item_box flex p15 bd-be">
+								<view class="limg pr10">
+									<image class="img" mode="aspectFill" :src="v.firstCover"/>
+								</view>
+								<view class="rinfo flex1 flex">
+									<view class="info flex1 pr10 flex-wrap">
+										<p class="ctitle w-b100 fs-16 lh-22 pb15">{{v.title}}</p>
+										<view class="w-b100">
+											<p class="clist fs-12 fc-9 lh-20">{{ v.intro }}</p>
+											
+										</view>
+										<!-- <p class="ccon fs-12 fc-6 lh-18 wrap2">{{v.content}}</p> -->
+									</view>
+									
+								</view>
+							</view>
+						</myform>
+					</view>
+				</view>
 			</view>
 			
 		</view>

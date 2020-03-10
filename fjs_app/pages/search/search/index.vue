@@ -10,7 +10,7 @@
 					<tui-icon name="search" :size='16' color='#333'></tui-icon>
 				</view>
 				<!-- #endif -->
-				<input confirm-type="search" placeholder="请搜索商品" :focus="true" auto-focus placeholder-class="tui-input-plholder"
+				<input confirm-type="search" placeholder="请输入要搜索的内容" :focus="true" auto-focus placeholder-class="tui-input-plholder"
 				 class="tui-input" v-model.trim="key"  @confirm="search"/>
 				<!-- #ifdef APP-PLUS || MP -->
 				<icon type="clear" :size='13' color='#bcbcbc' @tap="cleanKey" v-show="key"></icon>
@@ -32,7 +32,7 @@
 			</view>
 			<view class="tui-history-content">
 				<block v-for="(item,index) in history" :key="index">
-					<tui-tag type="gray" shape="circle" @click="goto('/pages/product/lists/main?name='+item.name,1)">{{item.name}}</tui-tag>
+					<tui-tag type="gray" shape="circle" @click="goto('/pages/medical_news/lists/index?name='+item.name,1)">{{item.name}}</tui-tag>
 				</block>
 			</view>
 		</view>
@@ -78,7 +78,7 @@
 						history.push({ name: this.key });
 						uni.setStorageSync('history', history);
 					}
-					this.goto("/pages/product/lists/main?name=" + this.key,1);
+					this.goto("/pages/medical_news/lists/index?name=" + this.key,1);
 			 },
 			 cleanRepeat(arr, val) {
 				var res = false;

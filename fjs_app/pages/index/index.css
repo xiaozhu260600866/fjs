@@ -27,5 +27,8 @@
 /* 查看更多 */
 .hasMore{background: #fff;}
 .hasMore .weui-loadmore{padding:1.5em 0;margin: 0;width: 100%;}
+.hospital_item .limg .img{width: 100px;height: 100px;display: flex;}
+.hospital_item .rinfo .info{display: flex;align-content: space-between;height: 100px;}
+.hospital_item .rinfo .location{align-content: center;text-align: right;}
 
 
