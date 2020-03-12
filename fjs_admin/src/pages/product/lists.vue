@@ -3,9 +3,9 @@
         <dx-table :data="data" :globalData="globalData" @submitBeforeCallBack="submitBeforeCallBack">
             <div slot="header">
             </div>
-            <!-- <div slot="append_table_up" slot-scope="scope">
-              	 <el-switch v-model="scope.row.putaway " on-text="" off-text="" :active-value="1" :inactive-value="0" @change="editField(scope.row,'putaway')"> </el-switch>
-            </div> -->
+              <div slot="append_table_putaway" slot-scope="scope">
+                   <el-switch v-model="scope.row.putaway " on-text="" off-text="" :active-value="1" :inactive-value="0" @change="editField(scope.row,'putaway')"> </el-switch>
+              </div>
         </dx-table>
     </div>
 </template>
@@ -29,7 +29,7 @@
         },
         methods: {
             editField(row, field) {
-                this.postAjax("/admin/product/editField", {
+                this.postAjax("/admin/product/edit-field", {
                     id: row.id,
                     field: field,
                     value: row[field]

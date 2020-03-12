@@ -34,6 +34,11 @@
                 <template scope="scope">{{ scope.row.created_at }}</template>
             </el-table-column>
             <el-table-column prop="views" label="点击量" width="80"> </el-table-column>
+            <el-table-column align="center" label="是否上架" width="80">
+            	<template scope="scope">
+            		 <el-switch v-model="scope.row.putaway " on-text="" off-text="" :active-value="1" :inactive-value="0" @change="editField(scope.row,'putaway')"> </el-switch>
+            	</template>
+            </el-table-column>
             <el-table-column label="操作" width="170">
                 <template scope="scope">
                     <el-button type="primary" size="mini" @click="$router.push({path:'/vueadmin/article/edit?id='+scope.row.id})"
@@ -69,6 +74,16 @@
             this.ajax();
         },
         methods: {
+            editField(row,field){
+            	this.postAjax("/admin/article/edit-field", { id:row.id,field:field,value:row[field] }, msg => {
+            		if (msg.data.status == 3) {
+            			row[field] =0;
+            		}
+                    if(msg.data.status == 2){
+                        this.ajax();
+                    }
+            	});
+            },
             ajax() {
                 this.getAjax(this, {}, msg => {});
             },

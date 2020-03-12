@@ -6,6 +6,9 @@
                     <el-button size="mini" @click="qrcode(scope.row)">查看二维码</el-button>
                 </div>
             </div>
+            <div slot="append_table_putaway" slot-scope="scope">
+                 <el-switch v-model="scope.row.putaway " on-text="" off-text="" :active-value="1" :inactive-value="0" @change="editField(scope.row,'putaway')"> </el-switch>
+            </div>
          </dx-table>
          <qrcode ref="qrcode"></qrcode>
     </div>
@@ -29,6 +32,16 @@
             "$route": "ajax"
         },
         methods: {
+            editField(row,field){
+            	this.postAjax("/admin/user/edit-field", { id:row.id,field:field,value:row[field] }, msg => {
+            		if (msg.data.status == 3) {
+            			row[field] =0;
+            		}
+                    if(msg.data.status == 2){
+                        this.ajax();
+                    }
+            	});
+            },
             submitBeforeCallBack(ruleform){
                 delete ruleform.api_token;
                 console.log(ruleform);

@@ -90,6 +90,14 @@ export default {
 				"append_table_": 0,
 				"label": "手机"
 			},
+            {
+            	"name": "",
+            	"prop": "putaway",
+            	"minWidth": "",
+            	"width": "120",
+            	"append_table_putaway": 1,
+            	"label": "上架/下架"
+            },
 			{
 				"name": "",
 				"prop": "city",

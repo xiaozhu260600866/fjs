@@ -17,17 +17,17 @@ export default {
         getContent() {
             return this.ue.getContent();
         },
-        setContent(content){
+        setContent(content,z_index){
             UE.delEditor('editor'); /*使用前必须要消毁editor*/
             this.ue = UE.getEditor('editor', {
                 BaseUrl: '',
                 UEDITOR_HOME_URL: '/static/utf8-php/',
                 // toolbars:[]
             });
-           
+
             setTimeout(()=>{
                     $(".edui-editor").removeAttr("style","");
-                   $(".edui-editor").css("z-index", "3000");
+                   $(".edui-editor").css("z-index", z_index ? z_index :'3000');
 
 
             },1000);

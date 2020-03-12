@@ -39,7 +39,7 @@
 					<p class="unav-tab">
 						<span class="iconfont icon-user-store"></span>
 					</p>
-					<p class="nav-txt">医院中心</p>
+					<p class="nav-txt">{{data.a}}</p>
 				</view>
 			</view>
 		</view>

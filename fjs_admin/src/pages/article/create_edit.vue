@@ -88,12 +88,12 @@ export default {
                     this.ruleForm.thumb_pic = this.ruleForm.thumb_pic ? this.splitCover(this.ruleForm.thumb_pic, "article") : [];
                     this.ruleForm.fclass = this.ruleForm.fclassArr;
                     this.$nextTick(()=>{
-                         this.$refs.editor.setContent(this.ruleForm.content);
+                         this.$refs.editor.setContent(this.ruleForm.content,1);
                     })
 
                 }else{
                     this.$nextTick(()=>{
-                        this.$refs.editor.setContent("");
+                        this.$refs.editor.setContent("",1);
                     });
                 }
             });

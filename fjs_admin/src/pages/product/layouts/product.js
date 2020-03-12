@@ -69,6 +69,14 @@ export default {
             "label": "排序"
         },
         {
+        	"name": "",
+        	"prop": "putaway",
+        	"minWidth": "",
+        	"width": "120",
+        	"append_table_putaway": 1,
+        	"label": "上架/下架"
+        },
+        {
             "name": "",
             "prop": "created_at",
             "minWidth": "180",

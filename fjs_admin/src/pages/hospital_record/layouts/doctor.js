@@ -60,6 +60,14 @@ export default {
 			},
 			{
 				"name": "",
+				"prop": "putaway",
+				"minWidth": "",
+				"width": "120",
+				"append_table_putaway": 1,
+				"label": "上架/下架"
+			},
+			{
+				"name": "",
 				"prop": "address",
 				"minWidth": "150",
 				"width": "",
