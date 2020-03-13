@@ -71,7 +71,7 @@
 			</view>
 			
 			<view class="doctor bg-f mb12" v-if="data.article_lists.data.length">
-				<view class="ass-title p15 pr0 bg-f" @click="goto('/pages/doctor/lists/index',1)">
+				<view class="ass-title p15 pr0 bg-f" @click="goto('/pages/news/lists/index',1)">
 					<view class="name fs-16">最新资讯</view>
 					<view class="icon iconfont icon-right fc-9 fs-13 pr15"></view>
 				</view>

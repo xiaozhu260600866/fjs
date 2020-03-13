@@ -37,7 +37,7 @@
 		{
 			"path": "pages/video/lists/index",
 			"style": {
-				"navigationBarTitleText": "视频列表",
+				"navigationBarTitleText": "列表",
 				"enablePullDownRefresh": true
 				
 			}
