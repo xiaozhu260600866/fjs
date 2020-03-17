@@ -1,7 +1,6 @@
 <template>
 	<view>
-		<page :parentData="data" :formAction="formAction" ref="page">
-		</page>
+		<page :parentData="data" :formAction="formAction" ref="page"></page>
 		<view v-if="data.show">
 			<view class="banner">
 				<myswiper :lists="data.silders.data"></myswiper>

@@ -18,10 +18,10 @@
 .fun_button_con .a .button-img .img{width: 44px;height: 44px;display: flex;justify-content: center;border-radius: 10px;}
 
 
-/* 块标题 */
 .ass-title{display: flex;justify-content: space-between;}
-.ass-title .name{line-height: 16px;height: 16px;border-left: 4px #017bc4 solid;padding-left: 8px;}
-.ass-title .icon{text-align: right;line-height: 16px;height: 16px;}
+.ass-title .name{line-height: 20px;padding-left: 12px;position: relative;}
+.ass-title .name:before{content: '';display: block;position: absolute;top: 50%;margin-top: -8px;left: 0;width: 4px;height: 16px;background: #33c45d;}
+.ass-title .icon{text-align: right;line-height: 20px;}
 
 
 /* 查看更多 */

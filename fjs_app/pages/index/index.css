@@ -18,12 +18,6 @@
 .fun_button_con .a .button-img .img{width: 44px;height: 44px;display: flex;justify-content: center;border-radius: 10px;}
 
 
-/* 块标题 */
-.ass-title{display: flex;justify-content: space-between;}
-.ass-title .name{line-height: 16px;height: 16px;border-left: 4px #017bc4 solid;padding-left: 8px;}
-.ass-title .icon{text-align: right;line-height: 16px;height: 16px;}
-
-
 /* 查看更多 */
 .hasMore{background: #fff;}
 .hasMore .weui-loadmore{padding:1.5em 0;margin: 0;width: 100%;}

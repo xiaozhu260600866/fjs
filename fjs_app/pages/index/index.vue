@@ -3,12 +3,12 @@
 		<page :parentData="data" :formAction="formAction" ref="page" Fbottom="bottom: 25px">
 			<div slot="floatBtn">
 				<div @click="phone(data.config.web_phone)">
-					<floatBtn type="2" icon="icon-float-tel-o" iSize="fs-17" title="电话"></floatBtn>
+					<floatBtn type="2" icon="icon-float-tel" myclass="float-nav-w-green" iSize="fs-17" title="电话"></floatBtn>
 				</div>
-				<floatBtn type="2" icon="icon-float-feedback-o" iSize="fs-19" openType="contact" title="咨询" v-if="!data.canAppointemt"></floatBtn>
+				<floatBtn type="2" icon="icon-float-feedback" myclass="float-nav-w-green" iSize="fs-19" openType="contact" title="咨询" v-if="!data.canAppointemt"></floatBtn>
 			</div>
 		</page>
-		<view v-if="data.show">
+		<view class="pt50 mt5" v-if="data.show">
 			<div class="search-top p10 main-bg">
 				<div class="search-box flex-middle bg-f lh-34 bdr17">
 					<div class="select-city fs-14 fc-6 plr15" @click="goto('/pages/search/searchCity/index',1)">

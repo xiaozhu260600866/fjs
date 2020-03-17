@@ -1,3 +1,0 @@
-.block-nav{display: flex;align-items: center;flex-wrap: wrap;background-color: #fff;padding: 12px 6px 0;}
-.block-nav .nav{border-radius: 17px;font-size: 12px;text-align: center;height: 34px;line-height: 34px;margin: 0 6px 12px;border: 1px #ddd solid;color: #666;padding: 0 15px;}
-.block-nav .nav.act{background: #0F8CFF;color: #FFF;border-color: #0F8CFF;}

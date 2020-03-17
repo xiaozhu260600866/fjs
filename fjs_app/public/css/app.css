@@ -7,8 +7,10 @@ uni-page-body{height: 100%;}
 
 
 /* 主色调 */
-.main-color{color: #0F8CFF;}
-.main-bg{background: #0F8CFF;}
+.main-color{color: #33c45d;}
+.main-bg{background: #33c45d;}
+.float-nav-w-green{border-color: rgba(51,196,93,0.1)!important;border-width: 1rpx;}
+.float-nav-w-green .nav-icon{color: #33c45d!important;}
 
 
 /* 灰底 */
@@ -26,6 +28,19 @@ uni-page-body{height: 100%;}
 .searchTop .search-input{margin: 6rpx 10rpx;position: relative;background: rgba(255,255,255,0.7);border-radius: 20px;border: 1px #ddd solid;width: 100%;line-height: 68rpx;}
 .searchTop .search-input .a{display: flex;align-items: center;height: 64rpx;padding-left: 20rpx;line-height: 64rpx;}
 .searchTop .search-input .span{display: flex;line-height: 64rpx;padding-left: 15px;}
+
+
+/* 块标题 */
+.ass-title{display: flex;justify-content: space-between;}
+.ass-title .name{line-height: 20px;padding-left: 12px;position: relative;}
+.ass-title .name:before{content: '';display: block;position: absolute;top: 50%;margin-top: -8px;left: 0;width: 4px;height: 16px;background: #33c45d;}
+.ass-title .icon{text-align: right;line-height: 20px;}
+
+
+/* 标签 */
+.block-nav{display: flex;align-items: center;flex-wrap: wrap;background-color: #fff;padding: 12px 6px 0;}
+.block-nav .nav{border-radius: 17px;font-size: 13px;text-align: center;height: 34px;line-height: 33px;margin: 0 6px 15px;border: 1rpx #33c45d solid;color: #33c45d;padding: 0 15px;}
+.block-nav .nav.act{background: #33c45d;color: #FFF;}
 
 
 /* weui自定义样式 */
@@ -48,7 +63,7 @@ uni-page-body{height: 100%;}
 
 
 /* button */
-.dx-btn-blue{background-color: #0F8CFF!important;}
+.dx-btn-blue{background-color: #33c45d!important;}
 .dx-btn-big span{font-size: 17px;}
 .dx-btn-lg span{font-size: 16px;}
 .wxform uni-button{border-radius: 4px!important;}

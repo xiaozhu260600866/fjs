@@ -63,7 +63,9 @@
 
 
 .icon-float-tel-o:before{content: "\e628";}/* 浮动电话 */
+.icon-float-tel:before{content: "\e983";}/* 浮动电话 */
 .icon-float-feedback-o:before{content: "\e69f";}/* 浮动留言 */
+.icon-float-feedback:before{content: "\e600";}/* 浮动留言 */
 
 
 

@@ -343,7 +343,7 @@
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {
-		"selectedColor": "#0F8CFF",
+		"selectedColor": "#33c45d",
 		"list": [{
 			"pagePath": "pages/index/index",
 			"text": "首页",
@@ -372,8 +372,8 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "",
-		"navigationBarBackgroundColor": "#0F8CFF",
-		"backgroundColor": "#0F8CFF"
+		"navigationBarBackgroundColor": "#33c45d",
+		"backgroundColor": "#33c45d"
 	}
 	
 }
