@@ -33,11 +33,18 @@ export default{
             {prop:'name',label:'优惠券名称',type:'text',datatype:'require'},
             {prop:'num',label:'优惠券数量',type:'text',datatype:'require'},
 
-          
+
             {prop:'start_at',label:'开始日期',type:'date',datatype:'require'},
             {prop:'end_at',label:'结束日期',type:'date',datatype:'require'},
             {prop:'amount',label:'金额',type:'text',datatype:'require|price'},
-            {prop:'hospital_name',label:'选择医院',defaultValue:0,append_form_hospital_name:true},
+            {prop:'hospital_userid',name:'hospital_name',rowName:'company_name',label:'选择医院',defaultValue:0,type:"searchRadio",url:'/admin/user/lists?role=7',tableFields:[
+                  {prop:'userInfo.company_name',label:'医院',minWidth:"150"},
+                  {prop:'userInfo.phone',label:'电话',minWidth:"150"},
+                  {prop:'userInfo.address',label:'住址',minWidth:"150"},
+
+            ],searchFields:[
+                  {prop:'company_name',label:'医院名称'},
+            ]},
             {
                 "prop": "logo",
                 "datatype": "array",

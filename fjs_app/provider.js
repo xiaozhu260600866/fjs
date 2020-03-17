@@ -2,12 +2,6 @@
 let  siteName = 'https://fjs.doxinsoft.com';
 uni.setStorageSync('siteName', siteName);
 wx.setStorageSync('site_name', 'fjs');
-uni.getProvider({
-	service: 'oauth',
-	success: function(res) {
-		if (res.provider && res.provider.length > 0 && res.provider[0] == 'weixin') {
-			//如果是微信小程序
-			console.log(res.provider[0]);
 			uni.setStorageSync('source', 'wechatapp');
 			uni.login({
 				provider: 'weixin',
@@ -60,51 +54,69 @@ uni.getProvider({
 					console.log(JSON.stringify(res));
 				}
 			});
-		}
-		//uni.clearStorageSync();
-		if (res.provider.length == 0) {
-			 let site_name = uni.getStorageSync('siteName');
-			 if(getOptions('openid')){
-			 	let userInfo = {
-			 		nickName:getOptions('nickname'),
-			 		avatarUrl:getOptions('headimgurl'),
-					unionid:getOptions('unionid'),
-					openid:getOptions('openid'),
-			 	}
-			 	uni.setStorageSync("userInfo", userInfo);
-				uni.setStorageSync("openid", getOptions('openid'));
-			 	uni.setStorageSync("unionid", getOptions('unionid'));
-			 	uni.setStorageSync("source", 'wap');
-			}
-			 let userInfo = uni.getStorageSync('userInfo');
-			 if(!userInfo && !getOptions('openid')){
-			 	 let site_name = siteName;
-			 	 let source = window.location.href.split("#")[0];
-			 	 let url = "";
-			 	 let arg = window.location.href.split("#")[1];
-			 	 arg = arg.split("?");
-			 	 let page =arg[0];
-			 	 let scope = arg.length >= 1 ? arg[1] : '';
-			 	 if(scope){
-			 	 	url = site_name+'/openid?page='+page+'&'+scope+'&source='+source;
-			 	 }else{
-			 	 	url = site_name+'/openid?page='+page+'&source='+source;
-			 	 }
-			 	console.log(url);
-				window.location.href=url;
-			 }
+// uni.getProvider({
+// 	service: 'oauth',
+// 	complete:res=>{
+// 		let res_ = JSON.stringify(res);
+// 		uni.showModal({
+// 			title: '提示',
+// 			content: res_,
+// 			showCancel: false,
+// 			success: function(res3) {
+// 				if (res3.confirm) {} else if (res3.cancel) {}
+// 			}
+// 		})
+// 	},
+// 	success: function(res) {
+// 		let res_ = JSON.stringify(res);
+// 		uni.showModal({
+// 			title: '提示',
+// 			content: res_,
+// 			showCancel: false,
+// 			success: function(res3) {
+// 				if (res3.confirm) {} else if (res3.cancel) {}
+// 			}
+// 		})
+// 		if (res.provider && res.provider.length > 0 && res.provider[0] == 'weixin') {
+// 			//如果是微信小程序
+// 			console.log(res.provider[0]);
+
+// 		}
+// 		//uni.clearStorageSync();
+// 		if (res.provider.length == 0) {
+// 			 let site_name = uni.getStorageSync('siteName');
+// 			 if(getOptions('openid')){
+// 			 	let userInfo = {
+// 			 		nickName:getOptions('nickname'),
+// 			 		avatarUrl:getOptions('headimgurl'),
+// 					unionid:getOptions('unionid'),
+// 					openid:getOptions('openid'),
+// 			 	}
+// 			 	uni.setStorageSync("userInfo", userInfo);
+// 				uni.setStorageSync("openid", getOptions('openid'));
+// 			 	uni.setStorageSync("unionid", getOptions('unionid'));
+// 			 	uni.setStorageSync("source", 'wap');
+// 			}
+// 			 let userInfo = uni.getStorageSync('userInfo');
+// 			 if(!userInfo && !getOptions('openid')){
+// 			 	 let site_name = siteName;
+// 			 	 let source = window.location.href.split("#")[0];
+// 			 	 let url = "";
+// 			 	 let arg = window.location.href.split("#")[1];
+// 			 	 arg = arg.split("?");
+// 			 	 let page =arg[0];
+// 			 	 let scope = arg.length >= 1 ? arg[1] : '';
+// 			 	 if(scope){
+// 			 	 	url = site_name+'/openid?page='+page+'&'+scope+'&source='+source;
+// 			 	 }else{
+// 			 	 	url = site_name+'/openid?page='+page+'&source='+source;
+// 			 	 }
+// 			 	console.log(url);
+// 				window.location.href=url;
+// 			 }
 			 
 		
-		}
+// 		}
 
-	}
-});
-
-function getOptions(name) {
-	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-	var url = window.location.href;
-	var r = url.substr(url.indexOf("?") + 1).match(reg);
-	if (name == 'audit' && r != null) return decodeURI(r[2]) == 0 ? null : decodeURI(r[2]);;
-	if (r != null) return decodeURI(r[2]);
-	return null;
-}
+// 	}
+// });
