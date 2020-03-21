@@ -108,6 +108,12 @@ export default {
 				"allowUpLoadNum": "1",
 				"upurl": "coupon"
 			},
+            {
+            	"name": "",
+            	"prop": "remark",
+            	"type": "textarea",
+            	"label": "备注"
+            },
 
 			{
 				"name": "",

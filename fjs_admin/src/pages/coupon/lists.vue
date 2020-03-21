@@ -44,7 +44,7 @@
             },
             searchCallBack(rows) {
                 if(rows.length){
-                    this.$set(this.ruleForm,'hospital_name',rows[0].name);
+                    this.$set(this.ruleForm,'hospital_name',rows[0].userInfo.company_name);
                     this.$set(this.ruleForm,'hospital_userid',rows[0].id);
 
                     console.log(this.ruleForm);

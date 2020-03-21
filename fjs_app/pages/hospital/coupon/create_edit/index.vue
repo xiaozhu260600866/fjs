@@ -4,7 +4,7 @@
 		<div v-if="data.show">
 			<weui-input v-model="ruleform.name" label="优惠券名称" type="text" name="name" placeholder=" " datatype="require"></weui-input>
 			<weui-input v-model="ruleform.amount" label="优惠券金额" type="number" name="amount" placeholder=" " datatype="require"></weui-input>
-			<weui-input v-model="ruleform.discount" label="折扣" type="text" name="discount" placeholder=" " datatype="require"></weui-input>
+			<!-- <weui-input v-model="ruleform.discount" label="折扣" type="text" name="discount" placeholder=" " datatype="require"></weui-input> -->
 			<weui-input v-model="ruleform.num" label="数量" type="number" name="num" placeholder=" " datatype="require"></weui-input>
 			<weui-input v-model="ruleform.start_at" label="开始时间" type="date" name="start_at" datatype="require"></weui-input>
 			<weui-input v-model="ruleform.end_at" label="展示有效期" type="date" name="end_at" datatype="require"></weui-input>
@@ -39,6 +39,8 @@
 				getSiteName: this.getSiteName(),
 				ruleform: {
 					cover: [],
+					start_at:this.dateToString(new Date()),
+					end_at:this.dateToString(new Date()),
 					logo: []
 				},
 				vaildate: {}

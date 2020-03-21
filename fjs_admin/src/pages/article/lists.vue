@@ -53,7 +53,7 @@
                 :page-sizes="[6]" :page-size="6" layout="total, sizes, prev, pager, next, jumper" :total="data.total">
             </el-pagination>
         </div>
-        <my-class top="2%" ref="category" :type="0" :formAction="'/admin/article/'" :sizearr="300" :canupload="0" pageUrl="/pages/news/lists/index?fclass="></my-class>
+        <my-class top="2%"  ref="category" :type="0" :formAction="'/admin/article/'" :sizearr="300" :canupload="1" pageUrl="/pages/news/lists/index?fclass="></my-class>
     </section>
 </template>
 <script type="text/javascript">

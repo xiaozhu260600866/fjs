@@ -8,12 +8,21 @@ export default {
         "createAction": "/admin/doctor/create",
         "editAction": "/admin/doctor/edit",
         "checkAll": true,
-        "searchFields": [{
+        "searchFields": [
+         {
             "name": "",
             "prop": "name",
             "type": "text",
             "label": "优惠券名称"
-        }],
+        },
+        {
+            "name": "",
+            "prop": "hospital_name",
+            "type": "text",
+            "label": "医院名称"
+        },
+        
+        ],
         "tarbars": {
             "prop": "status",
             "data": [{
@@ -62,6 +71,13 @@ export default {
             "width": "",
             "append_table_date": 1,
             "label": "使用日期"
+        },
+        {
+            "name": "",
+            "prop": "hospital_name",
+            "minWidth": "180",
+            "width": "",
+            "label": "医院名称"
         },
         {
             "name": "",

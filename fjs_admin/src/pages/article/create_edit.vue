@@ -5,7 +5,7 @@
             <el-form-item label="新闻标题" prop="title" :rules="[{ required: true, message: '新闻标题不能为空'},]">
                 <el-input v-model="ruleForm.title" style="width:40%"></el-input>
             </el-form-item>
-            <el-form-item label="备注" prop="intro" :rules="[{ required: true, message: '备注不能为空'},]">
+            <el-form-item label="备注" prop="intro" >
                 <el-input v-model="ruleForm.intro" style="width:40%" type="textarea"></el-input>
             </el-form-item>
             <el-form-item label="请选择分类" prop="fclass" :rules="[{ required: true, message: '分类不能为空'},]">
@@ -51,7 +51,7 @@ export default {
         return {
             ruleForm: {
                 fclass: [],
-                published_at: '',
+                published_at: new Date(),
                 sort: 0,
                 cover: [],
                 thumb_pic:[]

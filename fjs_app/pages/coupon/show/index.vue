@@ -45,7 +45,7 @@
 			<div class="couponCon bg-f">
 				<div class="con-title"><span class="name">详情</span></div>
 				<div class="con-box p15 fs-14">
-					<u-parse :content="data.detail.need_remark" />
+					<u-parse :content="data.detail.remark" />
 					<img :src="getSiteName + '/upload/images/coupon/800_'+ v" mode="widthFix" style="width:100%" @click="previewImage(v,'coupon')" v-for="v in remarkImgArr"/>
 				</div>
 			</div>

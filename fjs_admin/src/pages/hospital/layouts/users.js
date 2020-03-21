@@ -7,6 +7,7 @@ export default {
 		"tableName": "users",
 		"createAction": "/admin/user/create",
 		"editAction": "/admin/user/edit",
+         classAction:'/admin/user/',
 		"checkAll": true,
 		"searchFields": [
 		 {
@@ -28,7 +29,7 @@ export default {
 			"label": "城市",
 			"datakey":"city"
 		}
-		
+
 		],
 	   /* "tarbars": {
 			"prop": "type",
@@ -58,6 +59,14 @@ export default {
 				"append_table_": 0,
 				"label": "医院名称"
 			},
+            {
+            	"name": "",
+            	"prop": "fclassName",
+            	"minWidth": "180",
+            	"width": "",
+            	"append_table_": 0,
+            	"label": "医院类别"
+            },
 			{
 				"name": "",
 				"prop": "username",
@@ -124,6 +133,13 @@ export default {
 			"append_form_": 0,
 			"label": "联系人"
 		},
+        {
+        	"name": "",
+        	"prop": "fclass",
+        	"type": "select",
+        	"label": "分类",
+        	"datakey":"class"
+        },
 
 
 		{
@@ -150,6 +166,14 @@ export default {
 			"append_form_": 0,
 			"label": "联系电话"
 		},
+        {
+        	"name": "",
+        	"prop": "remark",
+        	"datatype": "require",
+        	"type": "text",
+        	"append_form_": 0,
+        	"label": "备注"
+        },
 
 		{
 			"name": "",

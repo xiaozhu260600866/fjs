@@ -22,7 +22,7 @@
 						</view>
 						<view class="rt flex1">
 							<view class="tt fs-16 nowrap pt5">{{v.name}}</view>
-							<view class="td fs-13 mt10 wrap2" >{{v.position}}</view>
+							<view class="td fs-13 mt10 wrap2" v-if="v.remark">{{v.remark}}</view>
 						</view>
 					</view>
 				</view>

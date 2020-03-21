@@ -10,7 +10,7 @@
 					<view class="rinfo flex1 flex">
 						<view class="info flex1">
 							<p class="clist fs-16 lh-20 mb5">{{v.name}}</p>
-							<p class="ccon fs-13 fc-5 lh-20 wrap2 mtb8">医生备注医生备注医生备注医生备注医生备注医生备注医生备注医生备注医生备注医生备注</p>
+							<p class="ccon fs-13 fc-5 lh-20 wrap2 mtb8" v-if="v.remark">{{v.remark}}</p>
 							<p class="clist w-b100 fs-13 fc-5 lh-20">{{v.getHospital.company_name || ""}}</p>
 						</view>
 						<view class="location flex flex-wrap text-center">

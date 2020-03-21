@@ -86,7 +86,7 @@ export default {
 		//     "width": "",
 		//     "append_table_": 0,
 		//     "label": "地址"
-		// }, 
+		// },
 		],
 		"formFields": [
 			{
@@ -97,6 +97,12 @@ export default {
 				"append_form_hospital_userid": 1,
 				"label": "医院"
 			},
+            {
+            	"name": "",
+            	"prop": "remark",
+            	"type": "textarea",
+            	"label": "备注"
+            },
 			{
 				"name": "",
 				"prop": "name",

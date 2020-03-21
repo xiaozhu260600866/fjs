@@ -10,7 +10,7 @@
 					<view class="rinfo flex1 flex">
 						<view class="info flex1 pr10">
 							<p class="ctitle fs-16 lh-20">{{v.userInfo.company_name}}</p>
-							<p class="cintro fs-13 lh-20 fc-5 wrap2 mt10">医院备注医院备注医院备注医院备注医院备注医院备注医院备注医院备注医院备注医院备注医院备注医院备注</p>
+							<p class="cintro fs-13 lh-20 fc-5 wrap2 mt10" v-if="v.remark">{{v.remark}}</p>
 						</view>
 						<view class="location flex flex-wrap text-center">
 							<p class="name w-b100 fs-12 lh-18 h-18">距离</p>

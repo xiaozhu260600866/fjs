@@ -28,6 +28,7 @@ export default{
         ],
         searchFields:[
             {prop:'name',label:'优惠券名称'},
+            {prop:'hospital_name',label:'医院名称'},
         ],
         formFields:[
             {prop:'name',label:'优惠券名称',type:'text',datatype:'require'},
@@ -64,6 +65,7 @@ export default{
                 "upurl": "coupon"
             },
               {prop:'need_remark',label:'使用需知',type:'textarea'},
+              {prop:'remark',label:'备注',type:'editor'},
            /*  {prop:'pic',label:'图片',type:'upload',allowUpLoadNum:1,upurl:'user'}, */
         ]
     }
