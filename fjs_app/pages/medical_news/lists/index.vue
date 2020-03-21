@@ -3,19 +3,17 @@
 		<page :parentData="data" :formAction="formAction"></page>
 		<div v-if="data.show">
 			<view class="nav_btn mb12">
-				<view class="block-nav">
-					<view  v-for="v in data.class" v-if="v.can_show">
-						<view  @click="search(v)">
-							<view class="nav_img">
-								<image :src=" v.cover " :class="['img']" />
-							</view>
-							<view class="txt"><span>{{v.label}}</span></view>
+				<view class="item" v-for="(v,key) in data.class" v-if="v.can_show" @click="changeKey(key)">
+					<view>
+						<view class="nav_img">
+							<image :src=" v.cover " :class="['img']" />
 						</view>
-						<view v-for="children in v.children" @click="search(children)" v-if="children.can_show">
-							<view  >{{children.label}}</view> 
-						</view>
+						<view class="txt"><span>{{v.label}}</span></view>
 					</view>
 				</view>
+			</view>
+			<view class="block-nav" v-if="data.class[selectKey].children.length">
+				<view :class="['nav',fclass == children.value ? 'act':'']" @click="search(children)" v-for="(children,key) in data.class[selectKey].children">{{children.label}}</view>
 			</view>
 			<view id="article_list">
 				<view class="list" v-for="v in data.lists.data">
@@ -43,6 +41,7 @@
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),
 				fclass: 0,
+				selectKey: 0,
 
 			}
 		},
@@ -60,6 +59,9 @@
 			this.ajax();
 		},
 		methods: {
+			changeKey(key){
+				this.selectKey = key
+			},
 			search(v) {
 				console.log(v);
 				this.fclass = v.value;
@@ -69,6 +71,7 @@
 				this.getAjax(this, {
 					fclass: this.fclass
 				}).then(msg => {
+					
 					//this.setTitle(msg.lists.data[0].fclassname[0]);
 				});
 			}
