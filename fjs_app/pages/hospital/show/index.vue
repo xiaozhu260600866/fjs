@@ -52,7 +52,7 @@
 				<view class="box-title">
 					<view class="name fs-16">中心介绍</view>
 				</view>
-				<view class="content fs-13 p15">
+				<view class="content fs-15 p15 pt5">
 					<u-parse :content="data.detail.content" />
 				</view>
 			</view>

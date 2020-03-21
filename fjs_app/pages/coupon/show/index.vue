@@ -5,7 +5,7 @@
 			<div class="banner">
 				<img class="img" :src="getSiteName + '/upload/images/coupon/300_'+ data.detail.logo" mode="widthFix" />
 			</div>
-			<div class="weui-cells bgf mb10 mt0 detail-shop">
+			<div class="weui-cells bg-f mb10 mt0 detail-shop">
 				<div class="weui-cell">
 					<div class="weui-cell__bd cp-price">
 						<p class="title fs-18">{{ data.detail.name }}</p>
@@ -28,31 +28,38 @@
 				</div>
 				
 				<div class="shop-contact">
-					<div class="address bgf lh30"
+					<div class="address bg-f lh30"
 					 @click="location(data.detail.getUser.userInfo.location_y,data.detail.getUser.userInfo.location_x,data.detail.getUser.userInfo.address)">
 						<span class="iconfont icon-info-address fc-9 fs-16"></span> {{ data.detail.getUser.userInfo.address }}</div>
-					<div class="tel bgf mt5" @click="phone(data.detail.getUser.userInfo.phone)"><span class="iconfont icon-tel fc-9 fs-16"></span></div>
+					<div class="tel bg-f mt5" @click="phone(data.detail.getUser.userInfo.phone)"><span class="iconfont icon-tel fc-9 fs-16"></span></div>
 				</div>
 			</div>
-			<div class="couponCon bgf">
-				<div class="con-title lh40 bd-b fs-16 plr10"><span>详情</span></div>
+			<div class="couponCon bg-f mb10">
+				<div class="con-title"><span class="name">使用须知</span></div>
 				<div class="con-box p15 fs-14">
-					<!-- {{ data.detail.remark }} -->
+					
+					<u-parse :content="data.detail.need_remark" />
+					<img :src="getSiteName + '/upload/images/coupon/800_'+ v" mode="widthFix" style="width:100%" @click="previewImage(v,'coupon')" v-for="v in remarkImgArr"/>
+				</div>
+			</div>
+			<div class="couponCon bg-f">
+				<div class="con-title"><span class="name">详情</span></div>
+				<div class="con-box p15 fs-14">
 					<u-parse :content="data.detail.need_remark" />
 					<img :src="getSiteName + '/upload/images/coupon/800_'+ v" mode="widthFix" style="width:100%" @click="previewImage(v,'coupon')" v-for="v in remarkImgArr"/>
 				</div>
 			</div>
 		
 			<div id="footer-btn">
-				<a hover-class="none" open-type="switchTab" class="nav-btn" @click="goto('/pages/index/index',2)">
+				<view class="nav-btn" @click="goto('/pages/index/index',2)">
 					<p class="iconfont icon-home"></p>
 					<p class="name">首页</p>
-				</a>
+				</view>
 				<button hover-class="none" open-type="share" class="nav-btn">
 					<p class="iconfont icon-float-share-o"></p>
 					<p class="name">分享</p>
 				</button>
-				<button type="button" class="f-btn-blue ml15" form-type="submit" @click="buy">去领券</button>
+				<view class="f-dx-btn dx-btn-green text-center ml15" @click="buy">去领券</view>
 			</div>
 			
 		</div>

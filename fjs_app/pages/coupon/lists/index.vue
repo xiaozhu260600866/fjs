@@ -12,18 +12,15 @@
 								 :src="v.logo ? getSiteName+ '/upload/images/coupon/300_'+v.logo : 'https://boss.doxinsoft.com/images/wap/nocoupon.png'" />
 							</view>
 							<view class="rinfo flex1 flex-between">
-								<view class="lcon flex1 flex flex-wrap pr15">
-									<view class="info w-b100 mb10">
-										<p class="ctitle fs-15 lh-22">{{v.name}}</p>
-										<p class="ctitle fs-12 fc-6 lh-20">{{v.hospital_name}}</p>
-									</view>
-									<view class="bcon w-b100">
-										<p class="fs-12 lh-16 fc-6">使用须知：{{v.need_remark}}</p>
-									</view>
+								<view class="lcon flex1 pr15">
+									<p class="ctitle fs-15 lh-22 nowrap">{{v.name}}</p>
+									<p class="cmark fs-12 lh-16 fc-5 mtb8 wrap2">{{v.need_remark}}</p>
+									<p class="ctitle fs-12 lh-20 fc-5">{{v.hospital_name}}</p>
 								</view>
-								<view class="rdis flex flex-wrap">
+								<view class="rdis flex-center flex-wrap">
+									<p class="price fs-14" v-if="v.amount != '0.00'">￥<span class="fs-24">{{v.amount.split(".")[0]}}</span></p>
 									<p :class="['fs-14 s-btn plr15 w-b100',v.status == 1 ? 'dx-btn-default': 'dx-btn-orange']"
-									 :style="!v.discount ? 'margin-top: 32px': ''" >{{v.status == 1? '已领' :"领取"}}</p>
+									 :style="v.amount == '0.00' ? 'margin-top: 62px': 'margin-top: 30px'" >{{v.status == 1? '已领' :"领取"}}</p>
 								</view>
 							</view>
 						</view>

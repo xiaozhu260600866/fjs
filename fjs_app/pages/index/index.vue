@@ -24,33 +24,20 @@
 				<myswiper :lists="data.silders.data"></myswiper>
 			</view>
 			
-			<view v-if="data.index_link.data.length">
-				<view class="fun_button mb12">
-					<view class="fun_button_con">
-						<view class="a ptb8" v-for="(v,index) in data.index_link.data" :key="index">
-							<myform :ruleform="{}" :append="true" :vaildate="{}" :data="v" @callBack="goto(v.url,1)">
-								<view slot="content">
-									<view :class="['button-img']">
-										<image :src=" v.cover " :class="['img']" />
-									</view>
-									<view class="button-txt pt5 fs-13 fc-3 text-center lh-20"><span>{{v.name}}</span></view>
-								</view>
-							</myform>
+			
+			<navBtn :data="data" type="parent" v-if="data.index_link.data.length">
+				<view slot="RnavBtn" class="item">
+					<myform :ruleform="{}" :append="true" :vaildate="{}" :data="v" @callBack="goto('/pages/shop/index/index',2)">
+						<view slot="content">
+							<view class="nav_img">
+								<image src="https://fjs.doxinsoft.com/upload/images/poster/zDdKdqkCqb.png" class="img" />
+							</view>
+							<view class="txt"><span>产品简介</span></view>
 						</view>
-						
-						<view class="a ptb8">
-							<myform :ruleform="{}" :append="true" :vaildate="{}" :data="v" @callBack="goto('/pages/shop/index/index',2)">
-								<view slot="content">
-									<view class="button-img">
-										<image src="https://fjs.doxinsoft.com/upload/images/poster/zDdKdqkCqb.png" class="img" />
-									</view>
-									<view class="button-txt pt5 fs-13 fc-3 text-center lh-20"><span>产品简介</span></view>
-								</view>
-							</myform>
-						</view>
-					</view>
+					</myform>
 				</view>
-			</view>
+			</navBtn>
+			
 			
 			<view class="hospital bg-f mb12" v-if="data.lists.data.length">
 				<view class="ass-title p15 pr0 bg-f" @click="goto('/pages/hospital/lists/index',2)">
@@ -100,10 +87,12 @@
 	import "./index.css";
 	import hospitalLists from '@/components/hospitalLists';
 	import doctorLists from '@/components/doctorLists';
+	import navBtn from '@/components/navBtn';
 	export default {
 		components:{
 			hospitalLists,
-			doctorLists
+			doctorLists,
+			navBtn
 		},
 		data() {
 			return {

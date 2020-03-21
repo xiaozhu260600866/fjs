@@ -11,6 +11,8 @@ uni-page-body{height: 100%;}
 .main-bg{background: #33c45d;}
 .float-nav-w-green{border-color: rgba(51,196,93,0.1)!important;border-width: 1rpx;}
 .float-nav-w-green .nav-icon{color: #33c45d!important;}
+.dx-btn-green{background: #33c45d!important;border-color: #33c45d!important;}
+.dx-btn-green-o{border-color: #33c45d!important;color: #33c45d!important;}
 
 
 /* 灰底 */
@@ -37,10 +39,19 @@ uni-page-body{height: 100%;}
 .ass-title .icon{text-align: right;line-height: 20px;}
 
 
+/* 导航 */
+.nav_btn{padding: 5px;background: #fff;display: flex;flex-wrap: wrap;}
+.nav_btn .item,.nav_btn .item ._view{width: 25%;padding: 8px 5px;text-align: center;}
+.nav_btn .nav_img {text-align: center;text-align: -webkit-center;}
+.nav_btn .nav_img .img{width: 44px;height: 44px;display: flex;justify-content: center;border-radius: 10px;}
+.nav_btn .txt{padding-top: 5px;font-size: 13px;color: #333;text-align: center;line-height: 20px;}
+.nav_btn .item-5{width: 20%;}
+
+
 /* 标签 */
 .block-nav{display: flex;align-items: center;flex-wrap: wrap;background-color: #fff;padding: 12px 6px 0;}
-.block-nav .nav{border-radius: 17px;font-size: 13px;text-align: center;height: 34px;line-height: 33px;margin: 0 6px 15px;border: 1rpx #33c45d solid;color: #33c45d;padding: 0 15px;}
-.block-nav .nav.act{background: #33c45d;color: #FFF;}
+.block-nav .nav{border-radius: 17px;font-size: 13px;text-align: center;height: 34px;line-height: 34px;margin: 0 6px 15px;background: #33c45d;color: #FFF;padding: 0 15px;}
+.block-nav .nav.act{background: #4395ff;}
 
 
 /* weui自定义样式 */
@@ -127,13 +138,6 @@ uni-page-body{height: 100%;}
 .pro-list .copy{margin-bottom: 70px;color: #999;text-align: center;}
 
 
-.pro-line .porducts{padding: 6px;background: #fff;border: 0;}
-.pro-line .pro-div{border: 0;padding: 6px;}
-.pro-line .pro-box{border: 1px #eee solid;border-radius: 6px;}
-.pro-line .pro-box .cms_cover image{border-radius: 6px 6px 0 0;}
-.pro-line .pro-box .cms_price{margin-bottom: 5px;}
-
-
 .pro_lists .pro_item,.pro_lists .pro_item myform{background: #fff;box-sizing:border-box;display: flex;padding: 15px;border-bottom: 1px #eee solid;}
 .pro_lists .cms_cover{padding-right: 10px;position: relative;}
 .pro_lists .cms_cover .img{width: 200upx;height: 200upx;display: flex;}
@@ -150,14 +154,14 @@ uni-page-body{height: 100%;}
 
 
 /* 医生列表 */
-.doctor-box .limg .img{width: 100px;height: 100px;display: flex;}
-.doctor-box .rinfo .info{display: flex;align-content: space-between;height: 100px;padding-right: 15px;}
-.doctor-box .rinfo .location{align-content: center;text-align: right;}
+.doctor-box .limg .img{width: 100px;height: 100px;display: flex;border-radius: 6px;}
+.doctor-box .rinfo .info{padding-right: 15px;}
+.doctor-box .rinfo .location{align-content: center;text-align: right;width: 48px;}
 
 
 /* 新闻列表 */
 #article_list .item{border-bottom: 1px solid #ebebeb;}
-#article_list .item .img {width: 95px;height: 72px;border-radius: 3px;}
+#article_list .item .img {width: 95px;height: 72px;border-radius: 6px;}
 #article_list .item .rt {color: #666;}
 #article_list .item .rt .tt {color: #333;line-height: 1;font-weight: bold;}
-#article_list .item .rt .td {color: #979797;line-height: 1.5;}
+#article_list .item .rt .td {color: #666;line-height: 1.5;}

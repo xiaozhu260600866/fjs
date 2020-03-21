@@ -24,6 +24,8 @@ page{padding-bottom: 60px!important;}
 .shop-contact .tel{position: absolute;right: 0;top: 10px;border-left: 1px solid #d9d9d9;display: block;width: 60px;text-align: center;color: #000;height: 20px;line-height: 20px;}
 .shop-contact .tel ._span{font-size: 18px;}
 
-.con-title ._span{border-bottom: 3px #ff4400 solid;padding: 8px 15px;}
+.con-title{line-height: 40px;border-bottom: 1px #ddd solid;padding: 0 15px;display: flex;}
+.con-title .name{position: relative;}
+.con-title .name:before{content: '';display: block;position: absolute;bottom: 0;left: 0;width: 100%;height: 3px;background-color: #33c45d;}
 
 button.weui-cell,button.address{text-align: left;}
