@@ -59,7 +59,7 @@
 			
 			<div class="Hdoctor Hscroll mb10 bg-f">
 				<view class="box-title">
-					<view class="name fs-16">医生</view>
+					<view class="name fs-16">{{data.a}}</view>
 					<view class="more" @click="goto('/pages/hospital/doctor/lists/index?type=1&hospital_userid='+data.detail.id,1)">查看更多<span class="iconfont icon-right"></span></view>
 				</view>
 				<div class="Hs-list">

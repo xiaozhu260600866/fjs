@@ -2,19 +2,7 @@
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
 		<div v-if="data.show">
-			<view class="nav_btn mb12">
-				<view class="item" v-for="(v,key) in data.class" v-if="v.can_show" @click="changeKey(key)">
-					<view>
-						<view class="nav_img">
-							<image :src=" v.cover " :class="['img']" />
-						</view>
-						<view class="txt"><span>{{v.label}}</span></view>
-					</view>
-				</view>
-			</view>
-			<view class="block-nav" v-if="data.class[selectKey].children.length">
-				<view :class="['nav',fclass == children.value ? 'act':'']" @click="search(children)" v-for="(children,key) in data.class[selectKey].children">{{children.label}}</view>
-			</view>
+			<navBtn :data="data" :fclass="fclass"></navBtn>
 			<view id="article_list">
 				<view class="list" v-for="v in data.lists.data">
 					<view class="item bg-f flex p15" @click="goto('/pages/medical_news/show/index?id='+v.id,1)">
@@ -33,6 +21,7 @@
 
 <script>
 	import "./index.css";
+	import navBtn from "@/components/navBtn";
 	export default {
 		data() {
 			return {
@@ -41,9 +30,10 @@
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),
 				fclass: 0,
-				selectKey: 0,
-
 			}
+		},
+		components:{
+			navBtn
 		},
 		onReachBottom() {
 			this.hasMore(this);
@@ -59,14 +49,7 @@
 			this.ajax();
 		},
 		methods: {
-			changeKey(key){
-				this.selectKey = key
-			},
-			search(v) {
-				console.log(v);
-				this.fclass = v.value;
-				this.ajax()
-			},
+			
 			ajax() {
 				this.getAjax(this, {
 					fclass: this.fclass

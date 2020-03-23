@@ -23,7 +23,7 @@
 					</p>
 					<p class="nav-txt">我的优惠券</p>
 				</view>
-				<view class="item" @click="goto('/pages/news/show/index?id=231',1)">
+				<view class="item" @click="goto('/pages/news/show/index?id=245',1)">
 					<p class="unav-tab">
 						<span class="iconfont icon-user-about"></span>
 					</p>

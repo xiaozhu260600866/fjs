@@ -11,7 +11,7 @@ export default{
         checkAll:true,
         tableFields:[
             {prop:'nickname',label:'呢称',minwidth:"100"},
-            {prop:'userInfo.name',label:'姓名',minwidth:"100"},
+            // {prop:'userInfo.name',label:'姓名',minwidth:"100"},
             {prop:'phone',label:'电话',minwidth:"100"},
             {prop:'created_at',label:'关注时间',width:"180"}
         ],

@@ -21,6 +21,7 @@ export default new Router({
 				{
 					path: 'user*',
 					url: 'user',
+                    hidden:true,
 					name: '会员管理',
 					open: false,
 					iconCls: 'iconfont icon-fjs-vip', //图标样式class
