@@ -107,6 +107,15 @@ export default {
             	"append_table_putaway": 1,
             	"label": "上架/下架"
             },
+            {
+            	"name": "",
+            	"prop": "sort",
+            	"minWidth": "",
+            	"width": "120",
+            	type:'sort',
+                url:'/admin/user/edit-field',
+            	"label": "排序"
+            },
 			{
 				"name": "",
 				"prop": "city",
@@ -140,12 +149,20 @@ export default {
         	"label": "分类",
         	"datakey":"class"
         },
+        {
+        	"name": "",
+        	"prop": "username",
+        	"datatype": "require",
+        	"type": "text",
+        	"append_form_": 0,
+        	"label": "帐号"
+        },
 
 
 		{
 			"name": "",
 			"prop": "phone",
-			"datatype": "require|phone",
+			"datatype": "",
 			"type": "text",
 			"append_form_": 0,
 			"label": "手机"

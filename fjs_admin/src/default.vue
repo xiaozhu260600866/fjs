@@ -3,7 +3,7 @@
 		<el-col :span="24" class="header">
 			<el-col :span="8" class="logo" :class="collapsed?'logo-collapse-width':'logo-width'">
 				<!-- {{collapsed?'':sysName}} -->
-				<a href="javascript:;" class="fs-white" @click="$router.push({path:'/dashboard'})">
+				<a href="javascript:;" class="fs-white" @click="$router.push({path:'/vueadmin/hospital/lists'})">
 					<img src="https://boss.doxinsoft.com/images/wap/logo-default01.jpg"><!-- 有logo读logo，无logo读默认 -->
 					<span>福加斯大健康信息平台</span>
 				</a>

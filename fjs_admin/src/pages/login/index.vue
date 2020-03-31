@@ -68,9 +68,9 @@ export default {
 						let user = JSON.stringify(msg.data.user);
 						localStorage.setItem("userInfo", user);
 						if(user.role == 1){
-							this.$router.push({ path: '/vueadmin/order/count?type=today' });
+							this.$router.push({ path: '/vueadmin/hospital/lists' });
 						}else{
-							this.$router.push({path:'/vueadmin/order/count?type=today'});
+							this.$router.push({path:'/vueadmin/hospital/lists'});
 						}
 					}
 				});

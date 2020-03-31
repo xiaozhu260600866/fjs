@@ -74,6 +74,15 @@ export default {
 				"append_table_": 0,
 				"label": "地址"
 			},
+            {
+            	"name": "",
+            	"prop": "sort",
+            	"minWidth": "",
+            	"width": "120",
+            	type:'sort',
+                url:'/admin/hospital-record/edit-field',
+            	"label": "排序"
+            },
 		],
 		"formFields": [
 			{
@@ -96,7 +105,7 @@ export default {
 			{
 				"name": "",
 				"prop": "phone",
-				"datatype": "require|phone",
+				"datatype": "",
 				"type": "text",
 				"style": 'width: 200px',
 				"append_form_": 0,

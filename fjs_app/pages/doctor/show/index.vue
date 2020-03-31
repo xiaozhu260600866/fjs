@@ -20,7 +20,7 @@
 					</div>
 				</div>
 				<div class="bottom-item" >
-					<div class="flex lh-20 pt15" @click="phone(data.detail.phone)">
+					<div class="flex lh-20 pt15" @click="phone(data.detail.phone)" v-if="data.detail.phone">
 						<p class="iconfont icon-phone fs-14 fc-9 mr5"></p>
 						<p class="fs-13 fc-9 flex1" >{{data.detail.phone}}</p>
 						<p class="fs-13 fc-9" v-if="data.detail.line_phone">{{data.detail.line_phone}}</p>
@@ -40,7 +40,7 @@
 				</div>
 			</div>
 			
-			<view class="b_fixed Footer flex" @click="phone(data.detail.phone)">
+			<view class="b_fixed Footer flex" @click="phone(data.detail.phone)" v-if="data.detail.phone">
 				<view class="nav dx-btn-blue">一键拨号</view>
 			</view>
 		</view>
