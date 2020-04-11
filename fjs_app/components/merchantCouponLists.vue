@@ -7,7 +7,7 @@
 				</div>
 				<div class="weui-media-box__bd"  @click="goto('/pages/coupon/show/index?id='+v.id,1)">
 					<p class="weui-media-box__title">{{ v.name }}</p><!-- 优惠券名称 -->
-					<p class="weui-media-box__desc">剩余数量：<span class="Arial pr20">{{ v.getLeftNum }}</span>已领：<span class="Arial">{{ v.getOrderNum }}</span></p>
+					<p class="weui-media-box__desc">数量：<span class="Arial pr20">{{ v.num }}</span>已领：<span class="Arial">{{ v.orderCount }}</span></p>
 					<div class="bot">
 						<p class="fs13 fs-color">￥<span class="fs16 Arial">{{ v.amount }}</span></p><!-- 优惠券面额 -->
 					</div>
