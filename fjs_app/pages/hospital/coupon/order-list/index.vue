@@ -13,7 +13,7 @@
 				</div>
 				<div class="order_info ptb5 plr10">
 					<div class="pro_img pr10">
-						<image class="img" :src="'https://fjs.doxinsoft.com/upload/images/coupon/'+item.getCoupon.cover" />
+						<image class="img" :src="'https://fjs.doxinsoft.com/upload/images/coupon/'+item.getCoupon.logo" />
 					</div>
 					<div class="pro_right flex1">
 						<div class="tInfo w-b100">
@@ -21,13 +21,13 @@
 							<p class="nowrap fs-12 mt5 fc-9" v-if="item.getCoupon.is_info">{{item.getCoupon.attribute}}</p>
 						</div>
 						<div class="w-b100">
-							<p class="fs-12 fc-6">数量：<span>{{item.getCoupon.num}}</span></p>
+							<p class="fs-12 fc-6">已领：{{item.getCoupon.orderCount}} | 数量：<span>{{item.getCoupon.num}}</span></p>
 						</div>
 					</div>
 				</div>
-				<div class="order_count plr10 fs-13 text-right">共<span class="Arial">{{item.getCoupon.num}}</span>件商品
+				<!-- <div class="order_count plr10 fs-13 text-right">共<span class="Arial">{{item.getCoupon.num}}</span>件商品
 					实付：￥<span class="Arial fs-16 price">{{item.amount}}</span>
-				</div>
+				</div> -->
 				<!-- <div class="title">
 					<div class="headPic mr10">
 						<image class="head" :src="item.user.headerPic" />
