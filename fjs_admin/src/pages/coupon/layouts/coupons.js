@@ -21,6 +21,8 @@ export default{
             {prop:'name',label:'优惠券名称',minWidth:"150"},
             {prop:'hospital_name',label:'使用医院',minWidth:"200"},
             {prop:'amount',label:'优惠券金额',minWidth:"200"},
+            {prop:'orderCount',label:'领取数量',minWidth:"200"},
+            {prop:'num',label:'数量',minWidth:"200"},
             {prop:'start_at',label:'开始日期',minWidth:"200"},
             {prop:'end_at',label:'结束日期',minWidth:"200"},
             {prop:'putaway',label:'上架/下架',minWidth:"200",append_table_putaway:true},

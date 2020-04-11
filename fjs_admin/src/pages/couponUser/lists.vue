@@ -7,7 +7,8 @@
                 </div>
             </div>
             <div slot="append_table_date" slot-scope="scope">
-                {{scope.row.getCoupon.start_at}} ~  {{scope.row.getCoupon.end_at}}
+                <span v-if="scope.row.getCoupon">{{scope.row.getCoupon.start_at}} ~  {{scope.row.getCoupon.end_at}}</span>
+                <span v-else> 该优惠券已被删除</span>
             </div>
          </dx-table>
          <qrcode ref="qrcode"></qrcode>
