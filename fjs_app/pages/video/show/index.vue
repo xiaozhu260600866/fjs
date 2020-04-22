@@ -1,12 +1,23 @@
 <template>
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
-		<div class="content" v-if="data.show">
+		<!-- <div class="content" v-if="data.show">
 			<view class="video"><video :src="videoSrc" autoplay="true"></video></view>
 			<div class="con p15 pt5">
 				<u-parse :content="data.detail.content" />
 			</div>
-		</div>
+		</div> -->
+		<view v-if="data.show">
+			<view class="p15 fs-18 lh-24">{{data.detail.name}}</view>
+			<view class="mark fc-9 fs-12 flex-between flex-middle plr15 pb15">
+				<view class="date">{{data.detail.created_at}}</view>
+				<view class="hos">{{data.detail.fclassName}}</view>
+			</view>
+			<view class="video bg-f plr15 pb15" v-if="data.detail.url.length"><video :src="videoSrc" autoplay="true"></video></view>
+			<view class="content bg-f fs-15 plr15 pb15">
+				<u-parse :content="data.detail.content" />
+			</view>
+		</view>
 	</view>
 </template>
 
