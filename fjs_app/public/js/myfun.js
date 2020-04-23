@@ -21,6 +21,9 @@ myfun.install = (Vue, options) => {
 				}
 			}
 		},
+		Vue.prototype.updateHistory=()=>{
+			Vue.prototype.updateUrl(["/pages/index/index","/pages/hospital/lists/index","/pages/shop/index/index",'/pages/user/index/index']);
+		}
 		Vue.prototype.toIndex = () => {
 
 			let role_type = uni.getStorageSync('role_type');
