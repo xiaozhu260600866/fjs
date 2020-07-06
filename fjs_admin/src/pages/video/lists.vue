@@ -34,7 +34,7 @@
         },
         methods: {
             editField(row,field){
-            	this.postAjax("/admin/song/editField", { id:row.id,field:field,value:row[field] }, msg => {
+            	this.postAjax("/admin/video/editField", { id:row.id,field:field,value:row[field] }, msg => {
             		if (msg.data.status == 3) {
             			row[field] =0;
             		}

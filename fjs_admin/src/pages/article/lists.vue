@@ -50,7 +50,7 @@
         <div class="toolbar foot-tool">
             <el-button type="danger" @click="delAll" :disabled="this.sels.length===0 " v-if="data.auth.canDel">批量删除</el-button>
             <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="data.thisPage"
-                :page-sizes="[6]" :page-size="6" layout="total, sizes, prev, pager, next, jumper" :total="data.total">
+                :page-sizes="[15]" :page-size="15" layout="total, sizes, prev, pager, next, jumper" :total="data.total">
             </el-pagination>
         </div>
         <my-class top="2%"  ref="category" :type="0" :formAction="'/admin/article/'" :sizearr="300" :canupload="1" pageUrl="/pages/news/lists/index?fclass="></my-class>
